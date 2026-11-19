@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>WEBZLY · Votre voisin du web · Sites internet pour artisans en Côte-d'Or</title>
+  <meta name="description" content="WEBZLY, votre voisin du web, crée, héberge et entretient le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d'Or. Site sur-mesure dès 890 €, puis hébergement et maintenance dès 39 €/mois.">
+  <link rel="canonical" href="https://webzly.fr/">
+  <meta name="theme-color" content="#12110F">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="WEBZLY · Des sites qui font sonner votre téléphone">
+  <meta property="og:description" content="Sites internet pour artisans, commerçants et indépendants en Côte-d'Or. Site sur-mesure dès 890 €, hébergement et maintenance dès 39 €/mois.">
+  <meta property="og:image" content="https://webzly.fr/assets/img/og-image.jpg">
+  <meta property="og:url" content="https://webzly.fr/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/main.css?v=20">
+  <script>
+    document.documentElement.classList.add('js');
+    // Filet de sécurité : si les scripts ne se chargent pas, on affiche quand même la page.
+    setTimeout(function () {
+      if (!window.gsap) {
+        document.documentElement.classList.remove('js');
+        document.body && document.body.classList.remove('is-loading');
+        var l = document.querySelector('.loader'); if (l) l.remove();
+      }
+    }, 4000);
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "WEBZLY",
+    "slogan": "Votre voisin du web",
+    "description": "Création, hébergement et entretien de sites internet pour artisans, commerçants et indépendants en Côte-d'Or.",
+    "url": "https://webzly.fr/",
+    "image": "https://webzly.fr/assets/img/og-image.jpg",
+    "telephone": "+33695506239",
+    "email": "thibault.lbrt21@gmail.com",
+    "founder": { "@type": "Person", "name": "Thibault Lambert" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Perrigny-lès-Dijon",
+      "postalCode": "21160",
+      "addressRegion": "Côte-d'Or",
+      "addressCountry": "FR"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Dijon" },
+      { "@type": "AdministrativeArea", "name": "Côte-d'Or" }
+    ],
+    "priceRange": "Site dès 890 €, abonnement dès 39 €/mois",
+    "makesOffer": [
+      { "@type": "Offer", "name": "Essentiel", "price": "890", "priceCurrency": "EUR", "description": "Création d'un site une page sur-mesure. Abonnement au choix dès 39 €/mois." },
+      { "@type": "Offer", "name": "Pro", "price": "1490", "priceCurrency": "EUR", "description": "Création d'un site jusqu'à 6 pages avec devis en ligne. Abonnement au choix dès 39 €/mois." },
+      { "@type": "Offer", "name": "Sur-mesure", "price": "1990", "priceCurrency": "EUR", "description": "Projet sur-mesure (réservation, boutique, multilingue) à partir de 1 990 €. Abonnement au choix dès 39 €/mois." }
+    ]
+  }
+  </script>
+</head>
+
+<body class="is-loading">
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <!-- Préchargement -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__tile"><span><svg viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg></span></span>
+      <span class="loader__count"><span data-loader-count>0</span>%</span>
+    </div>
+    <p class="loader__line">On allume l'écran…</p>
+  </div>
+
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__label"></span></div>
+
+  <!-- En-tête -->
+  <header class="header" data-header>
+    <div class="header__inner">
+      <a href="#top" class="logo" aria-label="WEBZLY, retour en haut">
+        <span class="logo__word">web</span><svg class="logo__z" viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg><span class="logo__word">ly</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#methode">Méthode</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#formules">Formules</a>
+        <a href="#apropos">Qui suis-je</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <div class="header__cta">
+        <a class="header__tel" href="tel:+33695506239" aria-label="Appeler Thibault au 06 95 50 62 39">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          <span>06 95 50 62 39</span>
+        </a>
+        <a class="btn btn--sm btn--mustard header__quote" href="#devis" data-magnetic>Mon devis</a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__nav" aria-label="Menu mobile">
+      <a href="#methode"><span>01</span>Méthode</a>
+      <a href="#realisations"><span>02</span>Réalisations</a>
+      <a href="#formules"><span>03</span>Formules</a>
+      <a href="#apropos"><span>04</span>Qui suis-je</a>
+      <a href="#faq"><span>05</span>Questions</a>
+      <a href="#devis"><span>06</span>Demander un devis</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="tel:+33695506239">06 95 50 62 39</a>
+      <a href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" data-theme="dark">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="wrap hero__content">
+        <p class="chip chip--dark" data-hero-in>
+          <span class="chip__dot"></span>
+          Votre voisin du web<span class="chip__more"> · Dijon et Côte-d'Or</span>
+        </p>
+
+        <h1 class="hero__title" data-hero-title>
+          <span class="line"><span>Des sites qui</span></span>
+          <span class="line"><span>font <em class="ring">sonner<svg class="ring__waves" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 14a14 14 0 0 1 0 12M3 10a20 20 0 0 1 0 20"/><path d="M32 14a14 14 0 0 0 0 12M37 10a20 20 0 0 0 0 20"/></svg></em></span></span>
+          <span class="line"><span>votre téléphone.</span></span>
+        </h1>
+
+        <p class="hero__lead" data-hero-in>
+          Je crée, héberge et entretiens le site internet des <strong>artisans, commerçants et indépendants</strong> d'ici.
+          Un design unique, bien placé sur Google, mis à jour pour vous chaque mois.
+        </p>
+
+        <div class="hero__actions" data-hero-in>
+          <a class="btn btn--mustard btn--lg" href="#devis" data-magnetic>
+            Demander mon devis gratuit
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#formules">Voir les formules</a>
+        </div>
+
+        <ul class="hero__proof" data-hero-in>
+          <li><b>Site dès 890 €</b></li>
+          <li>Site + fiche Google</li>
+          <li>Votre site vous appartient</li>
+        </ul>
+      </div>
+
+      <div class="hero__hint" aria-hidden="true">
+        <span>Bougez la souris · touchez les pages</span>
+      </div>
+      <a class="hero__scroll" href="#constat" aria-label="Descendre vers la suite">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ BANDEAU MÉTIERS ============ -->
+    <div class="marquee" aria-label="Métiers accompagnés">
+      <div class="marquee__track">
+        <ul>
+          <li>Plombiers</li><li>Tatoueurs</li><li>Garages</li><li>Coiffeurs</li><li>Traiteurs</li><li>Électriciens</li><li>Menuisiers</li><li>Paysagistes</li><li>Esthéticiennes</li><li>Gîtes</li><li>Domaines viticoles</li><li>Cuisinistes</li><li>Auto-écoles</li><li>Chauffagistes</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li>Plombiers</li><li>Tatoueurs</li><li>Garages</li><li>Coiffeurs</li><li>Traiteurs</li><li>Électriciens</li><li>Menuisiers</li><li>Paysagistes</li><li>Esthéticiennes</li><li>Gîtes</li><li>Domaines viticoles</li><li>Cuisinistes</li><li>Auto-écoles</li><li>Chauffagistes</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ CONSTAT ============ -->
+    <section class="section constat" id="constat">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>Le constat</p>
+        <p class="statement" data-statement>
+          Avant d'appeler un artisan, on le cherche sur Google. On compare les avis, les photos, le site. Si vous n'y êtes pas, ou mal, l'appel part chez le voisin.
+        </p>
+
+        <div class="stats">
+          <article class="stat" data-reveal>
+            <p class="stat__num"><span data-count="87">0</span><small>%</small></p>
+            <p class="stat__text">des consommateurs utilisent Google pour juger un commerce local.</p>
+            <p class="stat__src">BrightLocal, Local Consumer Review Survey (données US, 2022)</p>
+          </article>
+          <article class="stat" data-reveal>
+            <p class="stat__num"><span data-count="88">0</span><small>%</small></p>
+            <p class="stat__text">choisissent plus volontiers un commerce qui répond à tous ses avis.</p>
+            <p class="stat__src">BrightLocal, même enquête (données US)</p>
+          </article>
+          <article class="stat stat--accent" data-reveal>
+            <p class="stat__num"><span data-count="2.5" data-decimals="1">0</span><small>s</small></p>
+            <p class="stat__text">C'est le temps d'affichage maximum que Google juge « bon » pour une page. Mes sites sont pensés pour passer en dessous.</p>
+            <p class="stat__src">web.dev, Core Web Vitals (LCP)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AVANT / APRÈS ============ -->
+    <section class="section compare" id="difference" data-theme="dark">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="eyebrow eyebrow--dark" data-reveal>La différence</p>
+          <h2 class="h2" data-split>Glissez. <em>Voyez</em> ce qui change.</h2>
+          <p class="section__lead" data-reveal>Même artisan, même métier. À gauche, le site qu'on voit trop souvent. À droite, ce que je construis.</p>
+        </div>
+
+        <div class="ba" data-ba data-reveal>
+          <div class="ba__chrome">
+            <span></span><span></span><span></span>
+            <p class="ba__url">martin-plomberie.fr</p>
+            <p class="ba__tag">Exemple fictif</p>
+          </div>
+          <div class="ba__stage">
+            <!-- APRÈS -->
+            <div class="ba__after">
+              <div class="demo">
+                <div class="demo__nav">
+                  <b class="demo__logo">Martin<i>.</i>Plomberie</b>
+                  <span class="demo__links"><i>Services</i><i>Réalisations</i><i>Avis</i></span>
+                  <span class="demo__call">06 12 34 56 78</span>
+                </div>
+                <div class="demo__hero">
+                  <div class="demo__copy">
+                    <span class="demo__badge">Plombier · Dijon et Côte-d'Or</span>
+                    <p class="demo__h">Une fuite ?<br>On arrive.</p>
+                    <p class="demo__p">Dépannage, chauffe-eau, salle de bain. Devis gratuit, prix annoncés avant travaux.</p>
+                    <div class="demo__btns">
+                      <span class="demo__btn">Appeler maintenant</span>
+                      <span class="demo__btn demo__btn--ghost">Devis en 2 min</span>
+                    </div>
+                    <span class="demo__stars">★★★★★ <b>4,9</b> · avis Google</span>
+                  </div>
+                  <div class="demo__img" role="img" aria-label="Illustration d'une salle de bain"></div>
+                </div>
+              </div>
+              <ul class="ba__notes" aria-label="Ce qui change">
+                <li style="--x:63%;--y:15%">Numéro toujours visible</li>
+                <li style="--x:64%;--y:86%">Avis Google mis en avant</li>
+                <li style="--x:74%;--y:62%">Bouton d'appel en un geste</li>
+              </ul>
+            </div>
+            <!-- AVANT -->
+            <div class="ba__before" aria-hidden="true">
+              <div class="old">
+                <p class="old__marquee">*** BIENVENUE SUR LE SITE OFFICIEL DE MARTIN PLOMBERIE ***</p>
+                <p class="old__title">Martin Plomberie Chauffage Sanitaire Zinguerie</p>
+                <div class="old__row">
+                  <div class="old__menu">
+                    <u>Accueil</u><u>Qui sommes nous</u><u>Nos prestations</u><u>Galerie photo (en construction)</u><u>Contact</u><u>Liens amis</u>
+                  </div>
+                  <div class="old__body">
+                    <p>Bienvenu(e) ! Notre entreprise familiale est à votre service depuis de nombreuses années pour tous vos travaux.</p>
+                    <div class="old__img">photo.jpg</div>
+                    <p class="old__small">Pour nous contacter merci de remplir le formulaire de la page contact ou nous téléphoner aux heures de bureau.</p>
+                    <p class="old__counter">Vous êtes le visiteur n° <b>004127</b></p>
+                  </div>
+                </div>
+                <p class="old__foot">Site optimisé pour Internet Explorer 6 · 1024×768</p>
+              </div>
+            </div>
+            <div class="ba__handle" aria-hidden="true"><span><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+            <span class="ba__label ba__label--l" aria-hidden="true">Avant</span>
+            <span class="ba__label ba__label--r" aria-hidden="true">Avec WEBZLY</span>
+          </div>
+          <label class="sr-only" for="ba-range">Comparer avant et après</label>
+          <input class="ba__range" id="ba-range" type="range" min="0" max="100" value="50">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services">
+      <div class="wrap">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Ce que je fais pour vous</p>
+            <h2 class="h2" data-split>Tout ce qu'il faut pour être <em>trouvé</em>. Rien que vous ayez à gérer.</h2>
+          </div>
+          <p class="section__lead" data-reveal>Vous faites votre métier. Je m'occupe d'internet : le site, Google, les mises à jour. Un seul interlocuteur, du premier appel aux mises à jour.</p>
+        </div>
+
+        <div class="bento">
+          <article class="tile tile--site" data-reveal data-tilt>
+            <div class="tile__art art-site" aria-hidden="true">
+              <span class="art-site__bar"></span>
+              <span class="art-site__h"></span>
+              <span class="art-site__h art-site__h--s"></span>
+              <span class="art-site__btn"></span>
+              <span class="art-site__phone"><i></i><i></i><i></i></span>
+            </div>
+            <h3>Un site sur-mesure</h3>
+            <p>Dessiné pour votre métier et votre clientèle, pas un modèle recopié. Rapide, lisible sur téléphone, à votre image.</p>
+          </article>
+
+          <article class="tile tile--google" data-reveal data-tilt>
+            <div class="tile__art art-pin" aria-hidden="true">
+              <span class="art-pin__map"></span>
+              <span class="art-pin__pin"></span>
+              <span class="art-pin__card"><b>Votre entreprise</b><i>★★★★★</i></span>
+            </div>
+            <h3>Votre fiche Google</h3>
+            <p>Créée ou reprise, reliée au site, tenue à jour : horaires, photos, réponses aux avis.</p>
+          </article>
+
+          <article class="tile tile--seo" data-reveal data-tilt>
+            <div class="tile__art art-search" aria-hidden="true">
+              <span class="art-search__bar"><i></i><b data-typing="électricien Dijon">électricien Dijon</b></span>
+              <span class="art-search__res art-search__res--you">#1 · Votre site</span>
+              <span class="art-search__res"></span>
+              <span class="art-search__res"></span>
+            </div>
+            <h3>Référencement local</h3>
+            <p>Une page par prestation et par zone, pour sortir quand on tape « votre métier + votre ville ».</p>
+          </article>
+
+          <article class="tile tile--leads" data-reveal data-tilt>
+            <div class="tile__art art-leads" aria-hidden="true">
+              <span class="art-leads__n">+1</span>
+              <span class="art-leads__msg"><b>Nouvelle demande de devis</b><i>Rénovation salle de bain · Talant</i></span>
+            </div>
+            <h3>Des demandes, pas des visites</h3>
+            <p>Bouton d'appel, formulaire de devis avec photos, prise de rendez-vous : chaque page pousse à vous contacter.</p>
+          </article>
+
+          <article class="tile tile--updates" data-reveal data-tilt>
+            <div class="tile__art art-chat" aria-hidden="true">
+              <span class="art-chat__b art-chat__b--in">Je vous envoie 3 photos du chantier de Chenôve 📸</span>
+              <span class="art-chat__b art-chat__b--out">C'est en ligne ✔︎</span>
+            </div>
+            <h3>Modifications incluses</h3>
+            <p>Un horaire change, une nouvelle réalisation ? Un message suffit, je m'en occupe.</p>
+          </article>
+
+          <article class="tile tile--host" data-reveal data-tilt>
+            <div class="tile__art art-lock" aria-hidden="true">
+              <span class="art-lock__shield">
+                <svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+              </span>
+              <span class="art-lock__url"><i>🔒</i> votre-entreprise.fr</span>
+            </div>
+            <h3>Hébergement et sécurité</h3>
+            <p>Nom de domaine, hébergement, HTTPS, mentions légales : tout est inclus et surveillé.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTHODE ============ -->
+    <section class="method" id="methode" data-theme="dark">
+      <div class="method__pin">
+        <div class="wrap method__head">
+          <p class="eyebrow eyebrow--dark">La méthode</p>
+          <h2 class="h2">Quatre étapes. <em>Zéro</em> prise de tête.</h2>
+        </div>
+        <div class="method__track">
+          <article class="step">
+            <p class="step__n">01</p>
+            <div class="step__body">
+              <h3>On se parle 15 minutes</h3>
+              <p>Au téléphone ou autour d'un café, chez vous. Vous me parlez de votre métier, de vos clients, de ce qui vous ferait gagner du temps. Pas de jargon.</p>
+            </div>
+            <span class="step__tag">Gratuit, sans engagement</span>
+          </article>
+          <article class="step">
+            <p class="step__n">02</p>
+            <div class="step__body">
+              <h3>Je dessine votre site</h3>
+              <p>Une maquette à votre image, avec vos prestations et vos photos. Vous la validez, on ajuste, rien n'est publié sans votre accord.</p>
+            </div>
+            <span class="step__tag">Vous validez tout</span>
+          </article>
+          <article class="step">
+            <p class="step__n">03</p>
+            <div class="step__body">
+              <h3>Mise en ligne et Google</h3>
+              <p>Le site part en ligne sur votre nom de domaine, relié à votre fiche Google, prêt à recevoir appels et demandes de devis.</p>
+            </div>
+            <span class="step__tag">Votre nom de domaine</span>
+          </article>
+          <article class="step step--last">
+            <p class="step__n">04</p>
+            <div class="step__body">
+              <h3>Je m'occupe du reste</h3>
+              <p>Chaque mois : hébergement, sécurité, mises à jour, fiche Google. Vous m'envoyez un message, c'est fait.</p>
+            </div>
+            <span class="step__tag">Un seul interlocuteur</span>
+          </article>
+        </div>
+        <div class="method__bar" aria-hidden="true"><span></span></div>
+      </div>
+    </section>
+
+    <!-- ============ RÉALISATIONS ============ -->
+    <section class="section work" id="realisations">
+      <div class="wrap">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Réalisations</p>
+            <h2 class="h2" data-split>Du concret, <em>d'ici</em>.</h2>
+          </div>
+          <p class="section__lead" data-reveal>Un client en ligne, et des concepts dessinés pour des métiers de Côte-d'Or. Survolez les écrans pour les faire défiler.</p>
+        </div>
+
+        <article class="case" data-reveal>
+          <div class="case__media">
+            <div class="case__shot case__shot--a" style="background-image:url('assets/img/work/tds-1.jpg')"></div>
+            <div class="case__shot case__shot--b" style="background-image:url('assets/img/work/tds-2.jpg')"></div>
+            <div class="case__shot case__shot--c" style="background-image:url('assets/img/work/tds-3.jpg')"></div>
+          </div>
+          <div class="case__body">
+            <p class="case__kicker"><span class="dot"></span> Client · En ligne</p>
+            <h3 class="case__title">TDS Fermetures</h3>
+            <p class="case__meta">Menuiseries, fenêtres et portails · Dijon</p>
+            <p>Site complet avec demandes de devis, pages par prestation, mentions légales vérifiées et fiche Google suivie chaque mois.</p>
+            <ul class="tags"><li>Site vitrine</li><li>Devis en ligne</li><li>Fiche Google</li><li>Abonnement</li></ul>
+            <a class="link-arrow" href="https://tds-fermetures.fr" target="_blank" rel="noopener">Voir le site <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+        </article>
+
+        <div class="concepts" data-concepts>
+          <article class="concept" data-reveal>
+            <div class="concept__screen" data-cursor="Défiler"><img src="assets/img/work/concept-tatoueur-tall.jpg" alt="Concept de site pour un salon de tatouage" loading="lazy" decoding="async"></div>
+            <div class="concept__info"><span class="badge">Concept</span><h3>Salon de tatouage</h3><p>Galerie plein écran, prise de rendez-vous.</p></div>
+          </article>
+          <article class="concept" data-reveal>
+            <div class="concept__screen" data-cursor="Défiler"><img src="assets/img/work/concept-electricien-tall.jpg" alt="Concept de site pour un électricien" loading="lazy" decoding="async"></div>
+            <div class="concept__info"><span class="badge">Concept</span><h3>Électricien</h3><p>Urgence, devis rapide, zones d'intervention.</p></div>
+          </article>
+          <article class="concept" data-reveal>
+            <div class="concept__screen" data-cursor="Défiler"><img src="assets/img/work/concept-cuisiniste-tall.jpg" alt="Concept de site pour un cuisiniste" loading="lazy" decoding="async"></div>
+            <div class="concept__info"><span class="badge">Concept</span><h3>Cuisiniste</h3><p>Réalisations en avant, prise de rendez-vous showroom.</p></div>
+          </article>
+          <article class="concept" data-reveal>
+            <div class="concept__screen" data-cursor="Défiler"><img src="assets/img/work/concept-chauffagiste-tall.jpg" alt="Concept de site pour un chauffagiste" loading="lazy" decoding="async"></div>
+            <div class="concept__info"><span class="badge">Concept</span><h3>Chauffagiste</h3><p>Entretien, dépannage, aides à la rénovation.</p></div>
+          </article>
+          <article class="concept" data-reveal>
+            <div class="concept__screen" data-cursor="Défiler"><img src="assets/img/work/concept-peintre-tall.jpg" alt="Concept de site pour un plaquiste peintre" loading="lazy" decoding="async"></div>
+            <div class="concept__info"><span class="badge">Concept</span><h3>Plaquiste · peintre</h3><p>Avant / après, devis détaillé.</p></div>
+          </article>
+          <article class="concept" data-reveal>
+            <div class="concept__screen" data-cursor="Défiler"><img src="assets/img/work/concept-auto-ecole-tall.jpg" alt="Concept de site pour une auto-école" loading="lazy" decoding="async"></div>
+            <div class="concept__info"><span class="badge">Concept</span><h3>Auto-école</h3><p>Formules, inscriptions, planning.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMULES ============ -->
+    <section class="section pricing" id="formules">
+      <div class="wrap">
+        <div class="section__head section__head--center">
+          <p class="eyebrow" data-reveal>Formules</p>
+          <h2 class="h2" data-split>Votre site, une fois. <em>La tranquillité</em>, chaque mois.</h2>
+          <p class="section__lead" data-reveal>Vous payez la création de votre site une seule fois. Ensuite, vous choisissez l'abonnement qui vous convient, quel que soit votre site : il couvre l'hébergement, le nom de domaine, la maintenance et vos modifications.</p>
+        </div>
+
+        <h3 class="pricing__step" data-reveal><span>1</span> La création de votre site <small>paiement unique</small></h3>
+        <div class="plans">
+          <article class="plan" data-reveal data-tilt>
+            <header class="plan__head">
+              <h3>Essentiel</h3>
+              <p class="plan__for">Pour exister en ligne et être trouvé.</p>
+            </header>
+            <div class="plan__block">
+              <p class="plan__label">Création</p>
+              <p class="plan__price"><b>890</b><span>€<small>une seule fois</small></span></p>
+              <ul class="plan__list">
+                <li>Site <b>une page complète</b>, design unique</li>
+                <li>Formulaire de contact vers votre e-mail</li>
+                <li>Fiche Google créée et reliée au site</li>
+                <li>Bases du référencement : titres, mobile, vitesse</li>
+              </ul>
+            </div>
+            <a class="btn btn--line btn--block" href="#devis" data-plan="Essentiel">Choisir Essentiel</a>
+          </article>
+
+          <article class="plan plan--featured" data-reveal data-tilt>
+            <span class="plan__flag">Recommandée</span>
+            <header class="plan__head">
+              <h3>Pro</h3>
+              <p class="plan__for">Pour recevoir des demandes de devis toutes les semaines.</p>
+            </header>
+            <div class="plan__block">
+              <p class="plan__label">Création</p>
+              <p class="plan__price"><b>1 490</b><span>€<small>une seule fois</small></span></p>
+              <ul class="plan__list">
+                <li>Jusqu'à <b>6 pages</b>, une par prestation</li>
+                <li>Devis détaillé en ligne, avec photos et alerte e-mail</li>
+                <li>Galerie de réalisations</li>
+                <li>Référencement « métier + ville » et données structurées</li>
+                <li>Fiche Google créée et optimisée</li>
+              </ul>
+            </div>
+            <a class="btn btn--mustard btn--block" href="#devis" data-plan="Pro" data-magnetic>Choisir Pro</a>
+          </article>
+
+          <article class="plan" data-reveal data-tilt>
+            <header class="plan__head">
+              <h3>Sur-mesure</h3>
+              <p class="plan__for">Réservation, boutique, projet spécifique.</p>
+            </header>
+            <div class="plan__block">
+              <p class="plan__label">Création · <i>à partir de</i></p>
+              <p class="plan__price"><b>1 990</b><span>€<small>une seule fois</small></span></p>
+              <ul class="plan__list">
+                <li>Pages et fonctions selon votre projet</li>
+                <li>Réservation en ligne, click &amp; collect, paiement</li>
+                <li>Multilingue, animations avancées, connexion à vos outils</li>
+              </ul>
+            </div>
+            <a class="btn btn--line btn--block" href="#devis" data-plan="Sur-mesure">Parlons de votre projet</a>
+          </article>
+        </div>
+
+
+        <h3 class="pricing__step" data-reveal><span>2</span> Votre abonnement, au choix <small>par mois, quel que soit votre site</small></h3>
+        <div class="subs">
+          <article class="sub" data-reveal data-tilt>
+            <h4>Veille</h4>
+            <p class="sub__for">Votre site en ligne, sûr et à jour.</p>
+            <p class="sub__price"><b>39 €</b>/mois</p>
+            <ul class="plan__list plan__list--sm">
+              <li>Hébergement et nom de domaine</li>
+              <li>Maintenance et sécurité</li>
+              <li>2 demandes de modification par mois</li>
+            </ul>
+          </article>
+          <article class="sub sub--featured" data-reveal data-tilt>
+            <span class="plan__flag">Recommandé</span>
+            <h4>Confort</h4>
+            <p class="sub__for">Je m'occupe de tout, vous m'envoyez un message.</p>
+            <p class="sub__price"><b>69 €</b>/mois</p>
+            <ul class="plan__list plan__list--sm">
+              <li>Tout l'abonnement Veille</li>
+              <li><b>Modifications illimitées</b>, sous 5 jours ouvrés</li>
+              <li>Fiche Google suivie : photos, horaires, avis</li>
+              <li>Bilan mensuel : visites et demandes reçues</li>
+            </ul>
+          </article>
+          <article class="sub" data-reveal data-tilt>
+            <h4>Croissance</h4>
+            <p class="sub__for">Pour monter sur Google mois après mois.</p>
+            <p class="sub__price"><small>à partir de</small> <b>119 €</b>/mois</p>
+            <ul class="plan__list plan__list--sm">
+              <li>Tout l'abonnement Confort</li>
+              <li>Modifications <b>prioritaires, sous 48 h</b></li>
+              <li>Une page ou un article en plus chaque mois</li>
+              <li>Bilan et point téléphonique chaque trimestre</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="included" data-reveal>
+          <p class="included__title">Dans tous les abonnements</p>
+          <ul>
+            <li>Hébergement</li><li>Nom de domaine</li><li>HTTPS sécurisé</li><li>Maintenance</li><li>Mentions légales à jour</li>
+          </ul>
+        </div>
+
+        <div class="guarantees">
+          <div class="guarantee" data-reveal>
+            <span class="guarantee__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+            <div><h3>12 mois, pas 4 ans</h3><p>Abonnement d'un an minimum, puis résiliable à tout moment avec un mois de préavis.</p></div>
+          </div>
+          <div class="guarantee" data-reveal>
+            <span class="guarantee__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 7a4 4 0 1 1-3.9 4.9L4 19v-3h3v-3h3l1-1"/></svg></span>
+            <div><h3>C'est à vous</h3><p>Votre site et votre nom de domaine vous appartiennent. Si vous partez, je vous les transfère.</p></div>
+          </div>
+          <div class="guarantee" data-reveal>
+            <span class="guarantee__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1 3 2.3c0 2.7-4 2-4 4.7M12 17h.01"/></svg></span>
+            <div><h3>Prix nets</h3><p>TVA non applicable (article 293 B du CGI) : le prix affiché est le prix payé.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section class="section about" id="apropos" data-theme="dark">
+      <div class="wrap about__grid">
+        <div class="about__visual" data-reveal>
+          <div class="portrait">
+            <!-- Remplacer par : <img src="assets/img/thibault.jpg" alt="Thibault Lambert, fondateur de WEBZLY"> -->
+            <div class="portrait__placeholder">
+              <span class="portrait__initials">TL</span>
+              <span class="portrait__note">Photo à venir</span>
+            </div>
+            <span class="portrait__stamp" aria-hidden="true">
+              <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text><textPath href="#circ">VOTRE VOISIN DU WEB · CÔTE-D'OR · </textPath></text></svg>
+              <b><svg viewBox="0 0 100 130"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg></b>
+            </span>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <p class="eyebrow eyebrow--dark" data-reveal>Qui est derrière WEBZLY</p>
+          <h2 class="h2" data-split>Moi, c'est Thibault. <em>Votre voisin</em> du web.</h2>
+          <div class="about__body" data-reveal>
+            <p>J'ai 23 ans et l'informatique me passionne depuis que je suis gamin. Avec WEBZLY, je mets ce savoir-faire au service des entreprises d'ici : celles qui font un travail de qualité mais que les clients ne trouvent pas en ligne.</p>
+            <p>Votre voisin du web, c'est ça : j'habite à Perrigny-lès-Dijon, je travaille pour des entreprises de chez nous, et je viens vous voir pour parler de votre projet. Pas de plateforme à l'autre bout de la France, pas de standard : vous avez mon numéro, et c'est moi qui fais votre site, du premier appel à la mise à jour de vos photos de chantier.</p>
+          </div>
+          <ul class="values" data-reveal>
+            <li><b>Local</b><span>Je connais vos clients, ce sont mes voisins.</span></li>
+            <li><b>Direct</b><span>Un seul interlocuteur, joignable.</span></li>
+            <li><b>Clair</b><span>Zéro jargon, des prix affichés.</span></li>
+          </ul>
+          <a class="btn btn--mustard" href="tel:+33695506239" data-magnetic>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            M'appeler : 06 95 50 62 39
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="wrap faq__grid">
+        <div class="faq__intro">
+          <p class="eyebrow" data-reveal>Questions fréquentes</p>
+          <h2 class="h2" data-split>Les questions qu'on me pose <em>tout le temps</em>.</h2>
+          <p class="section__lead" data-reveal>Une autre question ? Appelez-moi, ça prend deux minutes.</p>
+        </div>
+        <div class="faq__list" data-reveal>
+          <details class="qa">
+            <summary>J'ai déjà ma fiche Google, pourquoi un site ?<span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><p>La fiche est essentielle, et je m'en occupe aussi. Mais elle est limitée : quelques lignes, quelques photos. Le site montre tous vos services, vos réalisations, et permet de demander un devis à 23 h. Et une fiche reliée à un bon site est plus solide sur Google.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Je n'ai pas le temps de m'en occuper.<span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><p>C'est justement le principe. Vous me donnez 15 minutes au départ, puis vous m'envoyez une photo ou un message quand quelque chose change. Je fais tout le reste.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Est-ce que le site m'appartient ?<span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><p>Oui. Le nom de domaine, vos textes, vos photos et votre fiche Google restent à vous. Si un jour vous arrêtez, je vous transfère le domaine et je vous remets une copie complète du site.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Pourquoi un abonnement en plus du site ?<span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><p>Le site, vous le payez une fois : il est à vous. L'abonnement paie ce qui le fait vivre : l'hébergement, le nom de domaine, la sécurité, les mises à jour et vos modifications. Sans entretien, un site vieillit vite et finit par mal s'afficher ou disparaître de Google.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Je suis engagé combien de temps ?<span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><p>L'abonnement est de 12 mois minimum. Ensuite, il continue de mois en mois et vous pouvez arrêter quand vous voulez, avec un mois de préavis. Pas de contrat de 4 ans.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Mon neveu peut me faire un site, pourquoi vous ?<span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><p>C'est un bon début ! La différence se joue après : les pages qui sortent sur Google dans votre ville, la vitesse sur téléphone, les mentions légales à jour, et quelqu'un de joignable chaque mois quand il faut changer quelque chose.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Vous travaillez seulement à Dijon ?<span class="qa__icon" aria-hidden="true"></span></summary>
+            <div class="qa__a"><p>Je suis basé à Perrigny-lès-Dijon et je travaille surtout avec des entreprises de Côte-d'Or, ce qui permet de se voir en vrai. Pour le reste, tout peut se faire à distance.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEVIS ============ -->
+    <section class="section quote" id="devis" data-theme="dark">
+      <div class="wrap quote__grid">
+        <div class="quote__intro">
+          <p class="eyebrow eyebrow--dark" data-reveal>Devis gratuit</p>
+          <h2 class="h2 h2--xl" data-split>Parlons de <em>votre</em> site.</h2>
+          <p class="section__lead" data-reveal>Trois questions, une minute. Je vous rappelle pour en parler, sans engagement.</p>
+          <ul class="contact-list" data-reveal>
+            <li><span>Téléphone</span><a href="tel:+33695506239">06 95 50 62 39</a></li>
+            <li><span>E-mail</span><a href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a></li>
+            <li><span>Basé à</span><p>Perrigny-lès-Dijon · Côte-d'Or</p></li>
+          </ul>
+        </div>
+
+        <form class="form" action="send.php" method="post" novalidate data-form data-reveal>
+          <div class="form__progress" aria-hidden="true"><span></span></div>
+          <p class="form__count"><span data-step-current>1</span> / 3</p>
+
+          <!-- Étape 1 -->
+          <fieldset class="form__step is-active" data-step="1">
+            <legend>Quel est votre métier ?</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="metier" value="Bâtiment / artisan" required><span>Bâtiment, artisan</span></label>
+              <label class="choice"><input type="radio" name="metier" value="Beauté / coiffure / tatouage"><span>Beauté, coiffure, tatouage</span></label>
+              <label class="choice"><input type="radio" name="metier" value="Restauration / traiteur"><span>Restauration, traiteur</span></label>
+              <label class="choice"><input type="radio" name="metier" value="Automobile"><span>Automobile</span></label>
+              <label class="choice"><input type="radio" name="metier" value="Hébergement / viticulture"><span>Gîte, domaine viticole</span></label>
+              <label class="choice"><input type="radio" name="metier" value="Autre"><span>Autre</span></label>
+            </div>
+            <p class="form__error" data-error="1" role="alert"></p>
+            <div class="form__nav">
+              <span></span>
+              <button type="button" class="btn btn--mustard" data-next>Continuer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </fieldset>
+
+          <!-- Étape 2 -->
+          <fieldset class="form__step" data-step="2">
+            <legend>De quoi avez-vous besoin ?</legend>
+            <div class="choices choices--multi">
+              <label class="choice"><input type="checkbox" name="besoins[]" value="Nouveau site"><span>Un nouveau site</span></label>
+              <label class="choice"><input type="checkbox" name="besoins[]" value="Refonte"><span>Refaire mon site</span></label>
+              <label class="choice"><input type="checkbox" name="besoins[]" value="Fiche Google"><span>Ma fiche Google</span></label>
+              <label class="choice"><input type="checkbox" name="besoins[]" value="Demandes de devis en ligne"><span>Recevoir des devis</span></label>
+              <label class="choice"><input type="checkbox" name="besoins[]" value="Prise de rendez-vous"><span>Prise de rendez-vous</span></label>
+              <label class="choice"><input type="checkbox" name="besoins[]" value="Boutique en ligne"><span>Vendre en ligne</span></label>
+            </div>
+            <p class="form__sub">Formule qui vous intéresse</p>
+            <div class="choices choices--row">
+              <label class="choice choice--sm"><input type="radio" name="formule" value="Essentiel"><span>Essentiel</span></label>
+              <label class="choice choice--sm"><input type="radio" name="formule" value="Pro"><span>Pro</span></label>
+              <label class="choice choice--sm"><input type="radio" name="formule" value="Sur-mesure"><span>Sur-mesure</span></label>
+              <label class="choice choice--sm"><input type="radio" name="formule" value="Je ne sais pas encore" checked><span>Je ne sais pas</span></label>
+            </div>
+            <p class="form__error" data-error="2" role="alert"></p>
+            <div class="form__nav">
+              <button type="button" class="btn btn--ghost" data-prev>Retour</button>
+              <button type="button" class="btn btn--mustard" data-next>Continuer <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </fieldset>
+
+          <!-- Étape 3 -->
+          <fieldset class="form__step" data-step="3">
+            <legend>Comment vous joindre ?</legend>
+            <div class="fields">
+              <label class="field"><span>Nom et prénom *</span><input type="text" name="nom" autocomplete="name" required maxlength="100"></label>
+              <label class="field"><span>Entreprise</span><input type="text" name="entreprise" autocomplete="organization" maxlength="120"></label>
+              <label class="field"><span>Téléphone</span><input type="tel" name="telephone" autocomplete="tel" inputmode="tel" maxlength="30"></label>
+              <label class="field"><span>E-mail</span><input type="email" name="email" autocomplete="email" maxlength="160"></label>
+              <label class="field field--full"><span>Un mot sur votre projet</span><textarea name="message" rows="3" maxlength="2000" placeholder="Ex. : je suis paysagiste à Talant, je n'ai pas encore de site…"></textarea></label>
+              <input type="hidden" name="delai" value="">
+              <label class="hp" aria-hidden="true">Ne pas remplir<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+              <label class="consent field--full"><input type="checkbox" name="consent" value="1" required><span>J'accepte que mes informations soient utilisées pour répondre à ma demande. <a href="confidentialite.html">Confidentialité</a></span></label>
+            </div>
+            <p class="form__hint">* Laissez au moins un téléphone ou un e-mail.</p>
+            <p class="form__error" data-error="3" role="alert"></p>
+            <div class="form__nav">
+              <button type="button" class="btn btn--ghost" data-prev>Retour</button>
+              <button type="submit" class="btn btn--mustard" data-submit>Envoyer ma demande <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </div>
+          </fieldset>
+
+          <!-- Succès -->
+          <div class="form__done" data-done tabindex="-1" id="merci">
+            <svg class="check" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+            <h3>Merci, c'est bien reçu !</h3>
+            <p>Je vous rappelle très vite pour en parler. Si c'est urgent : <a href="tel:+33695506239">06 95 50 62 39</a>.</p>
+          </div>
+          <div class="form__fail" data-fail id="erreur" tabindex="-1">
+            <h3>Oups, l'envoi n'a pas fonctionné.</h3>
+            <p>Pas de panique : <a href="#" data-mailto>envoyez-moi ces informations par e-mail</a> ou appelez le <a href="tel:+33695506239">06 95 50 62 39</a>.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIED DE PAGE ============ -->
+  <footer class="footer" data-theme="dark">
+    <div class="wrap">
+      <div class="footer__cta">
+        <p>Un projet ? Une question ?</p>
+        <a href="tel:+33695506239" class="footer__big" data-magnetic>06 95 50 62 39</a>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <a href="#top" class="logo logo--light" aria-label="WEBZLY, retour en haut"><span class="logo__word">web</span><svg class="logo__z" viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg><span class="logo__word">ly</span></a>
+          <p class="footer__tagline">Sites internet pour artisans, commerçants et indépendants. Votre voisin du web, en Côte-d'Or.</p>
+        </div>
+        <nav aria-label="Liens du site">
+          <p class="footer__h">Le site</p>
+          <a href="#methode">Méthode</a><a href="#realisations">Réalisations</a><a href="#formules">Formules</a><a href="#apropos">Qui suis-je</a><a href="#devis">Devis</a>
+        </nav>
+        <div>
+          <p class="footer__h">Contact</p>
+          <a href="tel:+33695506239">06 95 50 62 39</a>
+          <a href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
+          <p>Perrigny-lès-Dijon (21)</p>
+        </div>
+        <div>
+          <p class="footer__h">Légal</p>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="confidentialite.html">Confidentialité</a>
+        </div>
+      </div>
+      <p class="footer__word" aria-hidden="true">web<svg viewBox="0 0 100 130"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</p>
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> WEBZLY · Thibault Lambert EI · SIREN 130 268 048</p>
+        <a href="#top" class="footer__top">Haut de page ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barre d'action mobile -->
+  <div class="mobilebar" data-mobilebar>
+    <a href="tel:+33695506239" class="mobilebar__call" aria-label="Appeler">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      Appeler
+    </a>
+    <a href="#devis" class="mobilebar__quote">Devis gratuit</a>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="assets/js/main.js?v=20" defer></script>
+  <script type="importmap">
+  { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  } }
+  </script>
+  <!-- Scène 3D du haut de page (intégrée ici pour fonctionner aussi en ouvrant le fichier directement) -->
+  <script type="module">
+/* =========================================================
+   WEBZLY — Hero 3D
+   Un ordinateur portable s'ouvre et les pages d'un site en sortent.
+   Style schématique : encre, crème, moutarde.
+   ========================================================= */
+import * as THREE from 'three';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+
+const canvas = document.querySelector('.hero__canvas');
+const hero = document.querySelector('.hero');
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const COL = {
+  ink: '#12110F', ink2: '#1B1A17', ink3: '#24221E', ink4: '#34312B', ink5: '#2C2A25',
+  cream: '#F2EEE4', paper: '#FBF9F3', sand: '#D9D0BC', sand2: '#E6DFCF',
+  gray: '#A6A092', gray2: '#C9C1B0', mustard: '#E5B80B', mustard2: '#E0B942',
+};
+
+if (canvas && hero) {
+  try { init(); } catch (e) { console.warn('3D indisponible', e); document.documentElement.classList.add('no-webgl'); }
+}
+
+/* ---------- Dessin des textures (canvas 2D) ---------- */
+function rr(ctx, x, y, w, h, r, fill) {
+  ctx.beginPath();
+  ctx.roundRect ? ctx.roundRect(x, y, w, h, r) : roundRectPath(ctx, x, y, w, h, r);
+  if (fill) { ctx.fillStyle = fill; ctx.fill(); }
+}
+function roundRectPath(ctx, x, y, w, h, r) {
+  r = Math.min(r, w / 2, h / 2);
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+function circle(ctx, x, y, r, fill) { ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fillStyle = fill; ctx.fill(); }
+function star(ctx, cx, cy, R, fill) {
+  ctx.beginPath();
+  for (let i = 0; i < 10; i++) {
+    const r = i % 2 ? R * 0.45 : R;
+    const a = -Math.PI / 2 + (i * Math.PI) / 5;
+    ctx[i ? 'lineTo' : 'moveTo'](cx + Math.cos(a) * r, cy + Math.sin(a) * r);
+  }
+  ctx.closePath(); ctx.fillStyle = fill; ctx.fill();
+}
+function makeCanvas(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return [c, c.getContext('2d')]; }
+
+// Barre de navigateur schématique
+function browserBar(ctx, x, y, w, dark) {
+  rr(ctx, x, y, w, 40, 20, dark ? COL.ink4 : COL.sand2);
+  circle(ctx, x + 24, y + 20, 7, COL.mustard);
+  circle(ctx, x + 46, y + 20, 7, dark ? '#6A655B' : COL.gray2);
+  circle(ctx, x + 68, y + 20, 7, dark ? '#6A655B' : COL.gray2);
+}
+
+// Une page de site (carte crème)
+function pageTexture(kind) {
+  const W = 720, H = 900;
+  const [c, ctx] = makeCanvas(W, H);
+  rr(ctx, 0, 0, W, H, 54, COL.paper);
+  browserBar(ctx, 34, 34, W - 68, false);
+  const L = 56;
+  if (kind === 'home') {
+    rr(ctx, L, 120, 420, 44, 14, COL.ink);
+    rr(ctx, L, 176, 300, 44, 14, COL.ink);
+    rr(ctx, L, 244, 360, 20, 10, COL.gray2);
+    rr(ctx, L, 276, 300, 20, 10, COL.gray2);
+    rr(ctx, L, 324, 190, 58, 29, COL.mustard);
+    rr(ctx, L + 206, 324, 150, 58, 29, COL.sand2);
+    rr(ctx, L, 420, W - 2 * L, 280, 30, COL.sand);
+    circle(ctx, W - 160, 500, 40, COL.mustard);
+    ctx.beginPath(); ctx.moveTo(L, 700); ctx.lineTo(L + 200, 560); ctx.lineTo(L + 340, 660); ctx.lineTo(L + 440, 590); ctx.lineTo(W - L, 700); ctx.closePath(); ctx.fillStyle = COL.gray2; ctx.fill();
+    for (let i = 0; i < 3; i++) rr(ctx, L + i * 206, 730, 190, 120, 22, COL.sand2);
+  } else if (kind === 'services') {
+    rr(ctx, L, 120, 360, 44, 14, COL.ink);
+    rr(ctx, L, 186, 460, 20, 10, COL.gray2);
+    for (let i = 0; i < 4; i++) {
+      const y = 250 + i * 150;
+      rr(ctx, L, y, W - 2 * L, 128, 26, COL.sand2);
+      rr(ctx, L + 22, y + 24, 80, 80, 20, i === 1 ? COL.mustard : COL.ink);
+      rr(ctx, L + 126, y + 34, 260, 24, 12, COL.ink3);
+      rr(ctx, L + 126, y + 72, 380, 16, 8, COL.gray2);
+    }
+  } else if (kind === 'gallery') {
+    rr(ctx, L, 120, 380, 44, 14, COL.ink);
+    rr(ctx, L, 186, 300, 20, 10, COL.gray2);
+    const cols = [COL.sand, COL.ink3, COL.mustard, COL.gray2, COL.sand, COL.ink3];
+    for (let i = 0; i < 6; i++) {
+      const x = L + (i % 2) * 312, y = 240 + Math.floor(i / 2) * 210;
+      rr(ctx, x, y, 296, 190, 24, cols[i]);
+    }
+  } else if (kind === 'contact') {
+    rr(ctx, L, 120, 320, 44, 14, COL.ink);
+    rr(ctx, L, 186, 420, 20, 10, COL.gray2);
+    for (let i = 0; i < 3; i++) {
+      rr(ctx, L, 246 + i * 104, 140, 16, 8, COL.gray);
+      ctx.lineWidth = 4; rr(ctx, L, 272 + i * 104, W - 2 * L, 58, 16, '#fff'); ctx.strokeStyle = COL.sand; ctx.stroke();
+    }
+    ctx.lineWidth = 4; rr(ctx, L, 570, W - 2 * L, 150, 16, '#fff'); ctx.strokeStyle = COL.sand; ctx.stroke();
+    rr(ctx, L, 750, W - 2 * L, 70, 35, COL.mustard);
+    rr(ctx, W / 2 - 110, 778, 220, 16, 8, COL.ink);
+  } else if (kind === 'reviews') {
+    rr(ctx, L, 120, 340, 44, 14, COL.ink);
+    for (let k = 0; k < 2; k++) {
+      const y = 210 + k * 330;
+      rr(ctx, L, y, W - 2 * L, 300, 28, COL.sand2);
+      for (let i = 0; i < 5; i++) star(ctx, L + 50 + i * 54, y + 56, 22, COL.mustard);
+      rr(ctx, L + 30, y + 110, 520, 18, 9, COL.ink3);
+      rr(ctx, L + 30, y + 144, 460, 18, 9, COL.gray);
+      rr(ctx, L + 30, y + 178, 400, 18, 9, COL.gray);
+      circle(ctx, L + 58, y + 248, 26, k ? COL.ink : COL.mustard);
+      rr(ctx, L + 100, y + 238, 160, 18, 9, COL.ink3);
+    }
+  }
+  return c;
+}
+
+// Téléphone (comme sur la tuile « site sur-mesure »)
+function phoneTexture() {
+  const W = 420, H = 860;
+  const [c, ctx] = makeCanvas(W, H);
+  rr(ctx, 0, 0, W, H, 70, COL.ink4);
+  rr(ctx, 18, 18, W - 36, H - 36, 56, COL.cream);
+  rr(ctx, W / 2 - 50, 34, 100, 20, 10, COL.ink4);
+  rr(ctx, 52, 96, W - 104, 100, 22, COL.ink);
+  rr(ctx, 52, 226, W - 104, 30, 15, COL.sand);
+  rr(ctx, 52, 276, W - 160, 30, 15, COL.sand);
+  rr(ctx, 52, 340, W - 104, 220, 26, COL.sand2);
+  circle(ctx, W - 120, 400, 26, COL.mustard);
+  rr(ctx, 52, H - 150, 190, 66, 33, COL.mustard);
+  return c;
+}
+
+// Dos d'une page : la pastille moutarde avec l'éclair WEBZLY
+function backTexture(w = 720, h = 900, phone = false) {
+  const [c, ctx] = makeCanvas(w, h);
+  rr(ctx, 0, 0, w, h, phone ? 70 : 54, phone ? COL.ink4 : COL.sand2);
+  ctx.save();
+  ctx.translate(w / 2, h / 2); ctx.rotate(-6 * Math.PI / 180);
+  rr(ctx, -110, -110, 220, 220, 54, COL.mustard);
+  ctx.translate(-62, -80); ctx.scale(1.24, 1.24);
+  ctx.fillStyle = COL.ink; ctx.fill(new Path2D('M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z'));
+  ctx.restore();
+  return c;
+}
+
+// Écran du portable (sombre, comme la capture de référence)
+function screenTexture() {
+  const W = 1400, H = 900;
+  const [c, ctx] = makeCanvas(W, H);
+  rr(ctx, 0, 0, W, H, 26, COL.ink3);
+  browserBar(ctx, 44, 40, W - 88, true);
+  rr(ctx, 44, 130, 640, 50, 16, COL.cream);
+  rr(ctx, 44, 200, 420, 28, 14, COL.gray);
+  rr(ctx, 44, 262, 220, 64, 32, COL.mustard2);
+  rr(ctx, 760, 130, 596, 380, 28, COL.ink4);
+  circle(ctx, 1240, 210, 34, COL.mustard);
+  for (let i = 0; i < 3; i++) rr(ctx, 44 + i * 444, 580, 424, 250, 26, COL.ink4);
+  for (let i = 0; i < 3; i++) { rr(ctx, 80 + i * 444, 620, 160, 22, 11, COL.gray); rr(ctx, 80 + i * 444, 662, 260, 16, 8, '#5B564C'); }
+  return c;
+}
+
+// Clavier schématique
+function keyboardTexture() {
+  const W = 1400, H = 920;
+  const [c, ctx] = makeCanvas(W, H);
+  rr(ctx, 0, 0, W, H, 40, COL.ink5);
+  const rows = 5, cols = 14, kx = 90, ky = 70, kw = (W - 2 * kx) / cols, kh = 78;
+  for (let r = 0; r < rows; r++) {
+    for (let k = 0; k < cols; k++) {
+      let w = kw - 12;
+      if (r === 4 && (k < 4 || k > 9)) w = kw - 12;
+      if (r === 4 && k >= 4 && k <= 9) { if (k === 4) rr(ctx, kx + 4 * kw, ky + r * (kh + 12), kw * 6 - 12, kh, 14, COL.ink3); continue; }
+      rr(ctx, kx + k * kw, ky + r * (kh + 12), w, kh, 14, COL.ink3);
+    }
+  }
+  rr(ctx, W / 2 - 230, 560, 460, 300, 30, COL.ink3);
+  return c;
+}
+
+// Ombre douce (fonctionne aussi sur Safari, sans ctx.filter)
+function shadowTexture(w, h, radius, blur) {
+  const pad = blur * 2;
+  const [c, ctx] = makeCanvas(w + pad * 2, h + pad * 2);
+  ctx.shadowColor = 'rgba(0,0,0,1)';
+  ctx.shadowBlur = blur;
+  ctx.shadowOffsetX = 10000;
+  rr(ctx, pad - 10000, pad, w, h, radius, '#000');
+  return c;
+}
+
+function init() {
+  /* ---------- Rendu ---------- */
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const maxAniso = renderer.capabilities.getMaxAnisotropy();
+
+  const tex = (cnv) => {
+    const t = new THREE.CanvasTexture(cnv);
+    t.colorSpace = THREE.SRGBColorSpace;
+    t.anisotropy = Math.min(8, maxAniso);
+    return t;
+  };
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 300);
+  camera.position.set(0, 0, 52);
+
+  scene.add(new THREE.AmbientLight('#ffffff', 1.6));
+  const key = new THREE.DirectionalLight('#fff4dc', 2.2);
+  key.position.set(-10, 18, 16);
+  scene.add(key);
+  const rim = new THREE.DirectionalLight('#E5B80B', 1.1);
+  rim.position.set(14, -4, -8);
+  scene.add(rim);
+
+  const root = new THREE.Group();   // position / échelle selon l'écran
+  const stage = new THREE.Group();  // rotation (souris, défilement)
+  const inner = new THREE.Group();  // contenu centré
+  scene.add(root); root.add(stage); stage.add(inner);
+  inner.position.set(0, -4.2, 0);
+
+  /* ---------- Ordinateur portable ---------- */
+  const laptop = new THREE.Group();
+  inner.add(laptop);
+  const bodyMat = new THREE.MeshStandardMaterial({ color: COL.ink2, roughness: 0.55, metalness: 0.15 });
+  const lidMat = new THREE.MeshStandardMaterial({ color: COL.ink, roughness: 0.5, metalness: 0.15 });
+
+  const BASE_W = 8, BASE_D = 5.2, BASE_H = 0.32;
+  const base = new THREE.Mesh(new RoundedBoxGeometry(BASE_W, BASE_H, BASE_D, 4, 0.14), bodyMat);
+  laptop.add(base);
+  const kb = new THREE.Mesh(new THREE.PlaneGeometry(BASE_W - 0.5, BASE_D - 0.5), new THREE.MeshBasicMaterial({ map: tex(keyboardTexture()) }));
+  kb.rotation.x = -Math.PI / 2;
+  kb.position.y = BASE_H / 2 + 0.005;
+  laptop.add(kb);
+
+  const hinge = new THREE.Group();
+  hinge.position.set(0, BASE_H / 2, -BASE_D / 2 + 0.12);
+  laptop.add(hinge);
+  const LID_H = 5.2;
+  const lid = new THREE.Mesh(new RoundedBoxGeometry(BASE_W, LID_H, 0.2, 4, 0.1), lidMat);
+  lid.position.set(0, LID_H / 2, -0.1);
+  hinge.add(lid);
+  const screenMat = new THREE.MeshBasicMaterial({ map: tex(screenTexture()), transparent: true, opacity: 0 });
+  const screen = new THREE.Mesh(new THREE.PlaneGeometry(BASE_W - 0.6, LID_H - 0.6), screenMat);
+  screen.position.set(0, LID_H / 2, 0.005);
+  hinge.add(screen);
+
+  // ombre sous le portable
+  const groundShadow = new THREE.Mesh(
+    new THREE.PlaneGeometry(BASE_W * 1.5, BASE_D * 1.5),
+    new THREE.MeshBasicMaterial({ map: tex(shadowTexture(400, 260, 120, 60)), transparent: true, opacity: 0.55, depthWrite: false })
+  );
+  groundShadow.rotation.x = -Math.PI / 2;
+  groundShadow.position.y = -BASE_H / 2 - 0.02;
+  laptop.add(groundShadow);
+
+  // halo moutarde derrière l'écran
+  const [gc, gctx] = makeCanvas(256, 256);
+  const grad = gctx.createRadialGradient(128, 128, 0, 128, 128, 128);
+  grad.addColorStop(0, 'rgba(229,184,11,0.55)'); grad.addColorStop(1, 'rgba(229,184,11,0)');
+  gctx.fillStyle = grad; gctx.fillRect(0, 0, 256, 256);
+  const glow = new THREE.Mesh(new THREE.PlaneGeometry(18, 14), new THREE.MeshBasicMaterial({ map: tex(gc), transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }));
+  glow.position.set(0, 3.2, -1.2);
+  laptop.add(glow);
+
+  const OPEN = -0.24;           // inclinaison de l'écran ouvert
+  const CLOSED = Math.PI / 2;   // écran rabattu
+  hinge.rotation.x = OPEN;
+  laptop.updateMatrixWorld(true);
+  const screenCenter = inner.worldToLocal(screen.getWorldPosition(new THREE.Vector3())); // repère « inner »
+
+  /* ---------- Pages qui sortent de l'écran ---------- */
+  const PW = 3.1, PH = PW * 900 / 720;
+  const defs = [
+    { kind: 'home',     pos: [-4.6, 9.4, 1.2],  rot: [0.05, 0.28, 0.07] },
+    { kind: 'services', pos: [-0.2, 10.6, -0.2], rot: [0.02, 0.0, -0.03] },
+    { kind: 'gallery',  pos: [4.3, 9.6, 0.8],   rot: [0.05, -0.28, -0.08] },
+    { kind: 'contact',  pos: [-7.0, 4.6, 2.2],  rot: [0.0, 0.42, 0.06] },
+    { kind: 'reviews',  pos: [6.9, 4.8, 2.0],   rot: [0.0, -0.42, -0.06] },
+    { kind: 'phone',    pos: [4.4, 1.9, 3.7],   rot: [-0.08, -0.32, -0.16] },
+  ];
+  const shadowCanvas = shadowTexture(360, 450, 30, 34);
+  const shadowTex = tex(shadowCanvas);
+  const pages = defs.map((d, i) => {
+    const phone = d.kind === 'phone';
+    const w = phone ? 1.45 : PW, h = phone ? 1.45 * 860 / 420 : PH;
+    const g = new THREE.Group();
+    const front = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: tex(phone ? phoneTexture() : pageTexture(d.kind)), transparent: true, opacity: 0 }));
+    const back = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: tex(phone ? backTexture(420, 860, true) : backTexture()), transparent: true, opacity: 0 }));
+    back.rotation.y = Math.PI;
+    back.position.z = -0.01;
+    const shadow = new THREE.Mesh(new THREE.PlaneGeometry(w * 1.25, h * 1.2), new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, opacity: 0, depthWrite: false }));
+    shadow.position.set(0.18, -0.28, -0.25);
+    g.add(shadow, back, front);
+    inner.add(g);
+    front.userData.index = i;
+    return {
+      ...d, g, front, back, shadow,
+      target: new THREE.Vector3(...d.pos),
+      targetRot: new THREE.Euler(...d.rot),
+      delay: 1.05 + i * 0.16,
+      hover: 0, flip: 0, flipping: false,
+      seed: i * 1.7,
+    };
+  });
+
+  /* ---------- Mise en page selon l'écran ---------- */
+  const CONTENT_W = 17.5, CONTENT_H = 15.5;
+  const layout = { rotY: -0.32, rotX: 0.2 };
+  function resize() {
+    const w = hero.clientWidth, h = hero.clientHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    const visH = 2 * camera.position.z * Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
+    const visW = visH * camera.aspect;
+    let s, x, y;
+    if (w > 900) {
+      s = Math.min((visW * 0.44) / CONTENT_W, (visH * 0.78) / CONTENT_H);
+      x = visW * 0.255;
+      y = -visH * 0.02;
+      layout.rotY = -0.32; layout.rotX = 0.2;
+    } else {
+      const pxToWorld = visH / h;
+      const boxTop = 64 + 6;
+      const boxH = window.innerHeight * 0.44 - 12;
+      s = Math.min((visW * 0.86) / CONTENT_W, (boxH * pxToWorld) / CONTENT_H);
+      x = 0;
+      y = visH / 2 - (boxTop + boxH / 2) * pxToWorld;
+      layout.rotY = -0.18; layout.rotX = 0.16;
+    }
+    root.position.set(x, y, 0);
+    root.scale.setScalar(s);
+    render();
+  }
+
+  /* ---------- Interaction ---------- */
+  const pointer = new THREE.Vector2();
+  const smooth = new THREE.Vector2();
+  const zero = new THREE.Vector2();
+  const raycaster = new THREE.Raycaster();
+  let pointerActive = false;
+  let hovered = -1;
+
+  const setPointer = (e) => {
+    const r = canvas.getBoundingClientRect();
+    pointer.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+    pointerActive = true;
+  };
+  const pick = () => {
+    raycaster.setFromCamera(pointer, camera);
+    const hit = raycaster.intersectObjects(pages.map((p) => p.front), false)[0];
+    return hit ? hit.object.userData.index : -1;
+  };
+  hero.addEventListener('pointermove', (e) => {
+    setPointer(e);
+    if (e.pointerType === 'mouse') {
+      hovered = pick();
+      hero.classList.toggle('is-page-hover', hovered >= 0);
+    }
+  }, { passive: true });
+  hero.addEventListener('pointerleave', () => { pointerActive = false; hovered = -1; hero.classList.remove('is-page-hover'); });
+  hero.addEventListener('pointerdown', (e) => {
+    if (e.target.closest('a, button')) return;
+    setPointer(e);
+    const i = pick();
+    if (i >= 0 && !pages[i].flipping) { pages[i].flipping = true; pages[i].flip = 0; }
+    wake();
+  });
+
+  /* ---------- Animation ---------- */
+  let introT = reduced ? 99 : -1;
+  let introStart = 0;
+  let running = false;
+  let visible = true;
+  let scrollP = 0;
+
+  const startIntro = () => { if (introT === -1) { introStart = performance.now(); introT = 0; } wake(); };
+  window.addEventListener('w21:intro', startIntro);
+  setTimeout(startIntro, 2600);
+
+  const clamp01 = (v) => (v < 0 ? 0 : v > 1 ? 1 : v);
+  const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+  const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const easeOutBack = (t) => { const c1 = 1.5, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); };
+  const tmp = new THREE.Vector3();
+  const startRot = new THREE.Euler(OPEN, 0, 0);
+
+  function frame() {
+    const now = performance.now();
+    if (introT >= 0 && !reduced) introT = (now - introStart) / 1000;
+    const T = introT < 0 ? 0 : introT;
+    const t = now / 1000;
+    const sp = reduced ? 0 : scrollP;
+
+    smooth.lerp(pointerActive && !reduced ? pointer : zero, 0.06);
+    stage.rotation.y = layout.rotY + smooth.x * 0.3 + sp * 0.5;
+    stage.rotation.x = layout.rotX - smooth.y * 0.14 + sp * 0.25;
+    stage.position.y = sp * 4;
+
+    // 1. le portable s'ouvre
+    const kOpen = introT < 0 ? 0 : reduced ? 1 : easeOutCubic(clamp01((T - 0.1) / 1.0));
+    hinge.rotation.x = CLOSED + (OPEN - CLOSED) * kOpen - sp * 0.5;
+    const kScreen = reduced ? 1 : clamp01((T - 0.7) / 0.5);
+    screenMat.opacity = kScreen;
+    glow.material.opacity = kScreen * (0.55 + Math.sin(t * 1.4) * 0.08) * (1 - sp);
+    laptop.position.y = (1 - kOpen) * -0.6;
+
+    // 2. les pages sortent de l'écran
+    pages.forEach((p, i) => {
+      const k = introT < 0 ? 0 : reduced ? 1 : clamp01((T - p.delay) / 1.15);
+      const e = easeOutCubic(k);
+      const vis = k > 0;
+      p.g.visible = vis;
+      if (!vis) return;
+
+      tmp.lerpVectors(screenCenter, p.target, e);
+      tmp.z += Math.sin(k * Math.PI) * 2.6;                // la page vient vers nous en sortant
+      if (k >= 1 && !reduced) {                             // flottement
+        tmp.y += Math.sin(t * 0.9 + p.seed) * 0.16;
+        tmp.x += Math.cos(t * 0.6 + p.seed) * 0.06;
+      }
+      // éparpillement au défilement
+      if (sp > 0) {
+        tmp.x += (p.target.x) * sp * 0.5;
+        tmp.y += (p.target.y - 4) * sp * 0.4;
+        tmp.z += sp * 5;
+      }
+      // survol
+      p.hover += ((hovered === i ? 1 : 0) - p.hover) * 0.14;
+      tmp.z += p.hover * 1.1;
+      p.g.position.copy(tmp);
+
+      // rotation : depuis l'angle de l'écran vers la pose finale
+      p.g.rotation.set(
+        startRot.x + (p.targetRot.x - startRot.x) * e,
+        p.targetRot.y * e,
+        p.targetRot.z * e + (k >= 1 && !reduced ? Math.sin(t * 0.7 + p.seed) * 0.025 : 0)
+      );
+      p.g.rotation.y -= p.hover * p.targetRot.y * 0.6; // se tourne vers nous au survol
+      if (p.flipping) {
+        p.flip = Math.min(1, p.flip + 0.018);
+        p.g.rotation.y += easeInOut(p.flip) * Math.PI * 2;
+        if (p.flip >= 1) { p.flipping = false; p.flip = 0; }
+      }
+
+      const sc = 0.12 + 0.88 * easeOutBack(Math.min(1, k * 1.05));
+      p.g.scale.setScalar(sc * (1 + p.hover * 0.06));
+      const op = clamp01(k * 3) * (1 - sp * 0.6);
+      p.front.material.opacity = op;
+      p.back.material.opacity = op;
+      p.shadow.material.opacity = op * 0.32;
+    });
+
+    canvas.style.opacity = String(1 - sp * 0.85);
+    render();
+  }
+
+  function render() { renderer.render(scene, camera); }
+
+  // Boucle : ticker GSAP (synchronisé avec le défilement) ou rAF
+  const useTicker = !!(window.gsap && window.gsap.ticker);
+  function loop() { if (!running) return; frame(); if (!useTicker) requestAnimationFrame(loop); }
+  function wake() {
+    if (running || !visible || document.hidden) return;
+    running = true;
+    if (useTicker) window.gsap.ticker.add(loop); else requestAnimationFrame(loop);
+  }
+  function sleep() { running = false; if (useTicker) window.gsap.ticker.remove(loop); }
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([en]) => { visible = en.isIntersecting; visible ? wake() : sleep(); }, { threshold: 0 }).observe(hero);
+  }
+  document.addEventListener('visibilitychange', () => (document.hidden ? sleep() : wake()));
+
+  const onScroll = () => {
+    scrollP = clamp01(window.scrollY / (hero.offsetHeight * 0.9));
+    if (reduced) render();
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  window.addEventListener('resize', resize);
+  resize();
+
+  // Redessine le dos des pages une fois les polices chargées
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      pages.forEach((p) => {
+        const phone = p.kind === 'phone';
+        p.back.material.map = tex(phone ? backTexture(420, 860, true) : backTexture());
+        p.back.material.needsUpdate = true;
+      });
+    });
+  }
+
+  if (window.__w21intro) startIntro();
+  if (reduced) frame(); else wake();
+}
+
+  </script>
+</body>
+</html>
