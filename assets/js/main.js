@@ -142,13 +142,19 @@
   }
 
   /* ---------- Apparitions ---------- */
+  // Une fois apparu, l'élément reçoit .is-revealed et GSAP rend la main sur « transform » :
+  // l'inclinaison au survol peut alors l'utiliser sans faire redescendre la carte.
+  const revealed = (el) => { el.classList.add('is-revealed'); gsap.set(el, { clearProps: 'transform,opacity' }); };
   if (reduced) {
-    gsap.set('[data-reveal]', { opacity: 1, y: 0 });
+    $$('[data-reveal]').forEach(revealed);
   } else {
     ScrollTrigger.batch('[data-reveal]', {
       start: 'top 88%',
       once: true,
-      onEnter: (els) => gsap.to(els, { opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', stagger: 0.08, overwrite: true }),
+      onEnter: (els) => els.forEach((el, i) => gsap.to(el, {
+        opacity: 1, y: 0, duration: 1.1, ease: 'expo.out', delay: i * 0.08, overwrite: true,
+        onComplete: () => revealed(el),
+      })),
     });
   }
 
@@ -474,10 +480,20 @@
     if (!finePointer || reduced) return;
     $$('[data-tilt]').forEach((el) => {
       let raf = null;
-      el.addEventListener('pointermove', (e) => {
+      let box = null; // position de la carte mesurée AVANT inclinaison
+      const ready = () => !(doc.classList.contains('js') && el.hasAttribute('data-reveal') && !el.classList.contains('is-revealed'));
+      const measure = () => {
         const r = el.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
+        box = { left: r.left + window.scrollX, top: r.top + window.scrollY, w: r.width, h: r.height };
+      };
+      el.addEventListener('pointerenter', () => { if (ready()) measure(); });
+      el.addEventListener('pointermove', (e) => {
+        if (!ready()) return;
+        if (!box) measure();
+        // On ne remesure pas pendant l'inclinaison : la carte penchée a une autre
+        // boîte, ce qui changeait l'angle à chaque mouvement et la faisait trembler.
+        const x = (e.clientX + window.scrollX - box.left) / box.w - 0.5;
+        const y = (e.clientY + window.scrollY - box.top) / box.h - 0.5;
         cancelAnimationFrame(raf);
         raf = requestAnimationFrame(() => {
           el.style.transform = `perspective(1100px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateZ(0)`;
@@ -485,9 +501,8 @@
       });
       el.addEventListener('pointerleave', () => {
         cancelAnimationFrame(raf);
-        el.style.transition = 'transform .7s cubic-bezier(.22,1,.36,1), box-shadow .5s';
+        box = null;
         el.style.transform = '';
-        setTimeout(() => (el.style.transition = ''), 700);
       });
     });
   }
@@ -520,16 +535,19 @@
     document.addEventListener('pointerenter', () => cur.classList.remove('is-hidden'));
 
     $$('[data-magnetic]').forEach((el) => {
+      let tx = 0, ty = 0;
       el.addEventListener('pointermove', (e) => {
+        // Centre « au repos » : on retire le décalage déjà appliqué, sinon le bouton
+        // se mesure après avoir bougé, se recale, et tremble sous le curseur.
         const r = el.getBoundingClientRect();
-        const dx = e.clientX - (r.left + r.width / 2);
-        const dy = e.clientY - (r.top + r.height / 2);
-        el.style.transform = `translate(${dx * 0.18}px, ${dy * 0.28}px)`;
+        const dx = e.clientX - (r.left + r.width / 2 - tx);
+        const dy = e.clientY - (r.top + r.height / 2 - ty);
+        tx = dx * 0.18; ty = dy * 0.28;
+        el.style.transform = `translate(${tx}px, ${ty}px)`;
       });
       el.addEventListener('pointerleave', () => {
-        el.style.transition = 'transform .6s cubic-bezier(.22,1,.36,1)';
+        tx = 0; ty = 0;
         el.style.transform = '';
-        setTimeout(() => (el.style.transition = ''), 600);
       });
     });
   }
