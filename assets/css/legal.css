@@ -9,13 +9,14 @@ body{margin:0;background:var(--cream);color:var(--ink);font-family:"Geist",syste
 .back:hover,.back:focus-visible{background:var(--mustard)}
 main{max-width:calc(72ch + 3rem);margin:0 auto;padding:3rem 1.5rem 4rem}
 main>*{max-width:72ch}
-h1,h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;line-height:1.15;letter-spacing:-.02em}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;line-height:1.15;letter-spacing:-.02em}
 h1{font-size:clamp(2rem,6vw,3rem);margin:0 0 .5rem}
 h1::after{content:"";display:block;width:3.5rem;height:5px;background:var(--mustard);border-radius:3px;margin-top:1rem}
 h2{font-size:1.5rem;margin:2.75rem 0 .75rem}
 .updated{color:var(--muted);font-size:.95rem;margin:1.25rem 0 2rem}
-p,ul{margin:0 0 1rem}
-ul{padding-left:1.25rem}
+p,ul,ol{margin:0 0 1rem}
+h3{font-size:1.15rem;margin:1.75rem 0 .5rem}
+ul,ol{padding-left:1.25rem}
 li{margin-bottom:.4rem}
 a{color:var(--ink);text-decoration-color:var(--mustard);text-decoration-thickness:2px;text-underline-offset:3px}
 a:hover{background:var(--mustard)}
