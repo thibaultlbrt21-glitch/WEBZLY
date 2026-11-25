@@ -5,20 +5,20 @@
 :root, [data-theme="braise"] {
   --bg: #0B0B0A; --bg-2: #131312; --bg-3: #1C1C1A;
   --fg: #F2EFE8; --fg-2: #A29D93; --line: rgba(242, 239, 232, .12);
-  --acc: #FF5B23; --acc-fg: #0B0B0A; --acc-soft: rgba(255, 91, 35, .14); --acc-glow: rgba(255, 91, 35, .45);
+  --acc: #FF5B23; --acc-ink: #C73A0A; --acc-fg: #0B0B0A; --acc-soft: rgba(255, 91, 35, .14); --acc-glow: rgba(255, 91, 35, .45);
   --light: #F2EFE8; --light-2: #E8E4DA; --on-light: #0B0B0A; --on-light-2: #5E5950;
 }
-[data-theme="champagne"] {
-  --bg: #0C0C0D; --bg-2: #151516; --bg-3: #1E1E20;
-  --fg: #F4F1EA; --fg-2: #A7A299; --line: rgba(244, 241, 234, .12);
-  --acc: #D9B56C; --acc-fg: #0C0C0D; --acc-soft: rgba(217, 181, 108, .14); --acc-glow: rgba(217, 181, 108, .4);
-  --light: #F4F1EA; --light-2: #EAE5D9; --on-light: #0C0C0D; --on-light-2: #5F5A50;
+[data-theme="moutarde"] {
+  --bg: #0C0B09; --bg-2: #14130F; --bg-3: #1D1B16;
+  --fg: #F4F0E6; --fg-2: #A8A294; --line: rgba(244, 240, 230, .12);
+  --acc: #EBB312; --acc-ink: #8A6500; --acc-fg: #0C0B09; --acc-soft: rgba(235, 179, 18, .15); --acc-glow: rgba(235, 179, 18, .42);
+  --light: #F4F0E6; --light-2: #EAE4D4; --on-light: #0C0B09; --on-light-2: #5F594C;
 }
-[data-theme="nuit"] {
-  --bg: #080C1B; --bg-2: #0F1428; --bg-3: #171D36;
-  --fg: #EEF0FA; --fg-2: #9CA2BA; --line: rgba(238, 240, 250, .12);
-  --acc: #9D8CFF; --acc-fg: #080C1B; --acc-soft: rgba(157, 140, 255, .16); --acc-glow: rgba(157, 140, 255, .5);
-  --light: #EEF0FA; --light-2: #E1E4F3; --on-light: #080C1B; --on-light-2: #545A73;
+[data-theme="fuchsia"] {
+  --bg: #0B0A0C; --bg-2: #141215; --bg-3: #1D1A1F;
+  --fg: #F4EFF2; --fg-2: #A79FA5; --line: rgba(244, 239, 242, .12);
+  --acc: #FF2E88; --acc-ink: #C4005A; --acc-fg: #0B0A0C; --acc-soft: rgba(255, 46, 136, .15); --acc-glow: rgba(255, 46, 136, .5);
+  --light: #F4EFF2; --light-2: #EAE2E7; --on-light: #0B0A0C; --on-light-2: #5E555B;
 }
 :root {
   --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -146,6 +146,8 @@ main { display: block; }
 .sec--2 { background: var(--bg-2); }
 .sec--light { background: var(--light); color: var(--on-light); --fg: var(--on-light); --fg-2: var(--on-light-2); --line: rgba(0, 0, 0, .12); --bg-3: var(--light-2); }
 .sec--light .btn::before { background: var(--on-light); }
+.sec--light .acc, .sec--light .kicker { color: var(--acc-ink); }
+.sec--light .plan--hl .acc { color: var(--acc); }
 .sec--light .btn--ghost:hover { color: var(--light); }
 .head { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 48px; align-items: end; margin-bottom: clamp(56px, 7vw, 112px); }
 .head .lead { justify-self: end; }
@@ -276,7 +278,6 @@ main { display: block; }
 .plan { position: relative; display: flex; flex-direction: column; padding: 36px 32px 32px; border-radius: var(--r-l); background: var(--light-2); }
 .plan--hl { background: var(--bg); color: var(--fg-dark, #F2EFE8); }
 .plan--hl { --fg: #F2EFE8; --fg-2: #A29D93; --line: rgba(255, 255, 255, .14); color: var(--fg); }
-[data-theme="nuit"] .plan--hl { --fg: #EEF0FA; --fg-2: #9CA2BA; }
 .plan__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 26px; }
 .plan .h3 { font-size: 2rem; }
 .plan__for { color: var(--fg-2); margin-top: 8px; min-height: 3.2em; }

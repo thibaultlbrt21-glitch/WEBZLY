@@ -15,7 +15,7 @@
 
   // palette choisie via ?theme= (pour comparer les propositions)
   const theme = new URLSearchParams(location.search).get('theme');
-  if (theme && /^(braise|champagne|nuit)$/.test(theme)) doc.dataset.theme = theme;
+  if (theme && /^(braise|moutarde|fuchsia)$/.test(theme)) doc.dataset.theme = theme;
 
   $$('[data-year]').forEach((el) => (el.textContent = new Date().getFullYear()));
 
