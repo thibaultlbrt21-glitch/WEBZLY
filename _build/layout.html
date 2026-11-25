@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr" data-theme="braise">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="canonical" href="https://webzly.fr/{{path}}">
+  <meta name="theme-color" content="#0B0B0A">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="WEBZLY">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="https://webzly.fr/{{path}}">
+  <meta property="og:image" content="https://webzly.fr/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/site.css?v={{v}}">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.gsap){document.documentElement.classList.remove('js')}},3500);</script>
+{{head}}
+</head>
+<body class="{{bodyclass}}">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="pl" data-pl aria-hidden="true">
+    <div class="pl__top mono"><span>WEBZLY</span><span>Dijon · Côte-d'Or</span></div>
+    <div><p class="pl__count"><span data-pl-n>0</span></p><div class="pl__bar"><span data-pl-bar></span></div></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cur" data-cur aria-hidden="true"><span class="cur__ring"><span data-cur-label></span></span><span class="cur__dot"></span></div>
+
+  <header class="hd" data-header>
+    <div class="hd__in wrap">
+      <a class="logo" href="./" aria-label="WEBZLY, accueil">web<svg class="logo__z" viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="offres.html"{{cur_offres}}>Offres</a>
+        <a href="realisations.html"{{cur_realisations}}>Réalisations</a>
+        <a href="methode.html"{{cur_methode}}>Méthode</a>
+        <a href="a-propos.html"{{cur_apropos}}>À propos</a>
+        <a href="faq.html"{{cur_faq}}>FAQ</a>
+      </nav>
+      <div class="hd__end">
+        <a class="btn btn--acc btn--sm" href="contact.html" data-magnetic>Devis gratuit<span class="btn__ic">{{part:arr}}</span></a>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" data-menu hidden>
+    <nav class="menu__nav wrap" aria-label="Menu mobile">
+      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu__foot wrap">
+      <a class="btn btn--acc" href="contact.html" style="justify-content:space-between">Demander mon devis gratuit<span class="btn__ic">{{part:arr}}</span></a>
+      <a class="link" href="tel:+33695506239" style="justify-self:center">06 95 50 62 39</a>
+    </div>
+  </div>
+
+  <main id="contenu">
+{{content}}
+  </main>
+
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft__grid">
+        <div>
+          <p class="mono ft__h">Un projet ? Appelez-moi</p>
+          <a class="ft__tel" href="tel:+33695506239" data-cursor="Appeler">06 95 50 62 39</a><br>
+          <a class="ft__mail" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
+        </div>
+        <div class="ft__col"><p class="mono ft__h">Pages</p><a href="./">Accueil</a><a href="offres.html">Offres &amp; tarifs</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a></div>
+        <div class="ft__col"><p class="mono ft__h">WEBZLY</p><a href="a-propos.html">À propos</a><a href="faq.html">Questions fréquentes</a><a href="contact.html">Contact</a></div>
+        <div class="ft__col"><p class="mono ft__h">Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
+      </div>
+      <p class="ft__word" aria-hidden="true">web<svg viewBox="0 0 100 130"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</p>
+      <div class="ft__bottom">
+        <p>© <span data-year>2026</span> WEBZLY · Thibault Lambert EI · SIREN 130 268 048 · Prix nets, TVA non applicable (art. 293 B du CGI)</p>
+        <p>Perrigny-lès-Dijon · <a href="#contenu">Haut de page ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="mbar" href="tel:+33695506239" data-mbar><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Appeler</a>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/js/site.js?v={{v}}" defer></script>
+{{scripts}}
+</body>
+</html>

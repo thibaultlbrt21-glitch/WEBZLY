@@ -19,7 +19,7 @@ function respond(bool $ok, int $status, string $error, bool $json): void {
         header('Cache-Control: no-store');
         echo json_encode($ok ? ['ok' => true] : ['ok' => false, 'error' => $error], JSON_UNESCAPED_UNICODE);
     } else {
-        header('Location: index.html#' . ($ok ? 'merci' : 'erreur'), true, 303);
+        header('Location: contact.html#' . ($ok ? 'merci' : 'erreur'), true, 303);
     }
     exit;
 }
