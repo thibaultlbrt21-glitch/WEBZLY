@@ -16,7 +16,7 @@ const light = matchMedia('(max-width: 900px), (pointer: coarse)').matches;
 if (stage && !reduced && ok && !skip) init();
 
 function accent() { return getComputedStyle(document.documentElement).getPropertyValue('--acc').trim() || '#FF5B23'; }
-function bg() { return getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() || '#0B0B0A'; }
+function card() { return getComputedStyle(document.documentElement).getPropertyValue('--bg-3').trim() || '#1C1C1A'; }
 
 function init() {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
@@ -52,7 +52,7 @@ function init() {
 
   // Formes satinées
   const satin = (color, rough = 0.28, metal = 0.1) => new THREE.MeshPhysicalMaterial({ color, roughness: rough, metalness: metal, clearcoat: 0.6, clearcoatRoughness: 0.2 });
-  const dark = satin(0x1a1a1a, 0.35, 0.2);
+  const dark = satin(card(), 0.35, 0.2);
   const chrome = new THREE.MeshPhysicalMaterial({ color: 0xffffff, metalness: 1, roughness: 0.12 });
   const accMat = satin(accent(), 0.3, 0.05);
 
@@ -68,7 +68,7 @@ function init() {
   // la palette peut changer (comparaison des propositions)
   new MutationObserver(() => {
     const c = new THREE.Color(accent());
-    glass.color.copy(c); glass.attenuationColor.copy(c); accMat.color.copy(c); accLight.color.copy(c);
+    glass.color.copy(c); glass.attenuationColor.copy(c); accMat.color.copy(c); accLight.color.copy(c); dark.color.set(card());
   }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
   const resize = () => {
