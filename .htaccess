@@ -1,0 +1,7 @@
+# Page d'erreur du site
+ErrorDocument 404 /404.html
+
+# Fichiers de travail qui n'ont pas à être lus depuis le web
+RedirectMatch 404 ^/\.git
+RedirectMatch 404 ^/_build(/|$)
+RedirectMatch 404 ^/DESIGN\.md$

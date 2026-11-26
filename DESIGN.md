@@ -1,42 +1,50 @@
-# WEBZLY — direction « Encre »
+# WEBZLY — le site
 
-De l'encre orange et or qui bouge dans le noir, derrière de grands titres en capitales.
-Sobre partout ailleurs : beaucoup de noir, du texte ivoire, l'or réservé à ce qui compte.
+Encre, crème et moutarde de Dijon. Sept pages courtes plutôt qu'une longue page.
+Pensé d'abord pour le téléphone, écrit à la première personne, sans effets de mode.
 
-## Couleurs (60 / 30 / 10)
+## Pages
+
+Accueil, Offres et tarifs, Réalisations, Méthode, À propos, Questions, Demande de devis,
+plus les mentions légales, la confidentialité, les CGV et la page 404.
+Les sources sont dans `_build/pages/`, les blocs communs dans `_build/parts/`.
+`python3 _build/build.py` génère les pages à la racine.
+
+## Couleurs
 
 | Rôle | Valeur | Usage |
 |---|---|---|
-| Nuit (60 %) | `#0A0908` | fond de toutes les pages |
-| Nuit relevée | `#141210`, `#1F1B17` | panneaux (formulaire, audit), barre d'appel mobile |
-| Ivoire (30 %) | `#F3EEE6` | texte, boutons principaux, une section claire par page (configurateur, besoins) |
-| Ivoire secondaire | `#B9AFA2` sur nuit, `#5C544A` sur ivoire | textes d'appui |
-| Or (10 %) | `#F2A541` | Z du logo, dernière ligne du titre d'accueil, prix choisi, étapes, bouton « Me faire rappeler », focus |
+| Crème | `#F2EEE4` | fond des pages |
+| Papier | `#FAF8F2` | sections alternées, cartes, formulaire |
+| Encre | `#12110F` | texte, haut de l'accueil, appel de fin de page, pied de page |
+| Gris chaud | `#5E594F` sur crème, `#ABA597` sur encre | textes d'appui |
+| Moutarde | `#E5B80B` | Z du logo, bouton « Demander un devis », bandeau des métiers, poignée de l'avant/après |
 
-L'or n'est jamais utilisé en texte sur fond ivoire (contraste trop faible) : sur ivoire, il sert de fond (pastille « Le plus demandé »).
+La moutarde ne sert jamais à surligner un mot dans un titre.
 
 ## Typographie
 
-- Titres : Bricolage Grotesque, graisse 700, largeur 78 %, en capitales (`.d-xl`, `.d-l`, `.d-m`, `.d-s`).
-- Citation, questions de la FAQ : Bricolage Grotesque 500, largeur normale.
-- Texte : Geist, 17 px, interligne 1,6.
-- Polices hébergées sur le site (`assets/fonts`), licence OFL.
+- Titres : Bricolage Grotesque, graisse 700 à 800, approche serrée.
+- Texte : Geist, 17 px (16,5 px sur téléphone), interligne 1,6.
+- Typographie française appliquée par `build.py` : espaces insécables avant « ? ! ; : »,
+  apostrophes typographiques, numéros de téléphone et prix qui ne se coupent pas.
 
-## L'image : l'encre
+## Mouvement
 
-- `assets/js/encre.js` : shader WebGL (bruit fractal déformé deux fois), attiré par la souris, qui se promène seul sur téléphone.
-- Rendu à demi-résolution, seulement quand il est à l'écran, une image sur deux au téléphone.
-- Sans WebGL ou avec « réduire les animations » : image fixe `assets/img/encre.jpg`.
-- Accueil : plein écran. Autres pages : bandeau assombri vers le bas (`.encre--calm`). Appel final : `.encre--top`.
+- Accueil : un ordinateur s'ouvre et des pages en sortent (`assets/js/hero3d.js`, three.js).
+- Bandeau des métiers qui défile.
+- Avant / après au doigt ou à la souris, maquettes qui défilent au survol.
+- Rien d'autre : pas d'écran de chargement, pas de curseur personnalisé, pas d'apparitions au défilement.
 
-## Composants
+## Téléphone
 
-Boutons en pilule (ivoire, contour, or). Cartes à coins de 10–16 px. Filets de 1 px.
-Configurateur de budget, avant / après, maquettes en grand, recherche dans la FAQ,
-formulaire de devis en 3 étapes, audit gratuit (adresse du site → formulaire prérempli),
-rappel rapide dans l'appel final de chaque page, barre « Appeler / Devis gratuit » sur téléphone.
+- Le haut de l'accueil tient en un écran.
+- Formules et maquettes à faire glisser de côté.
+- Barre « Appeler / Demander un devis » en bas d'écran pendant le défilement.
+- Cibles tactiles d'au moins 44 px, champs en 17 px pour éviter le zoom d'iOS.
 
 ## À éviter
 
-Dégradés décoratifs, halos, flou derrière la navigation, surtitres en petites capitales,
-flèches dans des ronds, curseur personnalisé, compteur de chargement, chiffres inventés, faux avis.
+Mots surlignés dans les titres, petites étiquettes en capitales, mosaïque de cartes,
+gros numéros « 01 02 03 », flèches dans des ronds, halos et dégradés décoratifs,
+logo géant en pied de page, émojis, chiffres ou avis inventés.
