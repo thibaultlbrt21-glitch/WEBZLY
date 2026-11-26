@@ -6,7 +6,7 @@
   <title>WEBZLY · Sites internet pour artisans à Dijon et en Côte-d'Or</title>
   <meta name="description" content="WEBZLY dessine, héberge et entretient le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d'Or. Site sur-mesure dès 890 €, entretien dès 39 € par mois.">
   <link rel="canonical" href="https://webzly.fr/">
-  <meta name="theme-color" content="#ECE5D8">
+  <meta name="theme-color" content="#0A0908">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
@@ -18,19 +18,13 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=b0fbfd7e">
+  <link rel="stylesheet" href="assets/css/site.css?v=14de5b58">
   <script>
-    (function () {
-      var d = document.documentElement, m = null;
-      d.classList.add('js');
-      try { m = localStorage.getItem('wz-mode'); } catch (e) {}
-      if (!m && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) m = 'soir';
-      if (m === 'soir') d.setAttribute('data-mode', 'soir');
-      setTimeout(function () { if (!window.wzReady) d.classList.remove('js'); }, 3000);
-    })();
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.wzReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
   <script type="application/ld+json">
   {
@@ -71,7 +65,7 @@
         <a href="faq.html">Questions</a>
       </nav>
       <div class="hd__end">
-        <button class="mode" type="button" data-mode-toggle aria-pressed="false"><i aria-hidden="true"></i><span data-mode-label>Soir</span></button>
+        <a class="call" href="tel:+33695506239">06 95 50 62 39</a>
         <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
@@ -83,81 +77,79 @@
       <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn" href="contact.html">Demander un devis</a>
-      <button class="btn btn--line" type="button" data-mode-toggle><span data-mode-label>Passer en mode soir</span></button>
+      <a class="btn btn--gold" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
+      <a class="btn btn--line" href="contact.html">Demander un devis</a>
     </div>
   </div>
 
   <main id="contenu">
     <section class="hero">
-      <div class="light" aria-hidden="true">
-        <div class="light__lamp"></div>
-        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
-        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
-      </div>
-
-      <div class="wrap">
-        <h1 class="h-xl hero__title" data-reveal>Des sites qui font sonner votre téléphone.</h1>
-        <div class="hero__foot" data-reveal>
-          <p>Je dessine, héberge et entretiens le site des artisans et commerçants de Côte-d'Or. Un site à vous, à partir de 890&nbsp;€.</p>
-          <div class="links"><a class="btn" href="contact.html">Demander un devis</a><a class="tlink" href="#budget">Estimer mon budget</a></div>
+      <div class="encre" data-encre="0" aria-hidden="true"></div>
+      <div class="wrap hero__in">
+        <h1 class="d-xl hero__t"><span class="line"><span>Des sites qui</span></span> <span class="line"><span>font sonner</span></span> <span class="line r"><span>votre téléphone.</span></span></h1>
+        <div class="hero__foot">
+          <p>Je dessine, héberge et entretiens le site des artisans et commerçants de Côte-d'Or. Un site à vous, à partir de 890&nbsp;€, et quelqu'un pour s'en occuper chaque mois.</p>
+          <div class="links"><a class="btn" href="contact.html">Demander un devis</a><a class="btn btn--line" href="#budget">Estimer mon budget</a></div>
         </div>
+        <div class="hero__base"><span>Perrigny-lès-Dijon, Côte-d'Or</span><span>Sites, fiches Google, entretien</span></div>
       </div>
-    </section>
-
-    <section class="sec sec--paper">
-      <div class="wrap split">
-        <div class="sticky">
-          <h2 class="h-l" data-reveal>Un site, et quelqu'un pour s'en occuper.</h2>
-          <p class="lead" style="margin-top:28px" data-reveal>Vous continuez votre métier. Le site, Google et les mises à jour passent par moi, du premier rendez-vous aux photos de votre dernier chantier.</p>
-        </div>
-        <ul class="srv" role="list">
-          <li data-reveal><h3 class="h-s">Un site dessiné pour vous</h3><p>Pensé pour votre métier et vos clients, lisible sur téléphone, rapide à charger. Pas un modèle repris d'un autre artisan.</p></li>
-          <li data-reveal><h3 class="h-s">Votre fiche Google</h3><p>Créée ou reprise, reliée au site, tenue à jour : horaires, photos, réponses aux avis.</p></li>
-          <li data-reveal><h3 class="h-s">Trouvé dans votre ville</h3><p>Une page par prestation, pour apparaître quand on tape votre métier suivi de votre ville.</p></li>
-          <li data-reveal><h3 class="h-s">Des appels, des devis</h3><p>Le numéro toujours visible, un formulaire de devis avec photos, la prise de rendez-vous si vous en avez besoin.</p></li>
-          <li data-reveal><h3 class="h-s">Entretenu chaque mois</h3><p>Hébergement, sécurité, nom de domaine et vos modifications. Vous m'envoyez un message, je m'en occupe.</p></li>
-        </ul>
-      </div>
+      <p class="hint" aria-hidden="true">Bougez la souris dans l'encre</p>
     </section>
 
     <section class="sec">
       <div class="wrap">
-        <div class="head">
-          <h2 class="h-l" data-reveal>Le même artisan, deux sites.</h2>
-          <p class="lead" data-reveal>Faites glisser le curseur. À gauche, ce que je construis. À droite, ce qu'on voit encore souvent. L'exemple est inventé.</p>
+        <div class="shead">
+          <h2 class="d-l" data-reveal>Un site, et quelqu'un pour s'en occuper.</h2>
+          <p class="lead" data-reveal>Vous continuez votre métier. Le site, Google et les mises à jour passent par moi, du premier rendez-vous aux photos de votre dernier chantier.</p>
         </div>
-        <div class="ba" data-ba data-reveal>
-          <div class="ba__layer">
-            <div class="old">
-              <p class="old__b">*** BIENVENUE SUR LE SITE OFFICIEL DE MARTIN PLOMBERIE ***</p>
-              <p class="old__t">Martin Plomberie</p>
-              <p class="old__n">Accueil Qui-sommes-nous Prestations Galerie(en&nbsp;construction) Contact</p>
-              <div class="old__c"><div class="old__img">photo.jpg</div><div><p>Bienvenu(e) ! Notre entreprise familiale est à votre service depuis de nombreuses années pour tous vos travaux.</p><p style="margin-top:6%">Pour nous contacter merci de remplir le formulaire de la page contact ou nous téléphoner aux heures de bureau.</p></div></div>
-              <p class="old__f">Vous êtes le visiteur n° <span class="old__cnt">004127</span> · Site optimisé pour Internet Explorer 6</p>
-            </div>
-          </div>
-          <div class="ba__layer ba__after">
-            <div class="new">
-              <div class="new__bar"><span class="new__logo">Martin, plombier</span><span class="new__tel">06 12 34 56 78</span></div>
-              <div class="new__body">
-                <div><p class="new__h">Une fuite ? J'arrive dans l'heure.</p><p class="new__p">Dépannage, chauffe-eau, salle de bain à Dijon. Devis gratuit, prix annoncé avant de commencer.</p><div class="new__btns"><span>Appeler</span><span>Demander un devis</span></div><p class="new__stars"><b>★★★★★</b> Avis Google en avant</p></div>
-                <div class="new__img"></div>
-              </div>
-            </div>
-          </div>
-          <span class="ba__lbl ba__lbl--l">Avec WEBZLY</span>
-          <span class="ba__lbl ba__lbl--r">Avant</span>
-          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer le nouveau site, à gauche, et l'ancien, à droite. Exemple inventé." data-ba-range>
-          <div class="ba__line" aria-hidden="true"><span class="ba__knob"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
-        </div>
+        <ul class="idx" role="list">
+          <li data-reveal><h3 class="d-s">Un site dessiné pour vous</h3><p>Pensé pour votre métier et vos clients, lisible sur téléphone, rapide à charger. Pas un modèle repris d'un autre artisan.</p></li>
+          <li data-reveal><h3 class="d-s">Votre fiche Google</h3><p>Créée ou reprise, reliée au site, tenue à jour : horaires, photos, réponses aux avis.</p></li>
+          <li data-reveal><h3 class="d-s">Trouvé dans votre ville</h3><p>Une page par prestation, pour apparaître quand on tape votre métier suivi de votre ville.</p></li>
+          <li data-reveal><h3 class="d-s">Des appels, des devis</h3><p>Le numéro toujours visible, un formulaire de devis avec photos, la prise de rendez-vous si vous en avez besoin.</p></li>
+          <li data-reveal><h3 class="d-s">Entretenu chaque mois</h3><p>Hébergement, sécurité, nom de domaine et vos modifications. Vous m'envoyez un message, je m'en occupe.</p></li>
+        </ul>
       </div>
     </section>
 
-    <section class="sec sec--paper" id="budget">
+    <section class="sec sec--flush">
       <div class="wrap">
-        <div class="head">
-          <h2 class="h-l" data-reveal>Votre budget, avant même de m'appeler.</h2>
+        <div class="shead">
+          <h2 class="d-l" data-reveal>Le même artisan, deux sites.</h2>
+          <p class="lead" data-reveal>Faites glisser le curseur. À gauche, ce que je construis. À droite, ce qu'on voit encore souvent. L'exemple est inventé.</p>
+        </div>
+        <div class="ba" data-ba data-reveal>
+  <div class="ba__layer">
+    <div class="old">
+      <p class="old__b">*** BIENVENUE SUR LE SITE OFFICIEL DE MARTIN PLOMBERIE ***</p>
+      <p class="old__t">Martin Plomberie</p>
+      <p class="old__n">Accueil Qui-sommes-nous Prestations Galerie(en&nbsp;construction) Contact</p>
+      <div class="old__c"><div class="old__img">photo.jpg</div><div><p>Bienvenu(e) ! Notre entreprise familiale est à votre service depuis de nombreuses années pour tous vos travaux.</p><p style="margin-top:6%">Pour nous contacter merci de remplir le formulaire de la page contact ou nous téléphoner aux heures de bureau.</p></div></div>
+      <p class="old__f">Vous êtes le visiteur n° <span class="old__cnt">004127</span> · Site optimisé pour Internet Explorer 6</p>
+    </div>
+  </div>
+  <div class="ba__layer ba__after">
+    <div class="new">
+      <div class="new__bar"><span class="new__logo">Martin, plombier</span><span class="new__tel">06 12 34 56 78</span></div>
+      <div class="new__body">
+        <div><p class="new__h">Une fuite ? J'arrive dans l'heure.</p><p class="new__p">Dépannage, chauffe-eau, salle de bain à Dijon. Devis gratuit, prix annoncé avant de commencer.</p><div class="new__btns"><span>Appeler</span><span>Demander un devis</span></div><p class="new__stars"><b>★★★★★</b> Avis Google en avant</p></div>
+        <div class="new__img"></div>
+      </div>
+    </div>
+  </div>
+  <span class="ba__lbl ba__lbl--l">Avec WEBZLY</span>
+  <span class="ba__lbl ba__lbl--r">Avant</span>
+  <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer le nouveau site, à gauche, et l'ancien, à droite. Exemple inventé." data-ba-range>
+  <div class="ba__line" aria-hidden="true"><span class="ba__knob"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+</div>
+
+      </div>
+    </section>
+
+    <section class="sec ivory" id="budget">
+      <div class="wrap">
+        <div class="shead">
+          <h2 class="d-l" data-reveal>Votre budget, avant même de m'appeler.</h2>
           <p class="lead" data-reveal>Choisissez une création et un entretien. Le détail des paiements se calcule tout seul. Les prix affichés sont ceux que vous payez.</p>
         </div>
         <form class="conf" data-conf action="contact.html" method="get">
@@ -180,7 +172,7 @@
             </fieldset>
           </div>
           <aside class="sum" aria-live="polite">
-            <p class="h-s"><span data-sum-name>Pro + Confort</span></p>
+            <p class="sum__name" data-sum-name>Pro + Confort</p>
             <dl>
               <dt>À la commande (30 %)</dt><dd data-sum-deposit>447 €</dd>
               <dt>À la mise en ligne (70 %)</dt><dd data-sum-balance>1 043 €</dd>
@@ -197,20 +189,20 @@
 
     <section class="sec">
       <div class="wrap">
-        <div class="head">
-          <h2 class="h-l" data-reveal>Déjà en ligne, à Dijon.</h2>
+        <div class="shead">
+          <h2 class="d-l" data-reveal>Déjà en ligne, à Dijon.</h2>
           <p class="lead" data-reveal>TDS Fermetures pose des fenêtres, des volets et des portails. Leur site, leur fiche Google et leurs mises à jour passent par moi. <a class="tlink" href="realisations.html">Toutes les réalisations</a></p>
         </div>
         <div class="case">
           <figure data-reveal>
-            <div class="frame case__media">
+            <div class="case__media">
               <img src="assets/img/work/tds-1.jpg" alt="Fenêtre posée par TDS Fermetures" width="933" height="1400" loading="lazy">
               <div class="case__stack"><img src="assets/img/work/tds-3.jpg" alt="Façade avec volets battants verts" width="1400" height="1050" loading="lazy"><img src="assets/img/work/tds-2.jpg" alt="Menuiserie extérieure" width="1120" height="1400" loading="lazy"></div>
             </div>
             <figcaption class="caption">Visuels du site de TDS Fermetures. Photos : FenêtréA.</figcaption>
           </figure>
           <div data-reveal>
-            <h3 class="h-m">TDS Fermetures</h3>
+            <h3 class="d-m">TDS Fermetures</h3>
             <ul class="facts" role="list">
               <li><span>Métier</span><span>Fenêtres, volets, portails</span></li>
               <li><span>Site</span><span>Une page par prestation</span></li>
@@ -223,24 +215,39 @@
       </div>
     </section>
 
-    <section class="sec sec--paper">
+    <section class="sec sec--flush">
       <div class="wrap">
-        <div class="head">
-          <h2 class="h-l" data-reveal>Quatre étapes, et vous validez chacune.</h2>
+        <div class="shead">
+          <h2 class="d-l" data-reveal>Quatre étapes, et vous validez chacune.</h2>
           <p class="lead" data-reveal>Rien n'est publié sans votre accord. <a class="tlink" href="methode.html">La méthode en détail</a></p>
         </div>
         <ol class="steps" role="list">
-          <li class="step" data-reveal><span class="step__n">i.</span><h3 class="h-s">On se rencontre</h3><p>Quinze minutes au téléphone, ou un café chez vous. Vous me parlez de votre métier et de vos clients.</p></li>
-          <li class="step" data-reveal><span class="step__n">ii.</span><h3 class="h-s">Je dessine</h3><p>Une maquette avec vos prestations et vos photos. Deux séries de retours sont comprises.</p></li>
-          <li class="step" data-reveal><span class="step__n">iii.</span><h3 class="h-s">Mise en ligne</h3><p>Sur votre nom de domaine, relié à votre fiche Google, prêt à recevoir des appels.</p></li>
-          <li class="step" data-reveal><span class="step__n">iv.</span><h3 class="h-s">Je m'en occupe</h3><p>Chaque mois : sécurité, mises à jour, modifications et fiche Google.</p></li>
+          <li class="step" data-reveal><span class="step__n">1</span><h3 class="t-s">On se rencontre</h3><p>Quinze minutes au téléphone, ou un café chez vous. Vous me parlez de votre métier et de vos clients.</p></li>
+          <li class="step" data-reveal><span class="step__n">2</span><h3 class="t-s">Je dessine</h3><p>Une maquette avec vos prestations et vos photos. Deux séries de retours sont comprises.</p></li>
+          <li class="step" data-reveal><span class="step__n">3</span><h3 class="t-s">Mise en ligne</h3><p>Sur votre nom de domaine, relié à votre fiche Google, prêt à recevoir des appels.</p></li>
+          <li class="step" data-reveal><span class="step__n">4</span><h3 class="t-s">Je m'en occupe</h3><p>Chaque mois : sécurité, mises à jour, modifications et fiche Google.</p></li>
         </ol>
+      </div>
+    </section>
+
+    <section class="sec sec--flush">
+      <div class="wrap">
+        <div class="audit" data-reveal>
+          <div>
+            <h2 class="d-m">Vous avez déjà un site&nbsp;?</h2>
+            <p>Donnez-moi son adresse. Je le regarde avant de vous appeler et je vous dis ce que j'y changerais. C'est gratuit, et ça ne vous engage à rien.</p>
+          </div>
+          <form action="contact.html" method="get">
+            <label><span class="sr">Adresse de votre site</span><input name="site" inputmode="url" placeholder="www.votre-site.fr" autocomplete="url" required></label>
+            <button class="btn btn--gold" type="submit">Faire regarder mon site</button>
+          </form>
+        </div>
       </div>
     </section>
 
     <section class="sec">
       <div class="wrap split">
-        <div>
+        <div class="sticky">
           <p class="quote" data-reveal>« Vous avez mon numéro, et c'est moi qui fais votre site. Du premier rendez-vous jusqu'à la photo de votre dernier chantier. »</p>
           <p class="sig" data-reveal>Thibault Lambert, fondateur de WEBZLY · <a class="tlink" href="a-propos.html">Faire connaissance</a></p>
         </div>
@@ -248,23 +255,45 @@
           <details><summary>J'ai déjà une fiche Google, pourquoi un site ?</summary><div class="faq__a"><p>La fiche est utile, et je m'en occupe aussi. Mais elle reste courte : quelques lignes, quelques photos. Le site montre tous vos services et vos réalisations, et permet de demander un devis à 23 h. Une fiche reliée à un bon site est aussi mieux placée sur Google.</p></div></details>
           <details><summary>Est-ce que le site m'appartient ?</summary><div class="faq__a"><p>Oui. Le nom de domaine, vos textes, vos photos et votre fiche Google restent à vous. Si vous arrêtez, je vous transfère le domaine et je vous remets une copie complète du site.</p></div></details>
           <details><summary>Je suis engagé combien de temps ?</summary><div class="faq__a"><p>Douze mois pour l'abonnement. Ensuite, il continue de mois en mois et vous arrêtez quand vous voulez, avec un mois de préavis.</p></div></details>
-          <p style="margin-top:24px"><a class="tlink" href="faq.html">Toutes les questions</a></p>
+          <details><summary>Les prix sont-ils HT ou TTC ?</summary><div class="faq__a"><p>Ils sont nets : TVA non applicable (article 293 B du CGI). Le prix affiché est le prix payé.</p></div></details>
+          <p style="margin-top:28px"><a class="tlink" href="faq.html">Toutes les questions</a></p>
         </div>
       </div>
     </section>
 
-    <section class="final">
-      <div class="light" aria-hidden="true">
-        <div class="light__lamp"></div>
-        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
-        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
-      </div>
-
+    <section class="final" aria-labelledby="final-t">
+      <div class="encre encre--top" data-encre aria-hidden="true"></div>
       <div class="wrap">
-        <h2 class="final__t" data-reveal>Parlons de votre site.</h2>
-        <div class="final__row" data-reveal>
-          <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
-          <div class="links"><a class="btn" href="contact.html">Demander un devis</a><a class="tlink" href="tel:+33695506239">06 95 50 62 39</a></div>
+        <h2 class="d-xl" id="final-t" data-reveal>Parlons de votre site.</h2>
+        <div class="final__grid">
+          <div data-reveal>
+            <a class="final__tel" href="tel:+33695506239">06 95 50 62 39</a>
+            <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
+            <div class="links"><a class="btn" href="contact.html">Demander un devis détaillé</a><a class="tlink" href="mailto:thibault.lbrt21@gmail.com">Écrire un e-mail</a></div>
+          </div>
+          <form class="cb" action="send.php" method="post" novalidate data-cb data-reveal>
+            <div class="cb__main">
+              <p class="cb__t">Être rappelé</p>
+              <p>Votre nom, votre numéro et le moment qui vous arrange. C'est moi qui appelle.</p>
+              <input type="hidden" name="demande" value="Rappel">
+              <div class="fields">
+                <div class="field"><label for="cb-nom">Nom</label><input id="cb-nom" name="nom" autocomplete="name" required></div>
+                <div class="field"><label for="cb-tel">Téléphone</label><input id="cb-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+              </div>
+              <span class="sub" id="cb-l-moment">Le meilleur moment</span>
+              <div class="chips" role="radiogroup" aria-labelledby="cb-l-moment">
+                <label class="chip"><input type="radio" name="rdv_moment" value="Le matin"><span>Le matin</span></label>
+                <label class="chip"><input type="radio" name="rdv_moment" value="Le midi"><span>Le midi</span></label>
+                <label class="chip"><input type="radio" name="rdv_moment" value="En fin de journée"><span>En fin de journée</span></label>
+              </div>
+              <div class="hp-field" aria-hidden="true"><label for="cb-web">Ne pas remplir</label><input id="cb-web" name="website" tabindex="-1" autocomplete="off"></div>
+              <label class="consent"><input type="checkbox" name="consent" value="1" required><span>J'accepte que mon numéro serve seulement à me rappeler. <a href="confidentialite.html">Confidentialité</a></span></label>
+              <p class="form__err" role="alert" data-err></p>
+              <button class="btn btn--gold" type="submit">Me faire rappeler</button>
+            </div>
+            <div class="cb__done" tabindex="-1"><p class="cb__t">C'est noté.</p><p>Je vous rappelle<span data-cb-when></span>. Si c'est urgent : <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>.</p></div>
+            <div class="cb__fail" tabindex="-1"><p class="cb__t">L'envoi n'a pas marché.</p><p>Appelez-moi au <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>, ou écrivez à <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>.</p></div>
+          </form>
         </div>
       </div>
     </section>
@@ -291,10 +320,14 @@
     </div>
   </footer>
 
-  <a class="mbar" href="tel:+33695506239" data-mbar>Appeler le 06 95 50 62 39</a>
+  <div class="mbar" data-mbar>
+    <a class="btn" href="tel:+33695506239">Appeler</a>
+    <a class="btn btn--gold" href="contact.html">Devis gratuit</a>
+  </div>
 
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js?v=b0fbfd7e" defer></script>
+  <script src="assets/js/site.js?v=14de5b58" defer></script>
+  <script src="assets/js/encre.js?v=14de5b58" defer></script>
 
 </body>
 </html>

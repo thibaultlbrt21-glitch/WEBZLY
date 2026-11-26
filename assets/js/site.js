@@ -1,31 +1,15 @@
 /* =========================================================
-   WEBZLY — « Lumière » : interactions
+   WEBZLY — « Encre » : interactions
    ========================================================= */
 (() => {
   'use strict';
   window.wzReady = true;
-  const doc = document.documentElement;
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const eur = (n) => n.toLocaleString('fr-FR').replace(/ | /g, ' ') + ' €';
+  const eur = (n) => n.toLocaleString('fr-FR').replace(/ | /g, ' ') + ' €';
 
   $$('[data-year]').forEach((el) => (el.textContent = new Date().getFullYear()));
-
-  /* ---------- Jour / Soir ---------- */
-  const syncMode = () => {
-    const soir = doc.dataset.mode === 'soir';
-    $$('[data-mode-toggle]').forEach((b) => b.setAttribute('aria-pressed', String(soir)));
-    $$('[data-mode-label]').forEach((l) => (l.textContent = l.closest('.menu') ? (soir ? 'Passer en mode jour' : 'Passer en mode soir') : (soir ? 'Jour' : 'Soir')));
-    const meta = $('meta[name="theme-color"]'); if (meta) meta.content = soir ? '#1D1915' : '#ECE5D8';
-  };
-  $$('[data-mode-toggle]').forEach((b) => b.addEventListener('click', () => {
-    const soir = doc.dataset.mode !== 'soir';
-    if (soir) doc.dataset.mode = 'soir'; else delete doc.dataset.mode;
-    try { localStorage.setItem('wz-mode', soir ? 'soir' : 'jour'); } catch (e) {}
-    syncMode();
-  }));
-  syncMode();
 
   /* ---------- Défilement fluide ---------- */
   let lenis = null;
@@ -41,14 +25,15 @@
     if (lenis) lenis.scrollTo(t, { offset: -90 }); else t.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' });
   }));
 
-  /* ---------- En-tête ---------- */
-  const hd = $('[data-header]'), mbar = $('[data-mbar]');
+  /* ---------- En-tête, barre d'appel, encre du héros ---------- */
+  const hd = $('[data-header]'), mbar = $('[data-mbar]'), heroInk = $('.hero .encre');
   let lastY = 0;
   const onScroll = () => {
     const y = scrollY;
     hd.classList.toggle('is-scrolled', y > 20);
     hd.classList.toggle('is-hidden', y > 400 && y > lastY && !document.body.classList.contains('menu-open'));
     if (mbar) mbar.classList.toggle('is-visible', y > innerHeight * 0.7);
+    if (heroInk && !reduced && y < innerHeight * 1.2) heroInk.style.setProperty('--py', `${Math.round(y * 0.35)}px`);
     lastY = y;
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
@@ -129,14 +114,50 @@
     });
   }
 
+  /* ---------- Envoi commun ---------- */
+  const post = async (form) => {
+    const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) throw new Error(data.error || 'send');
+  };
+  const telOk = (v) => v.replace(/\D/g, '').length >= 9;
+
+  /* ---------- Rappel rapide ---------- */
+  $$('[data-cb]').forEach((cb) => {
+    const err = $('[data-err]', cb);
+    cb.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      $$('.is-invalid', cb).forEach((x) => x.classList.remove('is-invalid'));
+      const fail = (i, m) => { i.classList.add('is-invalid'); err.textContent = m; i.focus(); };
+      if (!cb.nom.value.trim()) return fail(cb.nom, 'Indiquez votre nom.');
+      if (!telOk(cb.telephone.value)) return fail(cb.telephone, 'Indiquez un numéro où vous rappeler.');
+      if (!cb.consent.checked) { err.textContent = 'Cochez la case pour que je puisse vous rappeler.'; cb.consent.focus(); return; }
+      err.textContent = ''; cb.classList.add('is-sending');
+      try {
+        await post(cb);
+        const m = cb.querySelector('input[name="rdv_moment"]:checked');
+        $('[data-cb-when]', cb).textContent = m ? ` ${m.value.toLowerCase()}` : '';
+        cb.classList.add('is-done'); $('.cb__done', cb).focus({ preventScroll: true });
+      } catch (ex) {
+        cb.classList.add('is-failed'); $('.cb__fail', cb).focus({ preventScroll: true });
+      } finally { cb.classList.remove('is-sending'); }
+    });
+  });
+
   /* ---------- Formulaire de devis ---------- */
   const form = $('[data-form]');
   if (form) {
     const steps = $$('[data-step]', form), label = $('[data-step-label]', form), bar = $('[data-bar]', form);
     const prev = $('[data-prev]', form), next = $('[data-next]', form), submit = $('[data-submit]', form), err = $('[data-err]', form);
     let cur = 1;
+    // Ce que le visiteur a déjà choisi ailleurs sur le site (configurateur, audit)
     const params = new URLSearchParams(location.search);
     ['formule', 'abonnement'].forEach((n) => { const v = params.get(n); if (!v) return; const r = $$(`input[name="${n}"]`, form).find((i) => i.value === v); if (r) r.checked = true; });
+    const site = (params.get('site') || '').trim().slice(0, 200);
+    if (site) {
+      form.site_actuel.value = site;
+      const redo = $$('input[name="besoins[]"]', form).find((i) => i.value === 'Refaire mon site'); if (redo) redo.checked = true;
+    }
     const show = (n, focus = true) => {
       cur = n; steps.forEach((s) => (s.hidden = +s.dataset.step !== n));
       label.textContent = `Étape ${n} sur ${steps.length}`; bar.style.width = `${(n / steps.length) * 100}%`;
@@ -150,7 +171,7 @@
       if (!nom) return fail(form.nom, 'Indiquez votre nom.');
       if (!tel && !mail) return fail(form.telephone, 'Laissez un téléphone ou un e-mail pour que je puisse vous répondre.');
       if (mail && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail)) return fail(form.email, 'Cette adresse e-mail semble incomplète.');
-      if (tel && tel.replace(/\D/g, '').length < 9) return fail(form.telephone, 'Ce numéro semble incomplet.');
+      if (tel && !telOk(tel)) return fail(form.telephone, 'Ce numéro semble incomplet.');
       if (!form.consent.checked) { err.textContent = 'Cochez la case pour que je puisse vous répondre.'; form.consent.focus(); return false; }
       return true;
     };
@@ -168,9 +189,7 @@
       if (cur < steps.length || !validate()) return;
       form.classList.add('is-sending');
       try {
-        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || !data.ok) throw new Error(data.error || 'send');
+        await post(form);
         form.classList.add('is-done'); $('[data-done]', form).focus({ preventScroll: true });
       } catch (ex) {
         form.classList.add('is-failed'); $('[data-mailto]', form).href = mailto(); $('[data-fail]', form).focus({ preventScroll: true });

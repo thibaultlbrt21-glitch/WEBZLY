@@ -6,7 +6,6 @@ entre deux lignes « --- », suivi du contenu HTML de la page. Le script l'insè
 _build/layout.html et écrit le résultat à la racine du site.
 
 Raccourcis utilisables dans les pages :
-  {{ill:nom}}   insère l'illustration _build/ill/nom.svg
   {{part:nom}}  insère le bloc _build/parts/nom.html
 
 Usage : python3 _build/build.py   (depuis n'importe quel dossier)
@@ -37,7 +36,6 @@ def front_matter(text):
 def expand(html, depth=0):
     if depth > 4:
         return html
-    html = re.sub(r"\{\{ill:([\w-]+)\}\}", lambda m: read(SRC / "ill" / f"{m.group(1)}.svg").strip(), html)
     html = re.sub(r"\{\{part:([\w-]+)\}\}", lambda m: expand(read(SRC / "parts" / f"{m.group(1)}.html"), depth + 1), html)
     return html
 
@@ -46,8 +44,8 @@ def legal(meta, body):
     return f"""    <section class="legal">
       <div class="wrap legal__in">
         <header class="legal__head" data-reveal>
-          <p class="mono kicker">Informations légales</p>
-          <h1 class="h1">{meta['h1']}</h1>
+          <p class="kicker">Informations légales</p>
+          <h1 class="d-l">{meta['h1']}</h1>
           <p class="legal__updated">{meta['updated']}</p>
         </header>
         <div class="prose" data-reveal>
@@ -59,7 +57,7 @@ def legal(meta, body):
 
 def main():
     layout = expand(read(SRC / "layout.html"))
-    assets = [ROOT / "assets/css/site.css", ROOT / "assets/js/site.js"]
+    assets = [ROOT / "assets/css/site.css", ROOT / "assets/js/site.js", ROOT / "assets/js/encre.js"]
     v = hashlib.sha1(b"".join(p.read_bytes() for p in assets if p.exists())).hexdigest()[:8]
     for page in sorted((SRC / "pages").glob("*.html")):
         meta, body = front_matter(read(page))

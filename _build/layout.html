@@ -6,7 +6,7 @@
   <title>{{title}}</title>
   <meta name="description" content="{{description}}">
   <link rel="canonical" href="https://webzly.fr/{{path}}">
-  <meta name="theme-color" content="#ECE5D8">
+  <meta name="theme-color" content="#0A0908">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
@@ -18,19 +18,13 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/site.css?v={{v}}">
   <script>
-    (function () {
-      var d = document.documentElement, m = null;
-      d.classList.add('js');
-      try { m = localStorage.getItem('wz-mode'); } catch (e) {}
-      if (!m && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) m = 'soir';
-      if (m === 'soir') d.setAttribute('data-mode', 'soir');
-      setTimeout(function () { if (!window.wzReady) d.classList.remove('js'); }, 3000);
-    })();
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.wzReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
 {{head}}
 </head>
@@ -48,7 +42,7 @@
         <a href="faq.html"{{cur_faq}}>Questions</a>
       </nav>
       <div class="hd__end">
-        <button class="mode" type="button" data-mode-toggle aria-pressed="false"><i aria-hidden="true"></i><span data-mode-label>Soir</span></button>
+        <a class="call" href="tel:+33695506239">06 95 50 62 39</a>
         <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
@@ -57,11 +51,11 @@
 
   <div class="menu" id="menu" data-menu hidden>
     <nav class="menu__nav wrap" aria-label="Menu mobile">
-      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a>
+      <a href="./">Accueil</a><a href="offres.html"{{cur_offres}}>Offres</a><a href="realisations.html"{{cur_realisations}}>Réalisations</a><a href="methode.html"{{cur_methode}}>Méthode</a><a href="a-propos.html"{{cur_apropos}}>À propos</a><a href="faq.html"{{cur_faq}}>Questions</a><a href="contact.html">Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn" href="contact.html">Demander un devis</a>
-      <button class="btn btn--line" type="button" data-mode-toggle><span data-mode-label>Passer en mode soir</span></button>
+      <a class="btn btn--gold" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
+      <a class="btn btn--line" href="contact.html">Demander un devis</a>
     </div>
   </div>
 
@@ -88,10 +82,14 @@
     </div>
   </footer>
 
-  <a class="mbar" href="tel:+33695506239" data-mbar>Appeler le 06 95 50 62 39</a>
+  <div class="mbar" data-mbar>
+    <a class="btn" href="tel:+33695506239">Appeler</a>
+    <a class="btn btn--gold" href="contact.html">Devis gratuit</a>
+  </div>
 
   <script src="assets/vendor/lenis.min.js" defer></script>
   <script src="assets/js/site.js?v={{v}}" defer></script>
+  <script src="assets/js/encre.js?v={{v}}" defer></script>
 {{scripts}}
 </body>
 </html>

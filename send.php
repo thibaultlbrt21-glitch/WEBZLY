@@ -58,6 +58,7 @@ if (isset($_SESSION['last_send']) && ($now - (int)$_SESSION['last_send']) < RATE
     respond(false, 429, 'Merci de patienter quelques secondes avant un nouvel envoi.', $wantsJson);
 }
 
+$demande    = line($_POST['demande'] ?? '', 40) === 'Rappel' ? 'Rappel' : 'Devis';
 $nom        = line($_POST['nom'] ?? '', 100);
 $entreprise = line($_POST['entreprise'] ?? '', 120);
 $metier     = line($_POST['metier'] ?? '', 100);
@@ -96,12 +97,11 @@ if (!$consent) {
     respond(false, 422, 'Merci d\'accepter le traitement de vos données.', $wantsJson);
 }
 
-$subject = 'Nouvelle demande de devis — ' . $nom . ($metier !== '' ? ' (' . $metier . ')' : '');
+$subject = ($demande === 'Rappel' ? 'À rappeler — ' : 'Nouvelle demande de devis — ') . $nom . ($metier !== '' ? ' (' . $metier . ')' : '');
 $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
 
 $na = static fn(string $v): string => $v !== '' ? $v : '—';
-$body  = "NOUVELLE DEMANDE DE DEVIS\n";
-$body .= "=========================\n\n";
+$body  = $demande === 'Rappel' ? "DEMANDE DE RAPPEL\n=================\n\n" : "NOUVELLE DEMANDE DE DEVIS\n=========================\n\n";
 $body .= "Nom        : " . $nom . "\n";
 $body .= "Entreprise : " . $na($entreprise) . "\n";
 $body .= "Métier     : " . $na($metier) . "\n";

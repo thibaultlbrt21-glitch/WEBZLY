@@ -6,7 +6,7 @@
   <title>Questions fréquentes · WEBZLY · Site internet pour artisans</title>
   <meta name="description" content="Prix, abonnement, engagement, propriété du site, modifications, Google : les réponses aux questions qu'on pose le plus souvent à WEBZLY.">
   <link rel="canonical" href="https://webzly.fr/faq.html">
-  <meta name="theme-color" content="#ECE5D8">
+  <meta name="theme-color" content="#0A0908">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
@@ -18,19 +18,13 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=b0fbfd7e">
+  <link rel="stylesheet" href="assets/css/site.css?v=14de5b58">
   <script>
-    (function () {
-      var d = document.documentElement, m = null;
-      d.classList.add('js');
-      try { m = localStorage.getItem('wz-mode'); } catch (e) {}
-      if (!m && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) m = 'soir';
-      if (m === 'soir') d.setAttribute('data-mode', 'soir');
-      setTimeout(function () { if (!window.wzReady) d.classList.remove('js'); }, 3000);
-    })();
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.wzReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
 
 </head>
@@ -48,7 +42,7 @@
         <a href="faq.html" aria-current="page">Questions</a>
       </nav>
       <div class="hd__end">
-        <button class="mode" type="button" data-mode-toggle aria-pressed="false"><i aria-hidden="true"></i><span data-mode-label>Soir</span></button>
+        <a class="call" href="tel:+33695506239">06 95 50 62 39</a>
         <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
@@ -57,29 +51,25 @@
 
   <div class="menu" id="menu" data-menu hidden>
     <nav class="menu__nav wrap" aria-label="Menu mobile">
-      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a>
+      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html" aria-current="page">Questions</a><a href="contact.html">Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn" href="contact.html">Demander un devis</a>
-      <button class="btn btn--line" type="button" data-mode-toggle><span data-mode-label>Passer en mode soir</span></button>
+      <a class="btn btn--gold" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
+      <a class="btn btn--line" href="contact.html">Demander un devis</a>
     </div>
   </div>
 
   <main id="contenu">
-    <section class="pagehero">
-      <div class="light" aria-hidden="true">
-        <div class="light__lamp"></div>
-        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
-        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
-      </div>
+    <section class="phero">
+      <div class="encre encre--calm" data-encre aria-hidden="true"></div>
 
-      <div class="wrap">
-        <h1 class="h-xl" style="max-width:12ch" data-reveal>Les questions qu'on me pose souvent.</h1>
+      <div class="wrap phero__in">
+        <h1 class="d-l" data-reveal>Les questions qu'on me pose souvent.</h1>
         <p class="lead" data-reveal>Tapez un mot pour trouver la réponse. Si elle n'y est pas, appelez-moi au <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>.</p>
       </div>
     </section>
 
-    <section class="sec sec--paper">
+    <section class="sec">
       <div class="wrap" style="max-width:980px">
         <label class="search" data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr">Rechercher une question</span><input type="search" placeholder="Prix, engagement, Google…" data-faq-search autocomplete="off"></label>
         <div class="faq" data-faq>
@@ -108,18 +98,39 @@
       </div>
     </section>
 
-    <section class="final">
-      <div class="light" aria-hidden="true">
-        <div class="light__lamp"></div>
-        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
-        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
-      </div>
-
+    <section class="final" aria-labelledby="final-t">
+      <div class="encre encre--top" data-encre aria-hidden="true"></div>
       <div class="wrap">
-        <h2 class="final__t" data-reveal>Parlons de votre site.</h2>
-        <div class="final__row" data-reveal>
-          <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
-          <div class="links"><a class="btn" href="contact.html">Demander un devis</a><a class="tlink" href="tel:+33695506239">06 95 50 62 39</a></div>
+        <h2 class="d-xl" id="final-t" data-reveal>Parlons de votre site.</h2>
+        <div class="final__grid">
+          <div data-reveal>
+            <a class="final__tel" href="tel:+33695506239">06 95 50 62 39</a>
+            <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
+            <div class="links"><a class="btn" href="contact.html">Demander un devis détaillé</a><a class="tlink" href="mailto:thibault.lbrt21@gmail.com">Écrire un e-mail</a></div>
+          </div>
+          <form class="cb" action="send.php" method="post" novalidate data-cb data-reveal>
+            <div class="cb__main">
+              <p class="cb__t">Être rappelé</p>
+              <p>Votre nom, votre numéro et le moment qui vous arrange. C'est moi qui appelle.</p>
+              <input type="hidden" name="demande" value="Rappel">
+              <div class="fields">
+                <div class="field"><label for="cb-nom">Nom</label><input id="cb-nom" name="nom" autocomplete="name" required></div>
+                <div class="field"><label for="cb-tel">Téléphone</label><input id="cb-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+              </div>
+              <span class="sub" id="cb-l-moment">Le meilleur moment</span>
+              <div class="chips" role="radiogroup" aria-labelledby="cb-l-moment">
+                <label class="chip"><input type="radio" name="rdv_moment" value="Le matin"><span>Le matin</span></label>
+                <label class="chip"><input type="radio" name="rdv_moment" value="Le midi"><span>Le midi</span></label>
+                <label class="chip"><input type="radio" name="rdv_moment" value="En fin de journée"><span>En fin de journée</span></label>
+              </div>
+              <div class="hp-field" aria-hidden="true"><label for="cb-web">Ne pas remplir</label><input id="cb-web" name="website" tabindex="-1" autocomplete="off"></div>
+              <label class="consent"><input type="checkbox" name="consent" value="1" required><span>J'accepte que mon numéro serve seulement à me rappeler. <a href="confidentialite.html">Confidentialité</a></span></label>
+              <p class="form__err" role="alert" data-err></p>
+              <button class="btn btn--gold" type="submit">Me faire rappeler</button>
+            </div>
+            <div class="cb__done" tabindex="-1"><p class="cb__t">C'est noté.</p><p>Je vous rappelle<span data-cb-when></span>. Si c'est urgent : <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>.</p></div>
+            <div class="cb__fail" tabindex="-1"><p class="cb__t">L'envoi n'a pas marché.</p><p>Appelez-moi au <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>, ou écrivez à <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>.</p></div>
+          </form>
         </div>
       </div>
     </section>
@@ -146,10 +157,14 @@
     </div>
   </footer>
 
-  <a class="mbar" href="tel:+33695506239" data-mbar>Appeler le 06 95 50 62 39</a>
+  <div class="mbar" data-mbar>
+    <a class="btn" href="tel:+33695506239">Appeler</a>
+    <a class="btn btn--gold" href="contact.html">Devis gratuit</a>
+  </div>
 
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js?v=b0fbfd7e" defer></script>
+  <script src="assets/js/site.js?v=14de5b58" defer></script>
+  <script src="assets/js/encre.js?v=14de5b58" defer></script>
 
 </body>
 </html>

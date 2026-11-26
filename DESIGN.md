@@ -1,48 +1,42 @@
-# WEBZLY — Design system · « Lumière »
+# WEBZLY — direction « Encre »
 
-Un mur crème, la lumière d'une fenêtre qui glisse lentement, l'ombre d'un feuillage.
-Le soir, la fenêtre s'éteint et une lampe éclaire le mur. Sobre, chaud, très lisible.
-L'image du site est dessinée en CSS (aucune photo de banque d'images).
+De l'encre orange et or qui bouge dans le noir, derrière de grands titres en capitales.
+Sobre partout ailleurs : beaucoup de noir, du texte ivoire, l'or réservé à ce qui compte.
 
-Règles : pas de dégradés décoratifs, pas de halos, pas de pilules floues, pas d'étiquettes
-en majuscules, pas de mot de couleur dans les titres, pas d'icônes génériques, pas de
-curseur personnalisé. Textes courts, concrets, sans formules toutes faites.
+## Couleurs (60 / 30 / 10)
 
-## Couleurs (jour / soir)
+| Rôle | Valeur | Usage |
+|---|---|---|
+| Nuit (60 %) | `#0A0908` | fond de toutes les pages |
+| Nuit relevée | `#141210`, `#1F1B17` | panneaux (formulaire, audit), barre d'appel mobile |
+| Ivoire (30 %) | `#F3EEE6` | texte, boutons principaux, une section claire par page (configurateur, besoins) |
+| Ivoire secondaire | `#B9AFA2` sur nuit, `#5C544A` sur ivoire | textes d'appui |
+| Or (10 %) | `#F2A541` | Z du logo, dernière ligne du titre d'accueil, prix choisi, étapes, bouton « Me faire rappeler », focus |
 
-| Token | Jour | Soir | Rôle |
-|---|---|---|---|
-| `--wall` | `#ECE5D8` | `#1D1915` | Fond principal (le mur) |
-| `--paper` | `#F6F1E7` | `#25201A` | Sections alternées, cadres, configurateur |
-| `--ink` | `#2A2520` | `#EEE7DA` | Texte, boutons pleins |
-| `--ink-2` | `#665D53` | `#ABA193` | Texte secondaire |
-| `--line` | encre 16 % | crème 14 % | Filets |
-| `--brass` | `#A97C2F` | `#D3A24E` | Laiton : Z du logo, filets d'accent, focus. Jamais en petit texte. |
-| `--sun` | `#FBF5E8` | `#8A5A22` | Lumière de la fenêtre |
-
-Le mode suit le réglage du téléphone ou de l'ordinateur, puis le bouton Jour/Soir
-(mémorisé dans le navigateur).
+L'or n'est jamais utilisé en texte sur fond ivoire (contraste trop faible) : sur ivoire, il sert de fond (pastille « Le plus demandé »).
 
 ## Typographie
 
-- **Titres** : Instrument Serif, normal, interlettrage −0,02 à −0,03em. Échelle : 9,8 / 5,6 / 3,2 / 1,9 rem.
-- **Texte** : Geist 400/500, 17px (16px sur téléphone), interligne 1,6, 38 à 65 caractères.
-- **Logo** : Bricolage Grotesque 800, Z en laiton.
+- Titres : Bricolage Grotesque, graisse 700, largeur 78 %, en capitales (`.d-xl`, `.d-l`, `.d-m`, `.d-s`).
+- Citation, questions de la FAQ : Bricolage Grotesque 500, largeur normale.
+- Texte : Geist, 17 px, interligne 1,6.
+- Polices hébergées sur le site (`assets/fonts`), licence OFL.
 
-## Mise en page
+## L'image : l'encre
 
-Contenu max 1320px, gouttière 20→60px, sections 96→184px. Colonnes asymétriques (5/7),
-filets fins plutôt que cartes, un seul cadre « passe-partout » pour les photos.
+- `assets/js/encre.js` : shader WebGL (bruit fractal déformé deux fois), attiré par la souris, qui se promène seul sur téléphone.
+- Rendu à demi-résolution, seulement quand il est à l'écran, une image sur deux au téléphone.
+- Sans WebGL ou avec « réduire les animations » : image fixe `assets/img/encre.jpg`.
+- Accueil : plein écran. Autres pages : bandeau assombri vers le bas (`.encre--calm`). Appel final : `.encre--top`.
 
 ## Composants
 
-- **Bouton** : rectangle encre (rayon 2px), 54px ; survol laiton. Variante filet.
-- **Lien** : souligné 1px, décalé de 6px ; survol laiton.
-- **Configurateur** : options en rectangles à filet, récapitulatif collant avec acompte 30 %, solde 70 %, mensuel, total première année.
-- **FAQ** : recherche instantanée + questions dépliables.
-- **Formulaire** : 3 étapes, champs soulignés, choix en rectangles ; rendez-vous (téléphone, visio, café, sur place) et moment souhaité.
+Boutons en pilule (ivoire, contour, or). Cartes à coins de 10–16 px. Filets de 1 px.
+Configurateur de budget, avant / après, maquettes en grand, recherche dans la FAQ,
+formulaire de devis en 3 étapes, audit gratuit (adresse du site → formulaire prérempli),
+rappel rapide dans l'appel final de chaque page, barre « Appeler / Devis gratuit » sur téléphone.
 
-## Mouvement
+## À éviter
 
-Lumière qui dérive (40 s), feuillage qui se balance (7 s), défilement fluide (Lenis),
-apparitions douces (16px + fondu). Tout s'arrête avec `prefers-reduced-motion`.
+Dégradés décoratifs, halos, flou derrière la navigation, surtitres en petites capitales,
+flèches dans des ronds, curseur personnalisé, compteur de chargement, chiffres inventés, faux avis.

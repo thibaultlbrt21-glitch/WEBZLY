@@ -6,7 +6,7 @@
   <title>Conditions générales de vente · WEBZLY</title>
   <meta name="description" content="Conditions générales de vente de WEBZLY : création de sites internet et abonnements pour les professionnels.">
   <link rel="canonical" href="https://webzly.fr/cgv.html">
-  <meta name="theme-color" content="#ECE5D8">
+  <meta name="theme-color" content="#0A0908">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
@@ -18,19 +18,13 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=b0fbfd7e">
+  <link rel="stylesheet" href="assets/css/site.css?v=14de5b58">
   <script>
-    (function () {
-      var d = document.documentElement, m = null;
-      d.classList.add('js');
-      try { m = localStorage.getItem('wz-mode'); } catch (e) {}
-      if (!m && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) m = 'soir';
-      if (m === 'soir') d.setAttribute('data-mode', 'soir');
-      setTimeout(function () { if (!window.wzReady) d.classList.remove('js'); }, 3000);
-    })();
+    document.documentElement.classList.add('js');
+    setTimeout(function () { if (!window.wzReady) document.documentElement.classList.remove('js'); }, 3000);
   </script>
 
 </head>
@@ -48,7 +42,7 @@
         <a href="faq.html">Questions</a>
       </nav>
       <div class="hd__end">
-        <button class="mode" type="button" data-mode-toggle aria-pressed="false"><i aria-hidden="true"></i><span data-mode-label>Soir</span></button>
+        <a class="call" href="tel:+33695506239">06 95 50 62 39</a>
         <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
@@ -60,8 +54,8 @@
       <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn" href="contact.html">Demander un devis</a>
-      <button class="btn btn--line" type="button" data-mode-toggle><span data-mode-label>Passer en mode soir</span></button>
+      <a class="btn btn--gold" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
+      <a class="btn btn--line" href="contact.html">Demander un devis</a>
     </div>
   </div>
 
@@ -69,8 +63,8 @@
     <section class="legal">
       <div class="wrap legal__in">
         <header class="legal__head" data-reveal>
-          <p class="mono kicker">Informations légales</p>
-          <h1 class="h1">Conditions générales de vente</h1>
+          <p class="kicker">Informations légales</p>
+          <h1 class="d-l">Conditions générales de vente</h1>
           <p class="legal__updated">Version en vigueur : novembre 2026</p>
         </header>
         <div class="prose" data-reveal>
@@ -216,10 +210,14 @@ Signature du Client (uniquement en cas de notification sur papier) : ………�
     </div>
   </footer>
 
-  <a class="mbar" href="tel:+33695506239" data-mbar>Appeler le 06 95 50 62 39</a>
+  <div class="mbar" data-mbar>
+    <a class="btn" href="tel:+33695506239">Appeler</a>
+    <a class="btn btn--gold" href="contact.html">Devis gratuit</a>
+  </div>
 
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js?v=b0fbfd7e" defer></script>
+  <script src="assets/js/site.js?v=14de5b58" defer></script>
+  <script src="assets/js/encre.js?v=14de5b58" defer></script>
 
 </body>
 </html>
