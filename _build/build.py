@@ -59,7 +59,7 @@ def legal(meta, body):
 
 def main():
     layout = expand(read(SRC / "layout.html"))
-    assets = [ROOT / "assets/css/site.css", ROOT / "assets/js/site.js", ROOT / "assets/js/hero3d.js"]
+    assets = [ROOT / "assets/css/site.css", ROOT / "assets/js/site.js"]
     v = hashlib.sha1(b"".join(p.read_bytes() for p in assets if p.exists())).hexdigest()[:8]
     for page in sorted((SRC / "pages").glob("*.html")):
         meta, body = front_matter(read(page))

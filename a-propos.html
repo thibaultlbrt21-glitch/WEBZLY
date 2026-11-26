@@ -1,52 +1,55 @@
 <!doctype html>
-<html lang="fr" data-theme="braise">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>À propos · WEBZLY · Thibault, votre voisin du web à Dijon</title>
-  <meta name="description" content="Thibault Lambert, fondateur de WEBZLY, crée les sites internet des artisans et commerçants de Côte-d'Or depuis Perrigny-lès-Dijon. Un seul interlocuteur, joignable.">
+  <title>À propos · WEBZLY · Thibault Lambert, à Perrigny-lès-Dijon</title>
+  <meta name="description" content="Thibault Lambert crée les sites internet des artisans et commerçants de Côte-d'Or depuis Perrigny-lès-Dijon. Un seul interlocuteur, du premier rendez-vous à l'entretien.">
   <link rel="canonical" href="https://webzly.fr/a-propos.html">
-  <meta name="theme-color" content="#0B0B0A">
+  <meta name="theme-color" content="#ECE5D8">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
-  <meta property="og:title" content="À propos · WEBZLY · Thibault, votre voisin du web à Dijon">
-  <meta property="og:description" content="Thibault Lambert, fondateur de WEBZLY, crée les sites internet des artisans et commerçants de Côte-d'Or depuis Perrigny-lès-Dijon. Un seul interlocuteur, joignable.">
+  <meta property="og:title" content="À propos · WEBZLY · Thibault Lambert, à Perrigny-lès-Dijon">
+  <meta property="og:description" content="Thibault Lambert crée les sites internet des artisans et commerçants de Côte-d'Or depuis Perrigny-lès-Dijon. Un seul interlocuteur, du premier rendez-vous à l'entretien.">
   <meta property="og:url" content="https://webzly.fr/a-propos.html">
   <meta property="og:image" content="https://webzly.fr/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=dd1026bd">
-  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.gsap){document.documentElement.classList.remove('js')}},3500);</script>
+  <link rel="stylesheet" href="assets/css/site.css?v=b0fbfd7e">
+  <script>
+    (function () {
+      var d = document.documentElement, m = null;
+      d.classList.add('js');
+      try { m = localStorage.getItem('wz-mode'); } catch (e) {}
+      if (!m && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) m = 'soir';
+      if (m === 'soir') d.setAttribute('data-mode', 'soir');
+      setTimeout(function () { if (!window.wzReady) d.classList.remove('js'); }, 3000);
+    })();
+  </script>
 
 </head>
 <body class="">
   <a class="skip" href="#contenu">Aller au contenu</a>
-  <div class="pl" data-pl aria-hidden="true">
-    <div class="pl__top mono"><span>WEBZLY</span><span>Dijon · Côte-d'Or</span></div>
-    <div><p class="pl__count"><span data-pl-n>0</span></p><div class="pl__bar"><span data-pl-bar></span></div></div>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cur" data-cur aria-hidden="true"><span class="cur__ring"><span data-cur-label></span></span><span class="cur__dot"></span></div>
 
   <header class="hd" data-header>
     <div class="hd__in wrap">
-      <a class="logo" href="./" aria-label="WEBZLY, accueil">web<svg class="logo__z" viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</a>
+      <a class="logo" href="./" aria-label="WEBZLY, accueil">web<svg viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</a>
       <nav class="nav" aria-label="Navigation principale">
         <a href="offres.html">Offres</a>
         <a href="realisations.html">Réalisations</a>
         <a href="methode.html">Méthode</a>
         <a href="a-propos.html" aria-current="page">À propos</a>
-        <a href="faq.html">FAQ</a>
+        <a href="faq.html">Questions</a>
       </nav>
       <div class="hd__end">
-        <a class="btn btn--acc btn--sm" href="contact.html" data-magnetic>Devis gratuit<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
+        <button class="mode" type="button" data-mode-toggle aria-pressed="false"><i aria-hidden="true"></i><span data-mode-label>Soir</span></button>
+        <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
     </div>
@@ -54,106 +57,57 @@
 
   <div class="menu" id="menu" data-menu hidden>
     <nav class="menu__nav wrap" aria-label="Menu mobile">
-      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn btn--acc" href="contact.html" style="justify-content:space-between">Demander mon devis gratuit<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
-      <a class="link" href="tel:+33695506239" style="justify-self:center">06 95 50 62 39</a>
+      <a class="btn" href="contact.html">Demander un devis</a>
+      <button class="btn btn--line" type="button" data-mode-toggle><span data-mode-label>Passer en mode soir</span></button>
     </div>
   </div>
 
   <main id="contenu">
-    <section class="phero">
-      <div class="wrap phero__grid">
-        <div>
-          <p class="mono kicker" data-reveal>À propos</p>
-          <h1 class="h1" data-split>Moi, c'est Thibault. <span class="blue">Votre voisin du web.</span></h1>
-          <p class="lead" data-reveal>Je crée les sites des entreprises d'ici : celles qui font un travail de qualité mais que les clients ne trouvent pas en ligne.</p>
-        </div>
+    <section class="pagehero">
+      <div class="light" aria-hidden="true">
+        <div class="light__lamp"></div>
+        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
+        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
+      </div>
+
+      <div class="wrap">
+        <h1 class="h-xl" style="max-width:10ch" data-reveal>Moi, c'est Thibault.</h1>
+        <p class="lead" data-reveal>Je fais les sites des entreprises d'ici, celles qui travaillent bien mais que les clients ne trouvent pas en ligne.</p>
       </div>
     </section>
 
-    <section class="sec" style="padding-top:0">
-      <div class="wrap about">
-        <div class="portrait" data-reveal>
-          <svg class="ill" data-draw viewBox="0 0 320 400" aria-hidden="true" focusable="false"><circle class="f-w" cx="160" cy="150" r="86"/>
-<path class="f-b" d="M96 214c0-30 28-48 64-48s64 18 64 48v14H96z"/>
-<circle class="s" cx="160" cy="118" r="38"/>
-<path class="s" d="M124 106c10-22 46-30 70-6M146 120h.01M174 120h.01M150 136c6 5 14 5 20 0"/>
-<path class="s" d="M96 228v-14c0-30 28-48 64-48s64 18 64 48v14"/>
-<rect class="f-t" x="40" y="236" width="240" height="14" rx="7"/>
-<path class="s" d="M40 243h240M66 250v110M254 250v110"/>
-<path class="f-g" d="M108 186h104l10 50H98z"/>
-<path class="s" d="M108 186h104l10 50H98zM90 236h140"/>
-<path class="s" d="M150 210l6-8-6-8M170 194l-8 16"/>
-<path class="s" d="M236 236v-18c0-5 4-9 9-9h12v27M257 216c10 0 10 14 0 14"/>
-<path class="s" d="M60 236c-6-20 0-40 16-50 0 18-4 34-16 50zM60 236c0-22 10-38 28-42-4 18-14 32-28 42z"/></svg>
-          <span class="portrait__cap">Thibault Lambert, fondateur de WEBZLY</span>
-        </div>
-        <div class="about__txt" data-reveal>
-          <p>J'ai 23 ans et l'informatique me passionne depuis que je suis gamin. Avec WEBZLY, je mets ce savoir-faire au service des entreprises d'ici : celles qui font un travail de qualité mais que les clients ne trouvent pas en ligne.</p>
-          <p>Votre voisin du web, c'est ça : j'habite à Perrigny-lès-Dijon, je travaille pour des entreprises de chez nous, et je viens vous voir pour parler de votre projet.</p>
-          <p>Pas de plateforme à l'autre bout de la France, pas de standard : vous avez mon numéro, et c'est moi qui fais votre site, du premier appel à la mise à jour de vos photos de chantier.</p>
+    <section class="sec sec--paper">
+      <div class="wrap split">
+        <p class="quote sticky" data-reveal>« Pas de plateforme à l'autre bout de la France. Vous avez mon numéro. »</p>
+        <div data-reveal>
+          <p class="lead" style="max-width:52ch;color:var(--ink)">J'ai 23 ans et l'informatique me passionne depuis que je suis gamin. Avec WEBZLY, je mets ce savoir-faire au service des entreprises de chez nous.</p>
+          <p class="lead" style="max-width:52ch">J'habite à Perrigny-lès-Dijon. Je viens vous voir pour parler de votre projet, et c'est moi qui fais votre site, du premier appel à la mise à jour de vos photos de chantier.</p>
+          <p class="lead" style="max-width:52ch">Je travaille surtout avec des entreprises de Côte-d'Or, ce qui permet de se voir en vrai. Pour le reste, tout peut se faire à distance.</p>
           <div class="values">
-            <div class="value"><b>Local</b><p>Je connais vos clients : ce sont mes voisins.</p></div>
-            <div class="value"><b>Direct</b><p>Un seul interlocuteur, joignable.</p></div>
-            <div class="value"><b>Clair</b><p>Zéro jargon, des prix affichés.</p></div>
+            <div><b>Près de vous</b><p>Vos clients sont mes voisins.</p></div>
+            <div><b>Joignable</b><p>Un seul interlocuteur, le même du début à la fin.</p></div>
+            <div><b>Clair</b><p>Des prix affichés, des mots simples.</p></div>
           </div>
-          <div class="phero__ctas">
-            <a class="btn btn--blue" href="tel:+33695506239">M'appeler : 06 95 50 62 39</a>
-            <a class="btn btn--gray" href="contact.html">M'écrire</a>
-          </div>
+          <div class="links" style="margin-top:40px"><a class="btn" href="contact.html">Me contacter</a><a class="tlink" href="tel:+33695506239">06 95 50 62 39</a></div>
         </div>
       </div>
     </section>
 
-    <section class="sec sec--gray">
-      <div class="wrap zone">
-        <div>
-          <p class="mono kicker" data-reveal>Où je travaille</p>
-          <h2 class="h2" data-split>Dijon et <span class="blue">la Côte-d'Or.</span></h2>
-          <p class="lead" data-reveal style="margin-top:24px">Je suis basé à Perrigny-lès-Dijon et je travaille surtout avec des entreprises de Côte-d'Or, ce qui permet de se voir en vrai. Pour le reste, tout peut se faire à distance.</p>
-        </div>
-        <div class="zone__map" data-reveal><svg class="ill" data-draw viewBox="0 0 420 320" aria-hidden="true" focusable="false"><path class="f-g" d="M40 60c40-30 110-36 170-20s120 6 160 30c26 16 24 60 10 96-16 40-20 80-70 96-60 20-130 10-190-4-50-12-90-40-96-90-4-40-14-80 16-108z"/>
-<circle class="f-t" cx="200" cy="150" r="96"/>
-<path class="s s-th" d="M40 60c40-30 110-36 170-20s120 6 160 30c26 16 24 60 10 96-16 40-20 80-70 96-60 20-130 10-190-4-50-12-90-40-96-90-4-40-14-80 16-108z" stroke-dasharray="3 7"/>
-<path class="s s-th" d="M60 120c60 10 120 40 160 30s90-50 150-40M120 40c10 60 40 110 80 150s50 80 40 120M30 220c70-20 140-40 200-30"/>
-<circle class="f-i" cx="214" cy="120" r="6"/><text class="txt" x="226" y="116">DIJON</text>
-<circle class="f-i" cx="150" cy="232" r="4"/><text class="txt" x="100" y="252">BEAUNE ↓</text>
-<circle class="f-i" cx="292" cy="96" r="4"/><text class="txt" x="300" y="92">MIREBEAU</text>
-<circle class="f-i" cx="120" cy="104" r="4"/><text class="txt" x="64" y="96">SOMBERNON</text>
-<path class="f-b" d="M200 116c-14 0-24 10-24 23 0 17 24 41 24 41s24-24 24-41c0-13-10-23-24-23z" transform="translate(-14 4)"/>
-<path class="s" d="M186 120c-14 0-24 10-24 23 0 17 24 41 24 41s24-24 24-41c0-13-10-23-24-23z"/>
-<circle class="s s-w" cx="186" cy="143" r="7"/>
-<text class="txt" x="94" y="200">PERRIGNY-LÈS-DIJON</text></svg></div>
+    <section class="final">
+      <div class="light" aria-hidden="true">
+        <div class="light__lamp"></div>
+        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
+        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
       </div>
-    </section>
 
-    <section class="sec">
       <div class="wrap">
-        <div class="sec-head">
-          <div>
-            <p class="mono kicker" data-reveal>Ce qui compte pour moi</p>
-            <h2 class="h2" data-split>Un site, c'est un outil. <span class="blue">Pas une vitrine qui prend la poussière.</span></h2>
-          </div>
-        </div>
-        <div class="promises">
-          <div class="promise" data-reveal><h3 class="h4">Des demandes, pas des visites</h3><p>Chaque page est pensée pour qu'on vous appelle ou qu'on vous demande un devis.</p></div>
-          <div class="promise" data-reveal><h3 class="h4">Rapide sur téléphone</h3><p>La plupart de vos clients vous cherchent depuis leur téléphone. Le site est d'abord pensé pour eux.</p></div>
-          <div class="promise" data-reveal><h3 class="h4">Tenu à jour</h3><p>Un site qui vit, avec vos dernières réalisations et vos vrais horaires, inspire confiance.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bigcta">
-      <div class="bigcta__glow" aria-hidden="true"></div>
-      <div class="wrap">
-        <p class="mono kicker" data-reveal>Devis gratuit, sans engagement</p>
-        <h2 class="bigcta__t" data-split>Parlons de <span class="it acc">votre site.</span></h2>
-        <div class="bigcta__row">
-          <p data-reveal>15 minutes au téléphone ou autour d'un café. Vous repartez avec un devis clair, prix et délai compris. Ou appelez directement le <a class="link" href="tel:+33695506239">06 95 50 62 39</a>.</p>
-          <a class="orb" href="contact.html" data-magnetic>Demander<br>mon devis<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <h2 class="final__t" data-reveal>Parlons de votre site.</h2>
+        <div class="final__row" data-reveal>
+          <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
+          <div class="links"><a class="btn" href="contact.html">Demander un devis</a><a class="tlink" href="tel:+33695506239">06 95 50 62 39</a></div>
         </div>
       </div>
     </section>
@@ -165,28 +119,25 @@
     <div class="wrap">
       <div class="ft__grid">
         <div>
-          <p class="mono ft__h">Un projet ? Appelez-moi</p>
-          <a class="ft__tel" href="tel:+33695506239" data-cursor="Appeler">06 95 50 62 39</a><br>
-          <a class="ft__mail" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
+          <a class="ft__tel" href="tel:+33695506239">06 95 50 62 39</a><br>
+          <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
+          <p class="small" style="margin-top:14px">Thibault Lambert, Perrigny-lès-Dijon. Laissez un message, je vous rappelle.</p>
         </div>
-        <div class="ft__col"><p class="mono ft__h">Pages</p><a href="./">Accueil</a><a href="offres.html">Offres &amp; tarifs</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a></div>
-        <div class="ft__col"><p class="mono ft__h">WEBZLY</p><a href="a-propos.html">À propos</a><a href="faq.html">Questions fréquentes</a><a href="contact.html">Contact</a></div>
-        <div class="ft__col"><p class="mono ft__h">Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
+        <div class="ft__col"><p>Le site</p><a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a></div>
+        <div class="ft__col"><p>WEBZLY</p><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a></div>
+        <div class="ft__col"><p>Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
       </div>
-      <p class="ft__word" aria-hidden="true">web<svg viewBox="0 0 100 130"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</p>
       <div class="ft__bottom">
         <p>© <span data-year>2026</span> WEBZLY · Thibault Lambert EI · SIREN 130 268 048 · Prix nets, TVA non applicable (art. 293 B du CGI)</p>
-        <p>Perrigny-lès-Dijon · <a href="#contenu">Haut de page ↑</a></p>
+        <a href="#contenu">Haut de page</a>
       </div>
     </div>
   </footer>
 
-  <a class="mbar" href="tel:+33695506239" data-mbar><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Appeler</a>
+  <a class="mbar" href="tel:+33695506239" data-mbar>Appeler le 06 95 50 62 39</a>
 
-  <script src="assets/vendor/gsap.min.js" defer></script>
-  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js?v=dd1026bd" defer></script>
+  <script src="assets/js/site.js?v=b0fbfd7e" defer></script>
 
 </body>
 </html>

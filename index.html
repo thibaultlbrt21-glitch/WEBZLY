@@ -1,28 +1,37 @@
 <!doctype html>
-<html lang="fr" data-theme="braise">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WEBZLY · Sites internet pour artisans à Dijon et en Côte-d'Or</title>
-  <meta name="description" content="WEBZLY crée, héberge et entretient le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d'Or. Site sur-mesure dès 890 €, puis hébergement et maintenance dès 39 €/mois.">
+  <meta name="description" content="WEBZLY dessine, héberge et entretient le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d'Or. Site sur-mesure dès 890 €, entretien dès 39 € par mois.">
   <link rel="canonical" href="https://webzly.fr/">
-  <meta name="theme-color" content="#0B0B0A">
+  <meta name="theme-color" content="#ECE5D8">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
   <meta property="og:title" content="WEBZLY · Sites internet pour artisans à Dijon et en Côte-d'Or">
-  <meta property="og:description" content="WEBZLY crée, héberge et entretient le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d'Or. Site sur-mesure dès 890 €, puis hébergement et maintenance dès 39 €/mois.">
+  <meta property="og:description" content="WEBZLY dessine, héberge et entretient le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d'Or. Site sur-mesure dès 890 €, entretien dès 39 € par mois.">
   <meta property="og:url" content="https://webzly.fr/">
   <meta property="og:image" content="https://webzly.fr/assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/instrument-serif.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=dd1026bd">
-  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.gsap){document.documentElement.classList.remove('js')}},3500);</script>
+  <link rel="stylesheet" href="assets/css/site.css?v=b0fbfd7e">
+  <script>
+    (function () {
+      var d = document.documentElement, m = null;
+      d.classList.add('js');
+      try { m = localStorage.getItem('wz-mode'); } catch (e) {}
+      if (!m && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) m = 'soir';
+      if (m === 'soir') d.setAttribute('data-mode', 'soir');
+      setTimeout(function () { if (!window.wzReady) d.classList.remove('js'); }, 3000);
+    })();
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,26 +59,20 @@
 </head>
 <body class="home">
   <a class="skip" href="#contenu">Aller au contenu</a>
-  <div class="pl" data-pl aria-hidden="true">
-    <div class="pl__top mono"><span>WEBZLY</span><span>Dijon · Côte-d'Or</span></div>
-    <div><p class="pl__count"><span data-pl-n>0</span></p><div class="pl__bar"><span data-pl-bar></span></div></div>
-  </div>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cur" data-cur aria-hidden="true"><span class="cur__ring"><span data-cur-label></span></span><span class="cur__dot"></span></div>
 
   <header class="hd" data-header>
     <div class="hd__in wrap">
-      <a class="logo" href="./" aria-label="WEBZLY, accueil">web<svg class="logo__z" viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</a>
+      <a class="logo" href="./" aria-label="WEBZLY, accueil">web<svg viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</a>
       <nav class="nav" aria-label="Navigation principale">
         <a href="offres.html">Offres</a>
         <a href="realisations.html">Réalisations</a>
         <a href="methode.html">Méthode</a>
         <a href="a-propos.html">À propos</a>
-        <a href="faq.html">FAQ</a>
+        <a href="faq.html">Questions</a>
       </nav>
       <div class="hd__end">
-        <a class="btn btn--acc btn--sm" href="contact.html" data-magnetic>Devis gratuit<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
+        <button class="mode" type="button" data-mode-toggle aria-pressed="false"><i aria-hidden="true"></i><span data-mode-label>Soir</span></button>
+        <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
     </div>
@@ -77,122 +80,54 @@
 
   <div class="menu" id="menu" data-menu hidden>
     <nav class="menu__nav wrap" aria-label="Menu mobile">
-      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn btn--acc" href="contact.html" style="justify-content:space-between">Demander mon devis gratuit<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
-      <a class="link" href="tel:+33695506239" style="justify-self:center">06 95 50 62 39</a>
+      <a class="btn" href="contact.html">Demander un devis</a>
+      <button class="btn btn--line" type="button" data-mode-toggle><span data-mode-label>Passer en mode soir</span></button>
     </div>
   </div>
 
   <main id="contenu">
-    <!-- Héros -->
     <section class="hero">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="hero__3d" data-hero3d><div class="hero__fb" aria-hidden="true"><svg class="ill" data-draw viewBox="0 0 400 400" aria-hidden="true" focusable="false"><rect class="f-t" x="58" y="64" width="290" height="290" rx="40"/>
-<path class="f-b" d="M150 60 H300 L232 140 H286 L170 250 L198 186 H140 L206 110 H150 Z"/>
-<path class="s" d="M150 60 H300 L232 140 H286 L170 250 L198 186 H140 L206 110 H150 Z"/>
-<path class="s" d="M96 214c1-9 8-15 17-15h62c9 0 16 7 16 16l-2 128c0 9-7 15-16 15h-61c-9 0-16-7-16-16z"/>
-<path class="s" d="M96 234h94M98 330h90M136 220h14"/><circle class="s" cx="143" cy="344" r="4"/>
-<path class="s" d="M128 266c3-7 9-9 13-4l5 6c2 3 1 6-2 8l-4 3c3 7 8 12 15 15l3-4c2-3 6-4 9-2l7 5c4 4 2 10-5 12-17 5-45-20-41-39z"/>
-<path class="s" d="M214 250c9 9 9 27 0 36M228 238c16 16 16 44 0 60"/>
-<path class="s" d="M318 286l4 12 12 4-12 4-4 12-4-12-12-4 12-4zM70 120l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/></svg></div></div>
+      <div class="light" aria-hidden="true">
+        <div class="light__lamp"></div>
+        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
+        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
+      </div>
+
       <div class="wrap">
-        <div class="hero__top mono" data-reveal>
-          <span class="hero__status"><span class="dot"></span>Studio web · Dijon et Côte-d'Or</span>
-          <span>(Défiler)</span>
-        </div>
-        <h1 class="display hero__title" data-split>Des sites qui font <span class="it acc">sonner</span> votre téléphone.</h1>
-        <div class="hero__foot">
-          <div data-reveal>
-            <p class="lead">Je crée, héberge et entretiens le site internet des artisans, commerçants et indépendants d'ici. Vous faites votre métier, je m'occupe d'internet.</p>
-            <ul class="hero__proof" role="list"><li><span class="dot"></span>Site dès 890 €</li><li><span class="dot"></span>Votre site vous appartient</li><li><span class="dot"></span>Un seul interlocuteur</li></ul>
-          </div>
-          <div class="hero__ctas" data-reveal>
-            <a class="btn btn--acc" href="contact.html" data-magnetic>Demander mon devis gratuit<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
-            <a class="btn btn--ghost" href="offres.html" data-magnetic>Voir les offres<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
-          </div>
+        <h1 class="h-xl hero__title" data-reveal>Des sites qui font sonner votre téléphone.</h1>
+        <div class="hero__foot" data-reveal>
+          <p>Je dessine, héberge et entretiens le site des artisans et commerçants de Côte-d'Or. Un site à vous, à partir de 890&nbsp;€.</p>
+          <div class="links"><a class="btn" href="contact.html">Demander un devis</a><a class="tlink" href="#budget">Estimer mon budget</a></div>
         </div>
       </div>
     </section>
 
-    <!-- Métiers -->
-    <div class="marq" aria-label="Je crée des sites pour les plombiers, électriciens, menuisiers, coiffeurs, tatoueurs, garages, traiteurs, paysagistes, gîtes, domaines viticoles, cuisinistes et auto-écoles.">
-      <div class="marq__track" aria-hidden="true">
-        <span>Plombiers</span><span>Électriciens</span><span>Menuisiers</span><span>Coiffeurs</span><span>Tatoueurs</span><span>Garages</span><span>Traiteurs</span><span>Paysagistes</span><span>Gîtes</span><span>Domaines viticoles</span><span>Cuisinistes</span><span>Auto-écoles</span>
-        <span>Plombiers</span><span>Électriciens</span><span>Menuisiers</span><span>Coiffeurs</span><span>Tatoueurs</span><span>Garages</span><span>Traiteurs</span><span>Paysagistes</span><span>Gîtes</span><span>Domaines viticoles</span><span>Cuisinistes</span><span>Auto-écoles</span>
-      </div>
-    </div>
-
-    <!-- Manifeste + chiffres -->
-    <section class="sec">
-      <div class="wrap">
-        <p class="mono kicker" data-reveal>Le constat</p>
-        <p class="manif" data-manif>Avant d'appeler un artisan, on le cherche sur Google. On compare les avis, les photos, le site. Si vous n'y êtes pas, ou mal, <span class="it">l'appel part chez le voisin.</span></p>
-        <div class="stats">
-          <div class="stat" data-reveal><p class="stat__n"><span data-count="87">87</span><small>%</small></p><p>des consommateurs utilisent Google pour juger un commerce local.</p><cite>BrightLocal, Local Consumer Review Survey (données US, 2022)</cite></div>
-          <div class="stat" data-reveal><p class="stat__n"><span data-count="88">88</span><small>%</small></p><p>choisissent plus volontiers un commerce qui répond à tous ses avis.</p><cite>BrightLocal, même enquête (données US)</cite></div>
-          <div class="stat" data-reveal><p class="stat__n"><span data-count="2.5" data-decimals="1">2,5</span><small>s</small></p><p>C'est le temps d'affichage maximum que Google juge « bon ». Mes sites sont pensés pour passer en dessous.</p><cite>web.dev, Core Web Vitals (LCP)</cite></div>
+    <section class="sec sec--paper">
+      <div class="wrap split">
+        <div class="sticky">
+          <h2 class="h-l" data-reveal>Un site, et quelqu'un pour s'en occuper.</h2>
+          <p class="lead" style="margin-top:28px" data-reveal>Vous continuez votre métier. Le site, Google et les mises à jour passent par moi, du premier rendez-vous aux photos de votre dernier chantier.</p>
         </div>
+        <ul class="srv" role="list">
+          <li data-reveal><h3 class="h-s">Un site dessiné pour vous</h3><p>Pensé pour votre métier et vos clients, lisible sur téléphone, rapide à charger. Pas un modèle repris d'un autre artisan.</p></li>
+          <li data-reveal><h3 class="h-s">Votre fiche Google</h3><p>Créée ou reprise, reliée au site, tenue à jour : horaires, photos, réponses aux avis.</p></li>
+          <li data-reveal><h3 class="h-s">Trouvé dans votre ville</h3><p>Une page par prestation, pour apparaître quand on tape votre métier suivi de votre ville.</p></li>
+          <li data-reveal><h3 class="h-s">Des appels, des devis</h3><p>Le numéro toujours visible, un formulaire de devis avec photos, la prise de rendez-vous si vous en avez besoin.</p></li>
+          <li data-reveal><h3 class="h-s">Entretenu chaque mois</h3><p>Hébergement, sécurité, nom de domaine et vos modifications. Vous m'envoyez un message, je m'en occupe.</p></li>
+        </ul>
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="sec sec--2">
-      <div class="wrap">
-        <div class="head">
-          <div><p class="mono kicker" data-reveal>Ce que je fais pour vous</p><h2 class="h1" data-split>Tout pour être trouvé. <span class="it acc">Rien à gérer.</span></h2></div>
-          <p class="lead" data-reveal>Le site, Google, les mises à jour : un seul interlocuteur, du premier appel aux photos de votre dernier chantier.</p>
-        </div>
-        <div class="stack">
-          <article class="scard scard--acc"><span class="scard__n">01</span><div><h3 class="h2">Un site sur-mesure</h3><p>Dessiné pour votre métier et votre clientèle, pas un modèle recopié. Rapide, lisible sur téléphone, à votre image.</p><div class="scard__tags"><span class="tag">Design unique</span><span class="tag">Mobile d'abord</span><span class="tag">Rapide</span></div></div><svg class="ill" data-draw viewBox="0 0 260 190" aria-hidden="true" focusable="false"><rect class="f-t" x="28" y="34" width="210" height="140" rx="16"/>
-<rect class="f-b" x="40" y="74" width="92" height="22" rx="6"/>
-<path class="s" d="M20 38c0-10 8-18 18-18h184c10 0 18 8 18 18v116c0 10-8 18-18 18H38c-10 0-18-8-18-18z"/>
-<path class="s" d="M20 50h220"/><circle class="s" cx="36" cy="35" r="3"/><circle class="s" cx="48" cy="35" r="3"/><circle class="s" cx="60" cy="35" r="3"/>
-<path class="s" d="M40 108h74M40 120h60"/><path class="s" d="M40 138h40c4 0 6 2 6 6s-2 6-6 6H40"/>
-<rect class="s" x="150" y="66" width="72" height="88" rx="10"/><path class="s" d="M158 136l18-22 14 16 9-10 15 16"/><circle class="s" cx="198" cy="88" r="7"/></svg></article>
-          <article class="scard"><span class="scard__n">02</span><div><h3 class="h2">Votre fiche Google</h3><p>Créée ou reprise, reliée au site, tenue à jour : horaires, photos, réponses aux avis.</p><div class="scard__tags"><span class="tag">Google Maps</span><span class="tag">Avis</span><span class="tag">Photos</span></div></div><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><path class="f-g" d="M30 150l60-22 60 22 60-22v54l-60 22-60-22-60 22z"/>
-<path class="f-b" d="M120 22c-26 0-44 19-44 44 0 32 44 76 44 76s44-44 44-76c0-25-18-44-44-44z"/>
-<path class="s" d="M30 150l60-22 60 22 60-22v54l-60 22-60-22-60 22zM90 128v54M150 150v54"/>
-<path class="s" d="M120 22c-26 0-44 19-44 44 0 32 44 76 44 76s44-44 44-76c0-25-18-44-44-44z"/>
-<circle class="s s-w" cx="120" cy="64" r="15"/>
-<path class="s" d="M186 40l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg></article>
-          <article class="scard"><span class="scard__n">03</span><div><h3 class="h2">Référencement local</h3><p>Une page par prestation, pour sortir quand on tape « votre métier + votre ville ».</p><div class="scard__tags"><span class="tag">Métier + ville</span><span class="tag">Données structurées</span></div></div><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><rect class="f-t" x="24" y="30" width="150" height="34" rx="10"/>
-<rect class="f-b" x="30" y="36" width="22" height="22" rx="6"/>
-<path class="s" d="M24 40c0-6 4-10 10-10h130c6 0 10 4 10 10v14c0 6-4 10-10 10H34c-6 0-10-4-10-10z"/>
-<path class="s" d="M62 44h70M62 52h44"/>
-<path class="s" d="M24 84h120M24 94h90M24 120h110M24 130h70M24 156h100M24 166h60"/>
-<circle class="f-w" cx="170" cy="128" r="34"/>
-<circle class="s" cx="170" cy="128" r="34"/><path class="s" d="M195 153l26 26"/>
-<path class="s" d="M156 130l9 9 19-21"/></svg></article>
-          <article class="scard"><span class="scard__n">04</span><div><h3 class="h2">Des demandes, pas des visites</h3><p>Bouton d'appel, devis en ligne avec photos, prise de rendez-vous : chaque page pousse à vous contacter.</p><div class="scard__tags"><span class="tag">Appel en un geste</span><span class="tag">Devis en ligne</span></div></div><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><rect class="f-t" x="30" y="66" width="170" height="112" rx="14"/>
-<circle class="f-b" cx="190" cy="56" r="26"/>
-<path class="s" d="M26 76c0-8 6-14 14-14h146c8 0 14 6 14 14v86c0 8-6 14-14 14H40c-8 0-14-6-14-14z"/>
-<path class="s" d="M30 70l74 54c6 4 14 4 20 0l72-54M30 170l58-48M196 170l-58-48"/>
-<path class="s s-w" d="M180 56h20M190 46v20"/>
-<path class="s" d="M36 34c8-6 18-6 26 0M44 24c4-2 8-2 12 0"/></svg></article>
-          <article class="scard"><span class="scard__n">05</span><div><h3 class="h2">Entretenu chaque mois</h3><p>Hébergement, sécurité, mises à jour et vos modifications : un message suffit, je m'en occupe.</p><div class="scard__tags"><span class="tag">Hébergement</span><span class="tag">HTTPS</span><span class="tag">Modifications</span></div></div><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><path class="f-t" d="M120 18l70 24v52c0 46-32 78-70 92-38-14-70-46-70-92V42z"/>
-<rect class="f-b" x="92" y="92" width="56" height="46" rx="10"/>
-<path class="s" d="M120 18l70 24v52c0 46-32 78-70 92-38-14-70-46-70-92V42z"/>
-<rect class="s" x="92" y="92" width="56" height="46" rx="10"/>
-<path class="s" d="M104 92V78c0-9 7-16 16-16s16 7 16 16v14"/>
-<path class="s s-w" d="M120 108v12"/>
-<path class="s" d="M206 34l3 8 8 3-8 3-3 8-3-8-8-3 8-3zM30 140l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Avant / après -->
     <section class="sec">
       <div class="wrap">
         <div class="head">
-          <div><p class="mono kicker" data-reveal>La différence</p><h2 class="h1" data-split>Glissez. Voyez <span class="it acc">ce qui change.</span></h2></div>
-          <p class="lead" data-reveal>Même artisan, même métier. À gauche, ce que je construis. À droite, le site qu'on voit trop souvent. <span class="muted">(Exemple fictif.)</span></p>
+          <h2 class="h-l" data-reveal>Le même artisan, deux sites.</h2>
+          <p class="lead" data-reveal>Faites glisser le curseur. À gauche, ce que je construis. À droite, ce qu'on voit encore souvent. L'exemple est inventé.</p>
         </div>
-        <div class="ba" data-ba data-reveal data-cursor="Glisser">
+        <div class="ba" data-ba data-reveal>
           <div class="ba__layer">
             <div class="old">
               <p class="old__b">*** BIENVENUE SUR LE SITE OFFICIEL DE MARTIN PLOMBERIE ***</p>
@@ -204,198 +139,132 @@
           </div>
           <div class="ba__layer ba__after">
             <div class="new">
-              <div class="new__bar"><span class="new__logo">Martin<b>.</b></span><span class="new__tel">06 12 34 56 78</span></div>
+              <div class="new__bar"><span class="new__logo">Martin, plombier</span><span class="new__tel">06 12 34 56 78</span></div>
               <div class="new__body">
-                <div><p class="new__k">Plombier · Dijon et Côte-d'Or</p><p class="new__h">Une fuite ? <i>On arrive.</i></p><p class="new__p">Dépannage, chauffe-eau, salle de bain. Devis gratuit, prix annoncés avant travaux.</p><div class="new__btns"><span>Appeler maintenant</span><span>Devis en 2 min</span></div><p class="new__stars"><b>★★★★★</b> Avis Google mis en avant</p></div>
+                <div><p class="new__h">Une fuite ? J'arrive dans l'heure.</p><p class="new__p">Dépannage, chauffe-eau, salle de bain à Dijon. Devis gratuit, prix annoncé avant de commencer.</p><div class="new__btns"><span>Appeler</span><span>Demander un devis</span></div><p class="new__stars"><b>★★★★★</b> Avis Google en avant</p></div>
                 <div class="new__img"></div>
               </div>
             </div>
           </div>
-          <span class="tag ba__lbl ba__lbl--l">Avec WEBZLY</span>
-          <span class="tag ba__lbl ba__lbl--r">Avant</span>
-          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer le nouveau site (à gauche) et l'ancien (à droite), exemple fictif" data-ba-range>
+          <span class="ba__lbl ba__lbl--l">Avec WEBZLY</span>
+          <span class="ba__lbl ba__lbl--r">Avant</span>
+          <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparer le nouveau site, à gauche, et l'ancien, à droite. Exemple inventé." data-ba-range>
           <div class="ba__line" aria-hidden="true"><span class="ba__knob"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
         </div>
-        <ul class="ba-notes" role="list">
-          <li data-reveal><span class="dot"></span><span><b>Le numéro toujours visible</b>Un bouton d'appel en un geste, sur téléphone.</span></li>
-          <li data-reveal><span class="dot"></span><span><b>Le message en une phrase</b>Ce que vous faites, où, et pourquoi vous.</span></li>
-          <li data-reveal><span class="dot"></span><span><b>La confiance d'abord</b>Vos avis Google mis en avant.</span></li>
-        </ul>
       </div>
     </section>
 
-    <!-- Méthode : défilement horizontal -->
-    <section class="sec sec--2 hs" data-hs>
+    <section class="sec sec--paper" id="budget">
       <div class="wrap">
         <div class="head">
-          <div><p class="mono kicker" data-reveal>La méthode</p><h2 class="h1" data-split>Quatre étapes. <span class="it acc">Zéro prise de tête.</span></h2></div>
-          <p class="lead" data-reveal>Vous me donnez 15 minutes au départ. Rien n'est publié sans votre accord. <a class="link" href="methode.html">La méthode en détail</a></p>
+          <h2 class="h-l" data-reveal>Votre budget, avant même de m'appeler.</h2>
+          <p class="lead" data-reveal>Choisissez une création et un entretien. Le détail des paiements se calcule tout seul. Les prix affichés sont ceux que vous payez.</p>
         </div>
-      </div>
-      <div class="hs__track" data-hs-track>
-        <article class="panel"><span class="panel__n">01</span><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><ellipse class="f-g" cx="120" cy="170" rx="96" ry="12"/>
-<path class="f-b" d="M44 96h64l-6 62c-1 7-6 12-13 12H63c-7 0-12-5-13-12z"/>
-<path class="f-t" d="M132 96h64l-6 62c-1 7-6 12-13 12h-26c-7 0-12-5-13-12z"/>
-<path class="s" d="M44 96h64l-6 62c-1 7-6 12-13 12H63c-7 0-12-5-13-12zM108 110c14 0 18 20 2 24"/>
-<path class="s" d="M132 96h64l-6 62c-1 7-6 12-13 12h-26c-7 0-12-5-13-12zM196 110c14 0 18 20 2 24"/>
-<path class="s" d="M66 80c-6-8 6-14 0-24M84 80c-6-8 6-14 0-24M154 80c-6-8 6-14 0-24M172 80c-6-8 6-14 0-24"/>
-<path class="s" d="M112 30c4-8 12-8 16 0 4 8-8 14-8 14s-12-6-8-14z"/></svg><h3 class="h3">On se parle 15 minutes</h3><p>Au téléphone ou autour d'un café, chez vous. Vous me parlez de votre métier et de vos clients. Pas de jargon.</p><span class="tag">Gratuit, sans engagement</span></article>
-        <article class="panel"><span class="panel__n">02</span><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><rect class="f-t" x="24" y="30" width="150" height="150" rx="14"/>
-<rect class="f-b" x="40" y="48" width="70" height="40" rx="6"/>
-<rect class="s" x="24" y="30" width="150" height="150" rx="14"/>
-<path class="s" d="M40 104h110M40 116h80M40 140h50v24H40zM104 140h50v24h-50z" />
-<path class="s" d="M196 36l20 20-86 86-28 8 8-28z"/><path class="s" d="M186 46l20 20M118 126l12 12"/>
-<path class="s" d="M128 60c10-4 18 2 26-2"/></svg><h3 class="h3">Je dessine votre site</h3><p>Une maquette à votre image, avec vos prestations et vos photos. Vous validez, on ajuste.</p><span class="tag">Vous validez tout</span></article>
-        <article class="panel"><span class="panel__n">03</span><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><circle class="f-t" cx="120" cy="96" r="80"/>
-<path class="f-b" d="M120 26c26 18 36 48 30 84h-60c-6-36 4-66 30-84z"/>
-<path class="s" d="M120 26c26 18 36 48 30 84h-60c-6-36 4-66 30-84z"/>
-<circle class="s s-w" cx="120" cy="66" r="11"/>
-<path class="s" d="M90 92l-22 18 4 22 20-14M150 92l22 18-4 22-20-14"/>
-<path class="s" d="M106 112c0 16 6 28 14 40 8-12 14-24 14-40"/>
-<path class="s" d="M70 160h18M152 160h18M100 178h40M44 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></svg><h3 class="h3">Mise en ligne et Google</h3><p>Le site part en ligne sur votre nom de domaine, relié à votre fiche Google, prêt à recevoir des appels.</p><span class="tag">Votre nom de domaine</span></article>
-        <article class="panel"><span class="panel__n">04</span><svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><circle class="f-t" cx="120" cy="100" r="74"/>
-<g transform="rotate(-40 120 100)"><rect class="f-b" x="111" y="96" width="18" height="62" rx="9"/><path class="f-b" d="M100 52a26 26 0 1 0 40 0v24h-40z"/></g>
-<path class="s" d="M58 100a62 62 0 0 1 104-46M182 100a62 62 0 0 1-104 46"/>
-<path class="s" d="M162 30v24h-24M78 170v-24h24"/>
-<g transform="rotate(-40 120 100)"><rect class="s" x="111" y="96" width="18" height="62" rx="9"/><path class="s" d="M100 52a26 26 0 1 0 40 0v24h-40z"/></g></svg><h3 class="h3">Je m'occupe du reste</h3><p>Chaque mois : hébergement, sécurité, mises à jour, fiche Google. Un message, c'est fait.</p><span class="tag">Un seul interlocuteur</span></article>
-      </div>
-      <div class="hs__bar" aria-hidden="true"><span data-hs-bar></span></div>
-    </section>
+        <form class="conf" data-conf action="contact.html" method="get">
+          <div>
+            <fieldset>
+              <legend>La création du site</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="formule" value="Essentiel" data-price="890"><span><b>Essentiel</b><em>890 €</em><small>Une page, fiche Google, formulaire de contact.</small></span></label>
+                <label class="opt"><input type="radio" name="formule" value="Pro" data-price="1490" checked><span><b>Pro</b><em>1 490 €</em><small>Jusqu'à 6 pages, devis en ligne, galerie.</small></span></label>
+                <label class="opt"><input type="radio" name="formule" value="Sur-mesure" data-price="1990" data-from><span><b>Sur-mesure</b><em>dès 1 990 €</em><small>Réservation, boutique, multilingue.</small></span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>L'entretien, chaque mois</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="abonnement" value="Veille" data-price="39"><span><b>Veille</b><em>39 €</em><small>Hébergement, sécurité, 2 modifications par mois.</small></span></label>
+                <label class="opt"><input type="radio" name="abonnement" value="Confort" data-price="69" checked><span><b>Confort</b><em>69 €</em><small>Modifications illimitées, fiche Google suivie.</small></span></label>
+                <label class="opt"><input type="radio" name="abonnement" value="Croissance" data-price="119" data-from><span><b>Croissance</b><em>dès 119 €</em><small>Une page en plus chaque mois, point trimestriel.</small></span></label>
+              </div>
+            </fieldset>
+          </div>
+          <aside class="sum" aria-live="polite">
+            <p class="h-s"><span data-sum-name>Pro + Confort</span></p>
+            <dl>
+              <dt>À la commande (30 %)</dt><dd data-sum-deposit>447 €</dd>
+              <dt>À la mise en ligne (70 %)</dt><dd data-sum-balance>1 043 €</dd>
+              <dt>Puis chaque mois</dt><dd data-sum-month>69 €</dd>
+              <dt class="tot">Première année</dt><dd class="tot" data-sum-year>2 318 €</dd>
+            </dl>
+            <button class="btn" type="submit">Recevoir ce devis</button>
+            <p class="small">Prix nets, TVA non applicable. Abonnement de 12 mois minimum, puis sans engagement. <span data-sum-note></span></p>
+          </aside>
+        </form>
 
-    <!-- Offres -->
-    <section class="sec sec--light">
-      <div class="wrap">
-        <div class="head">
-          <div><p class="mono kicker" data-reveal>Offres</p><h2 class="h1" data-split>Votre site, une fois. <span class="it acc">La tranquillité, chaque mois.</span></h2></div>
-          <p class="lead" data-reveal>Des prix affichés, nets de TVA. Vous payez la création une seule fois, puis l'abonnement de votre choix.</p>
-        </div>
-        <div class="plans">
-          <article class="plan" data-reveal>
-            <div class="plan__top"><span class="mono muted">Création</span></div>
-            <h3 class="h3">Essentiel</h3><p class="plan__for">Pour exister en ligne et être trouvé.</p>
-            <p class="price"><b>890</b><span>€, une seule fois</span></p>
-            <ul class="checks" role="list"><li>Site une page complète, design unique</li><li>Formulaire de contact vers votre e-mail</li><li>Fiche Google créée et reliée au site</li><li>Bases du référencement : titres, mobile, vitesse</li></ul>
-            <a class="btn btn--ghost" href="contact.html?formule=Essentiel" style="justify-content:space-between">Choisir Essentiel<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
-          </article>
-          <article class="plan plan--hl" data-reveal>
-            <div class="plan__top"><span class="mono muted">Création</span><span class="tag tag--acc">Recommandée</span></div>
-            <h3 class="h3">Pro</h3><p class="plan__for">Pour recevoir des demandes de devis toutes les semaines.</p>
-            <p class="price"><b>1 490</b><span>€, une seule fois</span></p>
-            <ul class="checks" role="list"><li>Jusqu'à 6 pages, une par prestation</li><li>Devis détaillé en ligne, avec photos et alerte e-mail</li><li>Galerie de réalisations</li><li>Référencement « métier + ville » et données structurées</li><li>Fiche Google créée et optimisée</li></ul>
-            <a class="btn btn--acc" href="contact.html?formule=Pro" style="justify-content:space-between" data-magnetic>Choisir Pro<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
-          </article>
-          <article class="plan" data-reveal>
-            <div class="plan__top"><span class="mono muted">Création</span></div>
-            <h3 class="h3">Sur-mesure</h3><p class="plan__for">Réservation, boutique, projet spécifique.</p>
-            <p class="price"><small>À partir de</small><b>1 990</b><span>€, une seule fois</span></p>
-            <ul class="checks" role="list"><li>Pages et fonctions selon votre projet</li><li>Réservation en ligne, click &amp; collect, paiement</li><li>Multilingue, animations avancées, connexion à vos outils</li></ul>
-            <a class="btn btn--ghost" href="contact.html?formule=Sur-mesure" style="justify-content:space-between">Parlons de votre projet<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
-          </article>
-        </div>
-        <div class="subs" data-reveal>
-          <div class="subs__t"><span class="mono" style="color:#A29D93">+ Abonnement</span><h3 class="h3">La tranquillité, chaque mois</h3><p>Hébergement, nom de domaine, maintenance et modifications.</p></div>
-          <div class="sub"><span class="mono muted">Veille</span><b>39 € <small>/ mois</small></b><p>Hébergement, domaine, maintenance, sécurité, 2 modifications par mois.</p></div>
-          <div class="sub sub--hl"><span class="mono">Confort · recommandé</span><b>69 € <small>/ mois</small></b><p>Modifications illimitées sous 5 jours ouvrés, fiche Google suivie, bilan mensuel.</p></div>
-          <div class="sub"><span class="mono muted">Croissance</span><b>119 € <small>/ mois, dès</small></b><p>Modifications sous 48 h, une page ou un article en plus chaque mois, point trimestriel.</p></div>
-        </div>
-        <div class="offer-foot" data-reveal>
-          <ul role="list"><li class="tag">12 mois, puis sans engagement</li><li class="tag">Votre site vous appartient</li><li class="tag">Prix nets, TVA non applicable</li></ul>
-          <a class="link" href="offres.html">Comparer toutes les offres <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</a>
-        </div>
       </div>
     </section>
 
-    <!-- Réalisation -->
     <section class="sec">
       <div class="wrap">
         <div class="head">
-          <div><p class="mono kicker" data-reveal>Réalisations</p><h2 class="h1" data-split>Du concret, <span class="it acc">d'ici.</span></h2></div>
-          <p class="lead" data-reveal>Un client en ligne, et des concepts dessinés pour des métiers de Côte-d'Or. <a class="link" href="realisations.html">Tout voir</a></p>
+          <h2 class="h-l" data-reveal>Déjà en ligne, à Dijon.</h2>
+          <p class="lead" data-reveal>TDS Fermetures pose des fenêtres, des volets et des portails. Leur site, leur fiche Google et leurs mises à jour passent par moi. <a class="tlink" href="realisations.html">Toutes les réalisations</a></p>
         </div>
         <div class="case">
-          <div>
-            <a class="case__media" href="https://tds-fermetures.fr" target="_blank" rel="noopener" data-clip data-cursor="Voir le site">
-              <span class="tag case__url">tds-fermetures.fr ↗</span>
-              <img src="assets/img/work/tds-3.jpg" alt="Façade avec volets battants, visuel du site de TDS Fermetures" width="1400" height="1050" loading="lazy">
-            </a>
-            <p class="credit">Visuel du site de TDS Fermetures · crédit photo : FenêtréA</p>
-          </div>
+          <figure data-reveal>
+            <div class="frame case__media">
+              <img src="assets/img/work/tds-1.jpg" alt="Fenêtre posée par TDS Fermetures" width="933" height="1400" loading="lazy">
+              <div class="case__stack"><img src="assets/img/work/tds-3.jpg" alt="Façade avec volets battants verts" width="1400" height="1050" loading="lazy"><img src="assets/img/work/tds-2.jpg" alt="Menuiserie extérieure" width="1120" height="1400" loading="lazy"></div>
+            </div>
+            <figcaption class="caption">Visuels du site de TDS Fermetures. Photos : FenêtréA.</figcaption>
+          </figure>
           <div data-reveal>
-            <span class="tag tag--acc">Client · En ligne</span>
-            <h3 class="h1">TDS Fermetures</h3>
-            <p class="lead">Menuiseries, fenêtres et portails à Dijon.</p>
-            <ul class="case__list" role="list"><li>Site complet avec demandes de devis</li><li>Une page par prestation</li><li>Mentions légales vérifiées</li><li>Fiche Google suivie chaque mois</li></ul>
-            <a class="btn btn--ghost" href="https://tds-fermetures.fr" target="_blank" rel="noopener">Voir le site en ligne<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
+            <h3 class="h-m">TDS Fermetures</h3>
+            <ul class="facts" role="list">
+              <li><span>Métier</span><span>Fenêtres, volets, portails</span></li>
+              <li><span>Site</span><span>Une page par prestation</span></li>
+              <li><span>Demandes</span><span>Devis en ligne</span></li>
+              <li><span>Suivi</span><span>Fiche Google chaque mois</span></li>
+            </ul>
+            <a class="btn btn--line" href="https://tds-fermetures.fr" target="_blank" rel="noopener">Voir leur site</a>
           </div>
-        </div>
-        <div class="concepts">
-          <a class="concept" href="realisations.html" data-reveal data-cursor="Concept"><div class="concept__screen"><img src="assets/img/work/concept-electricien-tall.jpg" alt="Concept de site pour un électricien" width="1200" height="2000" loading="lazy"></div><div class="concept__foot"><h3 class="h3">Électricien</h3><span class="tag">Concept</span></div></a>
-          <a class="concept" href="realisations.html" data-reveal data-cursor="Concept"><div class="concept__screen"><img src="assets/img/work/concept-cuisiniste-tall.jpg" alt="Concept de site pour un cuisiniste" width="1200" height="2000" loading="lazy"></div><div class="concept__foot"><h3 class="h3">Cuisiniste</h3><span class="tag">Concept</span></div></a>
-          <a class="concept" href="realisations.html" data-reveal data-cursor="Concept"><div class="concept__screen"><img src="assets/img/work/concept-tatoueur-tall.jpg" alt="Concept de site pour un salon de tatouage" width="1200" height="2000" loading="lazy"></div><div class="concept__foot"><h3 class="h3">Salon de tatouage</h3><span class="tag">Concept</span></div></a>
         </div>
       </div>
     </section>
 
-    <!-- À propos -->
-    <section class="sec sec--2">
-      <div class="wrap about">
-        <div class="portrait" data-reveal><svg class="ill" data-draw viewBox="0 0 320 400" aria-hidden="true" focusable="false"><circle class="f-w" cx="160" cy="150" r="86"/>
-<path class="f-b" d="M96 214c0-30 28-48 64-48s64 18 64 48v14H96z"/>
-<circle class="s" cx="160" cy="118" r="38"/>
-<path class="s" d="M124 106c10-22 46-30 70-6M146 120h.01M174 120h.01M150 136c6 5 14 5 20 0"/>
-<path class="s" d="M96 228v-14c0-30 28-48 64-48s64 18 64 48v14"/>
-<rect class="f-t" x="40" y="236" width="240" height="14" rx="7"/>
-<path class="s" d="M40 243h240M66 250v110M254 250v110"/>
-<path class="f-g" d="M108 186h104l10 50H98z"/>
-<path class="s" d="M108 186h104l10 50H98zM90 236h140"/>
-<path class="s" d="M150 210l6-8-6-8M170 194l-8 16"/>
-<path class="s" d="M236 236v-18c0-5 4-9 9-9h12v27M257 216c10 0 10 14 0 14"/>
-<path class="s" d="M60 236c-6-20 0-40 16-50 0 18-4 34-16 50zM60 236c0-22 10-38 28-42-4 18-14 32-28 42z"/></svg><span class="portrait__cap"><span>Thibault Lambert</span><span class="mono">Fondateur</span></span></div>
-        <div>
-          <p class="mono kicker" data-reveal>Qui est derrière WEBZLY</p>
-          <p class="quote" data-reveal>« Pas de plateforme à l'autre bout de la France. Vous avez mon numéro, et c'est <em>moi qui fais votre site.</em> »</p>
-          <div class="about__sig" data-reveal>
-            <div><b>Local</b><span>Je connais vos clients : ce sont mes voisins.</span></div>
-            <div><b>Direct</b><span>Un seul interlocuteur, joignable.</span></div>
-            <div><b>Clair</b><span>Zéro jargon, des prix affichés.</span></div>
-          </div>
-          <a class="link" href="a-propos.html" style="margin-top:36px" data-reveal>Faire connaissance <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</a>
+    <section class="sec sec--paper">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="h-l" data-reveal>Quatre étapes, et vous validez chacune.</h2>
+          <p class="lead" data-reveal>Rien n'est publié sans votre accord. <a class="tlink" href="methode.html">La méthode en détail</a></p>
         </div>
+        <ol class="steps" role="list">
+          <li class="step" data-reveal><span class="step__n">i.</span><h3 class="h-s">On se rencontre</h3><p>Quinze minutes au téléphone, ou un café chez vous. Vous me parlez de votre métier et de vos clients.</p></li>
+          <li class="step" data-reveal><span class="step__n">ii.</span><h3 class="h-s">Je dessine</h3><p>Une maquette avec vos prestations et vos photos. Deux séries de retours sont comprises.</p></li>
+          <li class="step" data-reveal><span class="step__n">iii.</span><h3 class="h-s">Mise en ligne</h3><p>Sur votre nom de domaine, relié à votre fiche Google, prêt à recevoir des appels.</p></li>
+          <li class="step" data-reveal><span class="step__n">iv.</span><h3 class="h-s">Je m'en occupe</h3><p>Chaque mois : sécurité, mises à jour, modifications et fiche Google.</p></li>
+        </ol>
       </div>
     </section>
 
-    <!-- FAQ -->
     <section class="sec">
-      <div class="wrap faq-grid">
+      <div class="wrap split">
         <div>
-          <p class="mono kicker" data-reveal>Questions fréquentes</p>
-          <h2 class="h1" data-split>On me pose <span class="it acc">souvent</span> ces questions.</h2>
-          <a class="btn btn--ghost" href="faq.html" style="margin-top:36px" data-reveal>Toutes les questions<span class="btn__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-</span></a>
+          <p class="quote" data-reveal>« Vous avez mon numéro, et c'est moi qui fais votre site. Du premier rendez-vous jusqu'à la photo de votre dernier chantier. »</p>
+          <p class="sig" data-reveal>Thibault Lambert, fondateur de WEBZLY · <a class="tlink" href="a-propos.html">Faire connaissance</a></p>
         </div>
         <div class="faq" data-reveal>
-          <details><summary>J'ai déjà ma fiche Google, pourquoi un site ?<i></i></summary><div class="faq__a"><p>La fiche est essentielle, et je m'en occupe aussi. Mais elle est limitée : quelques lignes, quelques photos. Le site montre tous vos services, vos réalisations, et permet de demander un devis à 23 h. Une fiche reliée à un bon site est aussi plus solide sur Google.</p></div></details>
-          <details><summary>Je n'ai pas le temps de m'en occuper.<i></i></summary><div class="faq__a"><p>C'est justement le principe. Vous me donnez 15 minutes au départ, puis vous m'envoyez une photo ou un message quand quelque chose change. Je fais tout le reste.</p></div></details>
-          <details><summary>Est-ce que le site m'appartient ?<i></i></summary><div class="faq__a"><p>Oui. Le nom de domaine, vos textes, vos photos et votre fiche Google restent à vous. Si un jour vous arrêtez, je vous transfère le domaine et je vous remets une copie complète du site.</p></div></details>
-          <details><summary>Je suis engagé combien de temps ?<i></i></summary><div class="faq__a"><p>L'abonnement est de 12 mois minimum. Ensuite, il continue de mois en mois et vous pouvez arrêter quand vous voulez, avec un mois de préavis. Pas de contrat de 4 ans.</p></div></details>
+          <details><summary>J'ai déjà une fiche Google, pourquoi un site ?</summary><div class="faq__a"><p>La fiche est utile, et je m'en occupe aussi. Mais elle reste courte : quelques lignes, quelques photos. Le site montre tous vos services et vos réalisations, et permet de demander un devis à 23 h. Une fiche reliée à un bon site est aussi mieux placée sur Google.</p></div></details>
+          <details><summary>Est-ce que le site m'appartient ?</summary><div class="faq__a"><p>Oui. Le nom de domaine, vos textes, vos photos et votre fiche Google restent à vous. Si vous arrêtez, je vous transfère le domaine et je vous remets une copie complète du site.</p></div></details>
+          <details><summary>Je suis engagé combien de temps ?</summary><div class="faq__a"><p>Douze mois pour l'abonnement. Ensuite, il continue de mois en mois et vous arrêtez quand vous voulez, avec un mois de préavis.</p></div></details>
+          <p style="margin-top:24px"><a class="tlink" href="faq.html">Toutes les questions</a></p>
         </div>
       </div>
     </section>
 
-    <section class="bigcta">
-      <div class="bigcta__glow" aria-hidden="true"></div>
+    <section class="final">
+      <div class="light" aria-hidden="true">
+        <div class="light__lamp"></div>
+        <div class="light__sun"><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span><span class="light__pane"></span></div>
+        <svg class="light__leaves" viewBox="0 0 300 300"><path d="M20 0 C60 60 90 120 150 170 C 190 205 230 230 290 250 L292 256 C230 238 186 212 146 176 C 86 124 54 64 14 2 Z"/><path d="M70 70 c-30 -10 -50 5 -60 25 c25 5 45 -2 60 -25z"/><path d="M92 100 c-10 -30 0 -55 25 -62 c3 25 -5 45 -25 62z"/><path d="M120 140 c-34 -4 -54 14 -60 38 c28 2 48 -12 60 -38z"/><path d="M150 168 c-6 -32 10 -54 36 -58 c0 26 -12 46 -36 58z"/><path d="M188 200 c-32 4 -48 26 -50 50 c26 -4 44 -22 50 -50z"/><path d="M220 222 c4 -30 24 -46 50 -46 c-4 26 -22 42 -50 46z"/></svg>
+      </div>
+
       <div class="wrap">
-        <p class="mono kicker" data-reveal>Devis gratuit, sans engagement</p>
-        <h2 class="bigcta__t" data-split>Parlons de <span class="it acc">votre site.</span></h2>
-        <div class="bigcta__row">
-          <p data-reveal>15 minutes au téléphone ou autour d'un café. Vous repartez avec un devis clair, prix et délai compris. Ou appelez directement le <a class="link" href="tel:+33695506239">06 95 50 62 39</a>.</p>
-          <a class="orb" href="contact.html" data-magnetic>Demander<br>mon devis<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <h2 class="final__t" data-reveal>Parlons de votre site.</h2>
+        <div class="final__row" data-reveal>
+          <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
+          <div class="links"><a class="btn" href="contact.html">Demander un devis</a><a class="tlink" href="tel:+33695506239">06 95 50 62 39</a></div>
         </div>
       </div>
     </section>
@@ -407,32 +276,25 @@
     <div class="wrap">
       <div class="ft__grid">
         <div>
-          <p class="mono ft__h">Un projet ? Appelez-moi</p>
-          <a class="ft__tel" href="tel:+33695506239" data-cursor="Appeler">06 95 50 62 39</a><br>
-          <a class="ft__mail" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
+          <a class="ft__tel" href="tel:+33695506239">06 95 50 62 39</a><br>
+          <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
+          <p class="small" style="margin-top:14px">Thibault Lambert, Perrigny-lès-Dijon. Laissez un message, je vous rappelle.</p>
         </div>
-        <div class="ft__col"><p class="mono ft__h">Pages</p><a href="./">Accueil</a><a href="offres.html">Offres &amp; tarifs</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a></div>
-        <div class="ft__col"><p class="mono ft__h">WEBZLY</p><a href="a-propos.html">À propos</a><a href="faq.html">Questions fréquentes</a><a href="contact.html">Contact</a></div>
-        <div class="ft__col"><p class="mono ft__h">Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
+        <div class="ft__col"><p>Le site</p><a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a></div>
+        <div class="ft__col"><p>WEBZLY</p><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a></div>
+        <div class="ft__col"><p>Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
       </div>
-      <p class="ft__word" aria-hidden="true">web<svg viewBox="0 0 100 130"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</p>
       <div class="ft__bottom">
         <p>© <span data-year>2026</span> WEBZLY · Thibault Lambert EI · SIREN 130 268 048 · Prix nets, TVA non applicable (art. 293 B du CGI)</p>
-        <p>Perrigny-lès-Dijon · <a href="#contenu">Haut de page ↑</a></p>
+        <a href="#contenu">Haut de page</a>
       </div>
     </div>
   </footer>
 
-  <a class="mbar" href="tel:+33695506239" data-mbar><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Appeler</a>
+  <a class="mbar" href="tel:+33695506239" data-mbar>Appeler le 06 95 50 62 39</a>
 
-  <script src="assets/vendor/gsap.min.js" defer></script>
-  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js?v=dd1026bd" defer></script>
-  <script type="importmap">
-  { "imports": { "three": "./assets/vendor/three/three.module.min.js", "three/addons/": "./assets/vendor/three/addons/" } }
-  </script>
-  <script type="module" src="assets/js/hero3d.js?v=dd1026bd"></script>
+  <script src="assets/js/site.js?v=b0fbfd7e" defer></script>
 
 </body>
 </html>

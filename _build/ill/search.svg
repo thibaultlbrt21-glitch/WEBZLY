@@ -1,8 +1,0 @@
-<svg class="ill" data-draw viewBox="0 0 240 200" aria-hidden="true" focusable="false"><rect class="f-t" x="24" y="30" width="150" height="34" rx="10"/>
-<rect class="f-b" x="30" y="36" width="22" height="22" rx="6"/>
-<path class="s" d="M24 40c0-6 4-10 10-10h130c6 0 10 4 10 10v14c0 6-4 10-10 10H34c-6 0-10-4-10-10z"/>
-<path class="s" d="M62 44h70M62 52h44"/>
-<path class="s" d="M24 84h120M24 94h90M24 120h110M24 130h70M24 156h100M24 166h60"/>
-<circle class="f-w" cx="170" cy="128" r="34"/>
-<circle class="s" cx="170" cy="128" r="34"/><path class="s" d="M195 153l26 26"/>
-<path class="s" d="M156 130l9 9 19-21"/></svg>
