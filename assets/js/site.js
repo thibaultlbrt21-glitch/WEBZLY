@@ -27,12 +27,13 @@
 
   /* ---------- En-tête, barre d'appel, encre du héros ---------- */
   const hd = $('[data-header]'), mbar = $('[data-mbar]'), heroInk = $('.hero .encre');
+  const endZone = $('.final, .contact'); // la barre d'appel s'efface quand l'appel final ou le formulaire est à l'écran
   let lastY = 0;
   const onScroll = () => {
     const y = scrollY;
     hd.classList.toggle('is-scrolled', y > 20);
     hd.classList.toggle('is-hidden', y > 400 && y > lastY && !document.body.classList.contains('menu-open'));
-    if (mbar) mbar.classList.toggle('is-visible', y > innerHeight * 0.7);
+    if (mbar) mbar.classList.toggle('is-visible', y > innerHeight * 0.7 && !(endZone && endZone.getBoundingClientRect().top < innerHeight * 0.9));
     if (heroInk && !reduced && y < innerHeight * 1.2) heroInk.style.setProperty('--py', `${Math.round(y * 0.35)}px`);
     lastY = y;
   };
