@@ -1,36 +1,12 @@
-    <section class="final" aria-labelledby="final-t">
-      <div class="encre encre--top" data-encre aria-hidden="true"></div>
-      <div class="wrap">
-        <h2 class="d-xl" id="final-t" data-reveal>Parlons de votre site.</h2>
-        <div class="final__grid">
-          <div data-reveal>
-            <a class="final__tel" href="tel:+33695506239">06 95 50 62 39</a>
-            <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
-            <div class="links"><a class="btn" href="contact.html">Demander un devis détaillé</a><a class="tlink" href="mailto:thibault.lbrt21@gmail.com">Écrire un e-mail</a></div>
-          </div>
-          <form class="cb" action="send.php" method="post" novalidate data-cb data-reveal>
-            <div class="cb__main">
-              <p class="cb__t">Être rappelé</p>
-              <p>Votre nom, votre numéro et le moment qui vous arrange. C'est moi qui appelle.</p>
-              <input type="hidden" name="demande" value="Rappel">
-              <div class="fields">
-                <div class="field"><label for="cb-nom">Nom</label><input id="cb-nom" name="nom" autocomplete="name" required></div>
-                <div class="field"><label for="cb-tel">Téléphone</label><input id="cb-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required></div>
-              </div>
-              <span class="sub" id="cb-l-moment">Le meilleur moment</span>
-              <div class="chips" role="radiogroup" aria-labelledby="cb-l-moment">
-                <label class="chip"><input type="radio" name="rdv_moment" value="Le matin"><span>Le matin</span></label>
-                <label class="chip"><input type="radio" name="rdv_moment" value="Le midi"><span>Le midi</span></label>
-                <label class="chip"><input type="radio" name="rdv_moment" value="En fin de journée"><span>En fin de journée</span></label>
-              </div>
-              <div class="hp-field" aria-hidden="true"><label for="cb-web">Ne pas remplir</label><input id="cb-web" name="website" tabindex="-1" autocomplete="off"></div>
-              <label class="consent"><input type="checkbox" name="consent" value="1" required><span>J'accepte que mon numéro serve seulement à me rappeler. <a href="confidentialite.html">Confidentialité</a></span></label>
-              <p class="form__err" role="alert" data-err></p>
-              <button class="btn btn--gold" type="submit">Me faire rappeler</button>
-            </div>
-            <div class="cb__done" tabindex="-1"><p class="cb__t">C'est noté.</p><p>Je vous rappelle<span data-cb-when></span>. Si c'est urgent : <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>.</p></div>
-            <div class="cb__fail" tabindex="-1"><p class="cb__t">L'envoi n'a pas marché.</p><p>Appelez-moi au <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>, ou écrivez à <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>.</p></div>
-          </form>
+    <section class="cta" aria-labelledby="cta-t">
+      <div class="wrap cta__in">
+        <div>
+          <h2 class="h2" id="cta-t">Parlons de votre site.</h2>
+          <p>Un appel de quinze minutes, ou un café chez vous. Le devis est gratuit, écrit, et valable 30 jours.</p>
+        </div>
+        <div class="cta__side">
+          <a class="cta__tel" href="tel:+33695506239">06 95 50 62 39</a>
+          <a class="btn btn--mustard" href="contact.html">Demander un devis</a>
         </div>
       </div>
     </section>

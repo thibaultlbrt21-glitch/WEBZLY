@@ -2,11 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Questions fréquentes · WEBZLY · Site internet pour artisans</title>
   <meta name="description" content="Prix, abonnement, engagement, propriété du site, modifications, Google : les réponses aux questions qu'on pose le plus souvent à WEBZLY.">
   <link rel="canonical" href="https://webzly.fr/faq.html">
-  <meta name="theme-color" content="#0A0908">
+  <meta name="theme-color" content="#12110F">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
@@ -21,11 +21,7 @@
   <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=57127c62">
-  <script>
-    document.documentElement.classList.add('js');
-    setTimeout(function () { if (!window.wzReady) document.documentElement.classList.remove('js'); }, 3000);
-  </script>
+  <link rel="stylesheet" href="assets/css/site.css?v=cae7cd2a">
 
 </head>
 <body class="">
@@ -42,95 +38,79 @@
         <a href="faq.html" aria-current="page">Questions</a>
       </nav>
       <div class="hd__end">
-        <a class="call" href="tel:+33695506239">06 95 50 62 39</a>
-        <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
+        <a class="hd__tel" href="tel:+33695506239">06 95 50 62 39</a>
+        <a class="btn btn--sm btn--mustard" href="contact.html">Demander un devis</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
     </div>
   </header>
 
   <div class="menu" id="menu" data-menu hidden>
-    <nav class="menu__nav wrap" aria-label="Menu mobile">
-      <a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a><a href="faq.html" aria-current="page">Questions</a><a href="contact.html">Contact</a>
+    <nav class="menu__nav wrap" aria-label="Menu">
+      <a href="./">Accueil</a>
+      <a href="offres.html">Offres et tarifs</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="methode.html">Méthode</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="faq.html" aria-current="page">Questions</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn btn--gold" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
-      <a class="btn btn--line" href="contact.html">Demander un devis</a>
+      <a class="btn btn--mustard" href="contact.html">Demander un devis</a>
+      <a class="btn btn--ghost" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
+      <p>Thibault Lambert, Perrigny-lès-Dijon</p>
     </div>
   </div>
 
   <main id="contenu">
-    <section class="phero">
-      <div class="encre encre--calm" data-encre aria-hidden="true"></div>
-
-      <div class="wrap phero__in">
-        <h1 class="d-l" data-reveal>Les questions qu'on me pose souvent.</h1>
-        <p class="lead" data-reveal>Tapez un mot pour trouver la réponse. Si elle n'y est pas, appelez-moi au <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>.</p>
+    <header class="phead">
+      <div class="wrap phead__in">
+        <h1 class="h1">Les questions qu’on me pose souvent</h1>
+        <p class="lead">Tapez un mot pour trouver la réponse. Si elle n’y est pas, appelez-moi au <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>.</p>
       </div>
-    </section>
+    </header>
 
-    <section class="sec">
-      <div class="wrap" style="max-width:980px">
-        <label class="search" data-reveal><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr">Rechercher une question</span><input type="search" placeholder="Prix, engagement, Google…" data-faq-search autocomplete="off"></label>
+    <section class="sec sec--tight">
+      <div class="wrap faqwrap">
+        <div>
+          <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span class="sr">Rechercher une question</span><input type="search" placeholder="Prix, engagement, Google…" data-faq-search autocomplete="off" enterkeyhint="search"></label>
+          <p class="small" style="margin-top:14px">Les conditions complètes sont dans les <a class="tlink" href="cgv.html">conditions de vente</a>.</p>
+        </div>
         <div class="faq" data-faq>
-          <div class="faq__group"><p>Avant de commencer</p>
-            <details><summary>J'ai déjà une fiche Google, pourquoi un site ?</summary><div class="faq__a"><p>La fiche est utile, et je m'en occupe aussi. Mais elle reste courte : quelques lignes, quelques photos. Le site montre tous vos services et vos réalisations, et permet de demander un devis à 23 h. Une fiche reliée à un bon site est aussi mieux placée sur Google.</p></div></details>
-            <details><summary>Je n'ai pas le temps de m'en occuper.</summary><div class="faq__a"><p>C'est le principe. Vous me donnez quinze minutes au départ, puis vous m'envoyez une photo ou un message quand quelque chose change. Je fais le reste.</p></div></details>
-            <details><summary>Mon neveu peut me faire un site. Pourquoi vous ?</summary><div class="faq__a"><p>C'est un bon début. La différence se joue après : les pages qui sortent sur Google dans votre ville, la vitesse sur téléphone, les mentions légales à jour, et quelqu'un de joignable chaque mois quand il faut changer quelque chose.</p></div></details>
-            <details><summary>Vous travaillez seulement à Dijon ?</summary><div class="faq__a"><p>Je suis à Perrigny-lès-Dijon et je travaille surtout en Côte-d'Or, ce qui permet de se voir en vrai. Pour le reste, tout peut se faire à distance.</p></div></details>
-            <details><summary>Mon site sera-t-il premier sur Google ?</summary><div class="faq__a"><p>Personne ne peut vous promettre une place précise : elle dépend aussi de vos concurrents et de vos avis. Ce que je fais : un site rapide, une page par prestation, le référencement « métier + ville » et une fiche Google soignée. Ce sont les bases pour être trouvé près de chez vous.</p></div></details>
+          <div class="faq__group"><h2>Avant de commencer</h2>
+            <details><summary>J’ai déjà une fiche Google, pourquoi un site ?</summary><div class="faq__a"><p>La fiche est utile, et je m’en occupe aussi. Mais elle reste courte : quelques lignes, quelques photos. Le site montre tous vos services et vos réalisations, et permet de demander un devis à 23 h. Une fiche reliée à un bon site est aussi mieux placée sur Google.</p></div></details>
+            <details><summary>Je n’ai pas le temps de m’en occuper.</summary><div class="faq__a"><p>C’est le principe. Vous me donnez quinze minutes au départ, puis vous m’envoyez une photo ou un message quand quelque chose change. Je fais le reste.</p></div></details>
+            <details><summary>Mon neveu peut me faire un site. Pourquoi vous ?</summary><div class="faq__a"><p>C’est un bon début. La différence se joue après : les pages qui sortent sur Google dans votre ville, la vitesse sur téléphone, les mentions légales à jour, et quelqu’un de joignable chaque mois quand il faut changer quelque chose.</p></div></details>
+            <details><summary>Vous travaillez seulement à Dijon ?</summary><div class="faq__a"><p>Je suis à Perrigny-lès-Dijon et je travaille surtout en Côte-d’Or, ce qui permet de se voir en vrai. Pour le reste, tout peut se faire à distance.</p></div></details>
+            <details><summary>Mon site sera-t-il premier sur Google ?</summary><div class="faq__a"><p>Personne ne peut vous promettre une place précise : elle dépend aussi de vos concurrents et de vos avis. Ce que je fais : un site rapide, une page par prestation, le référencement « métier + ville » et une fiche Google soignée. Ce sont les bases pour être trouvé près de chez vous.</p></div></details>
           </div>
-          <div class="faq__group"><p>Prix et engagement</p>
-            <details><summary>Combien coûte un site ?</summary><div class="faq__a"><p>La création coûte 890 € (Essentiel), 1 490 € (Pro) ou à partir de 1 990 € (Sur-mesure), une seule fois. L'entretien coûte 39 €, 69 € ou à partir de 119 € par mois. Vous pouvez <a href="offres.html#budget">estimer votre budget</a> en ligne.</p></div></details>
-            <details><summary>Pourquoi un abonnement en plus du site ?</summary><div class="faq__a"><p>Le site, vous le payez une fois : il est à vous. L'abonnement paie ce qui le fait vivre : hébergement, nom de domaine, sécurité, mises à jour et modifications. Sans entretien, un site vieillit vite et finit par mal s'afficher ou disparaître de Google.</p></div></details>
-            <details><summary>Je suis engagé combien de temps ?</summary><div class="faq__a"><p>Douze mois pour l'abonnement. Ensuite, il continue de mois en mois et vous arrêtez quand vous voulez, avec un mois de préavis.</p></div></details>
-            <details><summary>Comment se passe le paiement ?</summary><div class="faq__a"><p>Pour la création : 30 % à la commande, le reste à la mise en ligne. L'abonnement se paie chaque mois à partir de la mise en ligne.</p></div></details>
-            <details><summary>Les prix sont-ils HT ou TTC ?</summary><div class="faq__a"><p>Ils sont nets : TVA non applicable (article 293 B du CGI). Le prix affiché est le prix payé.</p></div></details>
+          <div class="faq__group"><h2>Prix et engagement</h2>
+            <details><summary>Combien coûte un site ?</summary><div class="faq__a"><p>La création coûte 890 € (Essentiel), 1 490 € (Pro) ou à partir de 1 990 € (Sur-mesure), une seule fois. L’entretien coûte 39 €, 69 € ou à partir de 119 € par mois. Vous pouvez <a href="offres.html#budget">estimer votre budget</a> en ligne.</p></div></details>
+            <details><summary>Pourquoi un abonnement en plus du site ?</summary><div class="faq__a"><p>Le site, vous le payez une fois : il est à vous. L’abonnement paie ce qui le fait vivre : hébergement, nom de domaine, sécurité, mises à jour et modifications. Sans entretien, un site vieillit vite et finit par mal s’afficher ou disparaître de Google.</p></div></details>
+            <details><summary>Je suis engagé combien de temps ?</summary><div class="faq__a"><p>Douze mois pour l’abonnement. Ensuite, il continue de mois en mois et vous arrêtez quand vous voulez, avec un mois de préavis.</p></div></details>
+            <details><summary>Comment se passe le paiement ?</summary><div class="faq__a"><p>Pour la création : 30 % à la commande, le reste à la mise en ligne. L’abonnement se paie chaque mois à partir de la mise en ligne.</p></div></details>
+            <details><summary>Les prix sont-ils HT ou TTC ?</summary><div class="faq__a"><p>Ils sont nets : TVA non applicable (article 293 B du CGI). Le prix affiché est le prix payé.</p></div></details>
           </div>
-          <div class="faq__group"><p>Votre site au quotidien</p>
-            <details><summary>Est-ce que le site m'appartient ?</summary><div class="faq__a"><p>Oui. Le nom de domaine, vos textes, vos photos et votre fiche Google restent à vous. Si vous arrêtez, je vous transfère le domaine et je vous remets une copie complète du site.</p></div></details>
-            <details><summary>Comment je demande une modification ?</summary><div class="faq__a"><p>Un message ou un e-mail avec le texte ou les photos. Une modification, c'est un changement sur ce qui existe : un texte, une photo, des horaires, des tarifs, une nouvelle réalisation. Une nouvelle page ou une nouvelle fonction fait l'objet d'un devis, sauf la page mensuelle de l'abonnement Croissance.</p></div></details>
-            <details><summary>Je peux changer d'abonnement ?</summary><div class="faq__a"><p>Oui. Vous passez à une formule supérieure quand vous voulez, et à une formule inférieure après les douze premiers mois.</p></div></details>
-            <details><summary>Les mentions légales et le RGPD, vous vous en occupez ?</summary><div class="faq__a"><p>Oui. Je rédige les mentions légales de votre site à partir de vos informations et je les tiens à jour avec l'abonnement. Le site est en HTTPS et vos formulaires sont protégés.</p></div></details>
+          <div class="faq__group"><h2>Votre site au quotidien</h2>
+            <details><summary>Est-ce que le site m’appartient ?</summary><div class="faq__a"><p>Oui. Le nom de domaine, vos textes, vos photos et votre fiche Google restent à vous. Si vous arrêtez, je vous transfère le domaine et je vous remets une copie complète du site.</p></div></details>
+            <details><summary>Comment je demande une modification ?</summary><div class="faq__a"><p>Un message ou un e-mail avec le texte ou les photos. Une modification, c’est un changement sur ce qui existe : un texte, une photo, des horaires, des tarifs, une nouvelle réalisation. Une nouvelle page ou une nouvelle fonction fait l’objet d’un devis, sauf la page mensuelle de l’abonnement Croissance.</p></div></details>
+            <details><summary>Je peux changer d’abonnement ?</summary><div class="faq__a"><p>Oui. Vous passez à une formule supérieure quand vous voulez, et à une formule inférieure après les douze premiers mois.</p></div></details>
+            <details><summary>Les mentions légales et le RGPD, vous vous en occupez ?</summary><div class="faq__a"><p>Oui. Je rédige les mentions légales de votre site à partir de vos informations et je les tiens à jour avec l’abonnement. Le site est en HTTPS et vos formulaires sont protégés.</p></div></details>
           </div>
-          <p class="faq__none" data-faq-none hidden>Aucune question ne correspond. Appelez-moi au 06 95 50 62 39, ou <a class="tlink" href="contact.html">écrivez-moi</a>.</p>
+          <p class="faq__none" data-faq-none hidden>Aucune question ne correspond. Appelez-moi au 06 95 50 62 39, ou <a class="tlink" href="contact.html">écrivez-moi</a>.</p>
         </div>
       </div>
     </section>
 
-    <section class="final" aria-labelledby="final-t">
-      <div class="encre encre--top" data-encre aria-hidden="true"></div>
-      <div class="wrap">
-        <h2 class="d-xl" id="final-t" data-reveal>Parlons de votre site.</h2>
-        <div class="final__grid">
-          <div data-reveal>
-            <a class="final__tel" href="tel:+33695506239">06 95 50 62 39</a>
-            <p>Un appel de quinze minutes, ou un café à Dijon. Vous repartez avec un devis écrit, prix et délai compris.</p>
-            <div class="links"><a class="btn" href="contact.html">Demander un devis détaillé</a><a class="tlink" href="mailto:thibault.lbrt21@gmail.com">Écrire un e-mail</a></div>
-          </div>
-          <form class="cb" action="send.php" method="post" novalidate data-cb data-reveal>
-            <div class="cb__main">
-              <p class="cb__t">Être rappelé</p>
-              <p>Votre nom, votre numéro et le moment qui vous arrange. C'est moi qui appelle.</p>
-              <input type="hidden" name="demande" value="Rappel">
-              <div class="fields">
-                <div class="field"><label for="cb-nom">Nom</label><input id="cb-nom" name="nom" autocomplete="name" required></div>
-                <div class="field"><label for="cb-tel">Téléphone</label><input id="cb-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required></div>
-              </div>
-              <span class="sub" id="cb-l-moment">Le meilleur moment</span>
-              <div class="chips" role="radiogroup" aria-labelledby="cb-l-moment">
-                <label class="chip"><input type="radio" name="rdv_moment" value="Le matin"><span>Le matin</span></label>
-                <label class="chip"><input type="radio" name="rdv_moment" value="Le midi"><span>Le midi</span></label>
-                <label class="chip"><input type="radio" name="rdv_moment" value="En fin de journée"><span>En fin de journée</span></label>
-              </div>
-              <div class="hp-field" aria-hidden="true"><label for="cb-web">Ne pas remplir</label><input id="cb-web" name="website" tabindex="-1" autocomplete="off"></div>
-              <label class="consent"><input type="checkbox" name="consent" value="1" required><span>J'accepte que mon numéro serve seulement à me rappeler. <a href="confidentialite.html">Confidentialité</a></span></label>
-              <p class="form__err" role="alert" data-err></p>
-              <button class="btn btn--gold" type="submit">Me faire rappeler</button>
-            </div>
-            <div class="cb__done" tabindex="-1"><p class="cb__t">C'est noté.</p><p>Je vous rappelle<span data-cb-when></span>. Si c'est urgent : <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>.</p></div>
-            <div class="cb__fail" tabindex="-1"><p class="cb__t">L'envoi n'a pas marché.</p><p>Appelez-moi au <a class="tlink" href="tel:+33695506239">06 95 50 62 39</a>, ou écrivez à <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>.</p></div>
-          </form>
+    <section class="cta" aria-labelledby="cta-t">
+      <div class="wrap cta__in">
+        <div>
+          <h2 class="h2" id="cta-t">Parlons de votre site.</h2>
+          <p>Un appel de quinze minutes, ou un café chez vous. Le devis est gratuit, écrit, et valable 30 jours.</p>
+        </div>
+        <div class="cta__side">
+          <a class="cta__tel" href="tel:+33695506239">06 95 50 62 39</a>
+          <a class="btn btn--mustard" href="contact.html">Demander un devis</a>
         </div>
       </div>
     </section>
@@ -141,30 +121,26 @@
   <footer class="ft">
     <div class="wrap">
       <div class="ft__grid">
-        <div>
-          <a class="ft__tel" href="tel:+33695506239">06 95 50 62 39</a><br>
-          <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
-          <p class="small" style="margin-top:14px">Thibault Lambert, Perrigny-lès-Dijon. Laissez un message, je vous rappelle.</p>
+        <div class="ft__id">
+          <a class="logo" href="./" aria-label="WEBZLY, accueil">web<svg viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</a>
+          <p>Sites internet pour les artisans, commerçants et indépendants de Dijon et de Côte-d’Or. Thibault Lambert, 21160 Perrigny-lès-Dijon.</p>
         </div>
-        <div class="ft__col"><p>Le site</p><a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a></div>
-        <div class="ft__col"><p>WEBZLY</p><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a></div>
-        <div class="ft__col"><p>Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
+        <div class="ft__col"><p>Le site</p><a href="offres.html">Offres et tarifs</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a></div>
+        <div class="ft__col"><p>Me joindre</p><a href="tel:+33695506239">06 95 50 62 39</a><a href="mailto:thibault.lbrt21@gmail.com">Par e-mail</a><a href="contact.html">Demande de devis</a><a href="faq.html">Questions</a></div>
+        <div class="ft__col"><p>Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">Conditions de vente</a></div>
       </div>
       <div class="ft__bottom">
-        <p>© <span data-year>2026</span> WEBZLY · Thibault Lambert EI · SIREN 130 268 048 · Prix nets, TVA non applicable (art. 293 B du CGI)</p>
-        <a href="#contenu">Haut de page</a>
+        <p>© <span data-year>2026</span> WEBZLY · Thibault Lambert EI · SIREN 130 268 048 · Prix nets, TVA non applicable (art. 293 B du CGI)</p>
       </div>
     </div>
   </footer>
 
   <div class="mbar" data-mbar>
     <a class="btn" href="tel:+33695506239">Appeler</a>
-    <a class="btn btn--gold" href="contact.html">Devis gratuit</a>
+    <a class="btn btn--mustard" href="contact.html">Demander un devis</a>
   </div>
 
-  <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/site.js?v=57127c62" defer></script>
-  <script src="assets/js/encre.js?v=57127c62" defer></script>
+  <script src="assets/js/site.js?v=cae7cd2a" defer></script>
 
 </body>
 </html>

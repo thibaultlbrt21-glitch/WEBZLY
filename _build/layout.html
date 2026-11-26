@@ -2,11 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{title}}</title>
   <meta name="description" content="{{description}}">
   <link rel="canonical" href="https://webzly.fr/{{path}}">
-  <meta name="theme-color" content="#0A0908">
+  <meta name="theme-color" content="#12110F">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="WEBZLY">
@@ -22,10 +22,6 @@
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/site.css?v={{v}}">
-  <script>
-    document.documentElement.classList.add('js');
-    setTimeout(function () { if (!window.wzReady) document.documentElement.classList.remove('js'); }, 3000);
-  </script>
 {{head}}
 </head>
 <body class="{{bodyclass}}">
@@ -42,20 +38,27 @@
         <a href="faq.html"{{cur_faq}}>Questions</a>
       </nav>
       <div class="hd__end">
-        <a class="call" href="tel:+33695506239">06 95 50 62 39</a>
-        <a class="btn btn--sm" href="contact.html">Devis gratuit</a>
+        <a class="hd__tel" href="tel:+33695506239">06 95 50 62 39</a>
+        <a class="btn btn--sm btn--mustard" href="contact.html"{{cur_contact}}>Demander un devis</a>
         <button class="burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Ouvrir le menu</span></button>
       </div>
     </div>
   </header>
 
   <div class="menu" id="menu" data-menu hidden>
-    <nav class="menu__nav wrap" aria-label="Menu mobile">
-      <a href="./">Accueil</a><a href="offres.html"{{cur_offres}}>Offres</a><a href="realisations.html"{{cur_realisations}}>Réalisations</a><a href="methode.html"{{cur_methode}}>Méthode</a><a href="a-propos.html"{{cur_apropos}}>À propos</a><a href="faq.html"{{cur_faq}}>Questions</a><a href="contact.html">Contact</a>
+    <nav class="menu__nav wrap" aria-label="Menu">
+      <a href="./">Accueil</a>
+      <a href="offres.html"{{cur_offres}}>Offres et tarifs</a>
+      <a href="realisations.html"{{cur_realisations}}>Réalisations</a>
+      <a href="methode.html"{{cur_methode}}>Méthode</a>
+      <a href="a-propos.html"{{cur_apropos}}>À propos</a>
+      <a href="faq.html"{{cur_faq}}>Questions</a>
+      <a href="contact.html"{{cur_contact}}>Contact</a>
     </nav>
     <div class="menu__foot wrap">
-      <a class="btn btn--gold" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
-      <a class="btn btn--line" href="contact.html">Demander un devis</a>
+      <a class="btn btn--mustard" href="contact.html">Demander un devis</a>
+      <a class="btn btn--ghost" href="tel:+33695506239">Appeler le 06 95 50 62 39</a>
+      <p>Thibault Lambert, Perrigny-lès-Dijon</p>
     </div>
   </div>
 
@@ -66,30 +69,26 @@
   <footer class="ft">
     <div class="wrap">
       <div class="ft__grid">
-        <div>
-          <a class="ft__tel" href="tel:+33695506239">06 95 50 62 39</a><br>
-          <a class="tlink" href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>
-          <p class="small" style="margin-top:14px">Thibault Lambert, Perrigny-lès-Dijon. Laissez un message, je vous rappelle.</p>
+        <div class="ft__id">
+          <a class="logo" href="./" aria-label="WEBZLY, accueil">web<svg viewBox="0 0 100 130" aria-hidden="true"><path d="M6 7 H95 L54 55 H87 L18 121 L35 83 H4 L43 38 H6 Z"/></svg>ly</a>
+          <p>Sites internet pour les artisans, commerçants et indépendants de Dijon et de Côte-d'Or. Thibault Lambert, 21160 Perrigny-lès-Dijon.</p>
         </div>
-        <div class="ft__col"><p>Le site</p><a href="./">Accueil</a><a href="offres.html">Offres</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a></div>
-        <div class="ft__col"><p>WEBZLY</p><a href="a-propos.html">À propos</a><a href="faq.html">Questions</a><a href="contact.html">Contact</a></div>
-        <div class="ft__col"><p>Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">CGV</a></div>
+        <div class="ft__col"><p>Le site</p><a href="offres.html">Offres et tarifs</a><a href="realisations.html">Réalisations</a><a href="methode.html">Méthode</a><a href="a-propos.html">À propos</a></div>
+        <div class="ft__col"><p>Me joindre</p><a href="tel:+33695506239">06 95 50 62 39</a><a href="mailto:thibault.lbrt21@gmail.com">Par e-mail</a><a href="contact.html">Demande de devis</a><a href="faq.html">Questions</a></div>
+        <div class="ft__col"><p>Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">Conditions de vente</a></div>
       </div>
       <div class="ft__bottom">
         <p>© <span data-year>2026</span> WEBZLY · Thibault Lambert EI · SIREN 130 268 048 · Prix nets, TVA non applicable (art. 293 B du CGI)</p>
-        <a href="#contenu">Haut de page</a>
       </div>
     </div>
   </footer>
 
   <div class="mbar" data-mbar>
     <a class="btn" href="tel:+33695506239">Appeler</a>
-    <a class="btn btn--gold" href="contact.html">Devis gratuit</a>
+    <a class="btn btn--mustard" href="contact.html">Demander un devis</a>
   </div>
 
-  <script src="assets/vendor/lenis.min.js" defer></script>
   <script src="assets/js/site.js?v={{v}}" defer></script>
-  <script src="assets/js/encre.js?v={{v}}" defer></script>
 {{scripts}}
 </body>
 </html>

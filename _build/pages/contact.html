@@ -1,28 +1,18 @@
 ---
-title: Contact et devis gratuit · WEBZLY · Dijon
-description: Demandez votre devis gratuit pour un site internet. Choisissez un créneau et la façon de se parler : téléphone, visio ou café à Dijon. 06 95 50 62 39.
-nav:
+title: Demande de devis · WEBZLY · Dijon et Côte-d'Or
+description: Demandez votre devis gratuit pour un site internet. Trois étapes, une minute. Choisissez comment et quand on se parle. 06 95 50 62 39.
+nav: contact
 ---
-    <section class="phero phero--short">
-      {{part:encre}}
-      <div class="wrap phero__in">
-        <h1 class="d-l" data-reveal>Parlons de votre site.</h1>
-        <p class="lead" data-reveal>Trois questions, une minute. Je vous rappelle au moment que vous choisissez, sans engagement.</p>
+    <header class="phead">
+      <div class="wrap phead__in">
+        <h1 class="h1">Demander un devis</h1>
+        <p class="lead">Trois étapes, une minute. Je vous rappelle au moment que vous choisissez. Le devis est gratuit et ne vous engage à rien.</p>
       </div>
-    </section>
+    </header>
 
-    <section class="sec sec--near">
+    <section class="sec sec--tight">
       <div class="wrap contact">
-        <div>
-          <ul class="coords" role="list" data-reveal>
-            <li><small>Téléphone</small><a href="tel:+33695506239">06 95 50 62 39</a></li>
-            <li><small>E-mail</small><a href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a></li>
-            <li><small>Basé à</small><b>Perrigny-lès-Dijon</b></li>
-          </ul>
-          <p class="small" style="margin-top:24px" data-reveal>Vous avez déjà un site ? Indiquez son adresse dans le formulaire : je le regarde avant de vous appeler et je vous dis ce que j'y changerais. C'est gratuit.</p>
-        </div>
-
-        <form class="form" action="send.php" method="post" novalidate data-form data-reveal>
+        <form class="form" action="send.php" method="post" novalidate data-form>
           <div class="form__main">
             <div class="form__top"><span data-step-label>Étape 1 sur 3</span><span class="form__bar" aria-hidden="true"><span data-bar></span></span></div>
 
@@ -46,7 +36,7 @@ nav:
                 <label class="chip"><input type="checkbox" name="besoins[]" value="Prise de rendez-vous"><span>Prise de rendez-vous</span></label>
                 <label class="chip"><input type="checkbox" name="besoins[]" value="Vendre en ligne"><span>Vendre en ligne</span></label>
               </div>
-              <div class="fields" style="margin-top:28px"><div class="field field--full"><label for="f-site">Votre site actuel, si vous en avez un</label><input id="f-site" name="site_actuel" inputmode="url" placeholder="www.exemple.fr" autocomplete="url"></div></div>
+              <div class="fields" style="margin-top:24px"><div class="field field--full"><label for="f-site">Votre site actuel, si vous en avez un</label><input id="f-site" name="site_actuel" inputmode="url" placeholder="www.exemple.fr" autocomplete="url" autocapitalize="off"></div></div>
             </fieldset>
 
             <fieldset class="fstep" data-step="2" hidden>
@@ -103,21 +93,31 @@ nav:
             <p class="form__err" role="alert" data-err></p>
             <div class="form__nav">
               <button class="btn btn--line" type="button" data-prev hidden>Retour</button>
-              <button class="btn" type="button" data-next style="margin-left:auto">Continuer</button>
-              <button class="btn" type="submit" data-submit hidden style="margin-left:auto">Envoyer ma demande</button>
+              <button class="btn" type="button" data-next>Continuer</button>
+              <button class="btn btn--mustard" type="submit" data-submit hidden>Envoyer ma demande</button>
             </div>
           </div>
 
           <div class="form__done" tabindex="-1" data-done>
-            <h2 class="d-m">Merci, c'est bien reçu.</h2>
+            <h2 class="h2">Merci, c'est bien reçu.</h2>
             <p>Je vous rappelle au moment que vous avez choisi. Si c'est urgent : 06 95 50 62 39.</p>
             <a class="btn btn--line" href="./">Retour à l'accueil</a>
           </div>
           <div class="form__fail" tabindex="-1" data-fail>
-            <h2 class="d-m">L'envoi n'a pas fonctionné.</h2>
+            <h2 class="h2">L'envoi n'a pas fonctionné.</h2>
             <p>Envoyez-moi ces informations par e-mail, ou appelez le 06 95 50 62 39.</p>
             <a class="btn" href="mailto:thibault.lbrt21@gmail.com" data-mailto>M'écrire par e-mail</a>
           </div>
         </form>
+
+        <aside>
+          <ul class="coords" role="list">
+            <li><small>Téléphone</small><a href="tel:+33695506239">06 95 50 62 39</a></li>
+            <li><small>E-mail</small><a href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a></li>
+            <li><small>Adresse</small><b>21160 Perrigny-lès-Dijon</b></li>
+          </ul>
+          <p>Vous avez déjà un site ? Indiquez son adresse à la première étape : je le regarde avant de vous appeler, et je vous dis ce que j'y changerais. C'est gratuit.</p>
+          <p>Si je ne décroche pas, laissez un message : je rappelle.</p>
+        </aside>
       </div>
     </section>
