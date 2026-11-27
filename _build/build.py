@@ -16,7 +16,7 @@ import re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "_build"
-NAV = ["offres", "realisations", "methode", "apropos", "faq", "contact"]
+NAV = ["accueil", "offres", "realisations", "methode", "apropos", "faq", "contact"]
 NBSP, NNBSP = "\u00a0", "\u202f"
 
 
