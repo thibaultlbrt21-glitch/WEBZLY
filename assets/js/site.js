@@ -12,6 +12,7 @@
   /* ---------- En-tête et barre d'appel du téléphone ---------- */
   const hd = $('[data-header]'), mbar = $('[data-mbar]');
   const top = $('.hero, .phead, .nf');
+  const heroBtns = $('.hero__btns'); // sur l'accueil : la barre s'affiche dès que ces boutons ne sont pas à l'écran
   const ends = $$('.cta, .close, .ft, .contact');
   let lastY = scrollY;
   const onScroll = () => {
@@ -20,7 +21,9 @@
     if (!menuOpen) hd.classList.toggle('is-hidden', y > 320 && y > lastY + 2);
     if (y < lastY - 2) hd.classList.remove('is-hidden');
     if (mbar) {
-      const past = top ? top.getBoundingClientRect().bottom < 0 : y > 300;
+      let past;
+      if (heroBtns) { const r = heroBtns.getBoundingClientRect(); past = r.top > innerHeight - 70 || r.bottom < 0; }
+      else past = top ? top.getBoundingClientRect().bottom < 0 : y > 300;
       const atEnd = ends.some((el) => el.getBoundingClientRect().top < innerHeight - 40);
       mbar.classList.toggle('is-visible', past && !atEnd);
     }

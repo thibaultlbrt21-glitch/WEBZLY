@@ -528,10 +528,16 @@ a.browser { display: block; text-decoration: none; color: inherit; }
   .mbar.is-visible { transform: none; }
   .mbar .btn { min-height: 48px; padding: 0 10px; }
   .mbar .btn:first-child { background: var(--ink-3); color: var(--cream); }
-  .hero__in { grid-template-columns: minmax(0, 1fr); }
+  /* Téléphone et tablette : le titre, puis tout de suite l'image, puis le texte et les boutons */
+  .hero__in { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+  .hero__in > div { display: contents; }
+  .hero__t { order: 1; }
+  .devices { order: 2; margin-top: 22px; }
+  .hero__lead { order: 3; }
+  .hero__btns { order: 4; }
+  .hero__note { order: 5; }
   .proof, .close__in { grid-template-columns: minmax(0, 1fr); }
   .steps3 { grid-template-columns: minmax(0, 1fr); gap: 18px; }
-  .devices { margin-top: 8px; }
   .keys { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .offer { grid-template-columns: minmax(0, 1fr) auto; }
