@@ -53,10 +53,9 @@ strong, b { font-weight: 600; }
 /* ---------- Boutons et liens ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 22px; border-radius: 10px; background: var(--ink); color: #fff; text-decoration: none; font-size: 16px; font-weight: 600; letter-spacing: -.005em; white-space: nowrap; transition: background-color .2s, color .2s, box-shadow .2s; }
 .btn:hover { background: #3A3833; }
-.btn--mustard { background: var(--ink); color: #fff; }
-.btn--mustard:hover { background: #3A3833; }
-.ink .btn--mustard, .cta .btn--mustard, .mbar .btn--mustard, .menu .btn--mustard, .plan--pro .btn--mustard { background: var(--mustard); color: var(--ink); }
-.ink .btn--mustard:hover, .cta .btn--mustard:hover, .mbar .btn--mustard:hover, .menu .btn--mustard:hover, .plan--pro .btn--mustard:hover { background: var(--mustard-2); }
+/* Le bouton de demande de devis : la seule touche de couleur vive du site */
+.btn--mustard { background: var(--mustard); color: var(--ink); }
+.btn--mustard:hover { background: var(--mustard-2); }
 .btn--ghost { background: transparent; color: inherit; box-shadow: inset 0 0 0 1.5px var(--line-d2); }
 .btn--ghost:hover { background: rgba(242, 238, 228, .08); box-shadow: inset 0 0 0 1.5px var(--cream); }
 .btn--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line-2); }
@@ -128,7 +127,7 @@ main { display: block; }
 
 /* Les appareils sont dessinés en pourcentages : ils suivent la largeur de leur colonne */
 .devices { margin: 0; }
-.devices__stage { position: relative; padding-bottom: 5%; }
+.devices__stage { position: relative; padding: 7% 5% 6%; border-radius: clamp(14px, 1.8vw, 24px); background: #F7EDC9; }
 .mbp { position: relative; width: 94%; }
 .mbp__lid { width: 89%; margin: 0 auto; padding: 1.5% 1.45% 2.3%; background: #0E0E0F; border-radius: clamp(10px, 1.5vw, 22px) clamp(10px, 1.5vw, 22px) 4px 4px; box-shadow: inset 0 0 0 1.5px #3A3A3D, 0 0 0 1.5px #B8B9BC; }
 .mbp__screen { position: relative; aspect-ratio: 1600 / 1039; overflow: hidden; border-radius: clamp(3px, .5vw, 8px) clamp(3px, .5vw, 8px) 1px 1px; background: #1d1f22; }
@@ -137,7 +136,7 @@ main { display: block; }
 .mbp__base { position: relative; height: 0; padding-bottom: 2.4%; margin-top: -1px; border-radius: 1px 1px 50% 50% / 1px 1px 100% 100%; background: linear-gradient(#E4E5E7, #C9CACD 50%, #95969A); }
 .mbp__base i { position: absolute; left: 50%; top: 0; width: 14%; height: 40%; transform: translateX(-50%); border-radius: 0 0 8px 8px; background: linear-gradient(#ACADB0, #D2D3D6); }
 .mbp::after { content: ""; position: absolute; left: 6%; right: 6%; bottom: -3.2%; height: 4%; border-radius: 50%; background: radial-gradient(closest-side, rgba(20, 20, 18, .28), transparent); z-index: -1; }
-.iph { position: absolute; right: 0; bottom: 0; width: 23.5%; padding: 1.05%; background: #121213; border-radius: 15.5% / 7.4%; box-shadow: inset 0 0 0 1.5px #4A4A4E, 0 0 0 1px #9C9DA1, 0 28px 48px -22px rgba(20, 20, 18, .55); }
+.iph { position: absolute; right: 4%; bottom: 4%; width: 22%; padding: 1%; background: #121213; border-radius: 15.5% / 7.4%; box-shadow: inset 0 0 0 1.5px #4A4A4E, 0 0 0 1px #9C9DA1, 0 28px 48px -22px rgba(20, 20, 18, .55); }
 .iph__screen { position: relative; aspect-ratio: 600 / 1298; overflow: hidden; border-radius: 13.6% / 6.3%; background: #1d1f22; }
 .iph__screen img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .iph__notch { position: absolute; left: 50%; top: 0; width: 41%; height: 3.8%; transform: translateX(-50%); background: #000; border-radius: 0 0 14px 14px; }
@@ -194,7 +193,7 @@ a.browser { display: block; text-decoration: none; color: inherit; }
 
 /* ---------- Repères ---------- */
 .keys { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 32px; }
-.keys > div { padding-top: 14px; border-top: 1px solid var(--ink); }
+.keys > div { padding-top: 14px; border-top: 2px solid var(--mustard); }
 .keys b { display: block; font-size: 1.12rem; font-weight: 600; letter-spacing: -.015em; }
 .keys span { display: block; margin-top: 4px; color: var(--muted); font-size: 15.5px; }
 
