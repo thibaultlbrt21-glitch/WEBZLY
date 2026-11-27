@@ -12,7 +12,7 @@
   /* ---------- En-tête et barre d'appel du téléphone ---------- */
   const hd = $('[data-header]'), mbar = $('[data-mbar]');
   const top = $('.hero, .phead, .nf');
-  const ends = $$('.cta, .ft, .contact');
+  const ends = $$('.cta, .close, .ft, .contact');
   let lastY = scrollY;
   const onScroll = () => {
     const y = scrollY, menuOpen = body.classList.contains('menu-open');
@@ -106,6 +106,30 @@
       none.hidden = n > 0;
     });
   }
+
+  /* ---------- Être rappelé (bas de l'accueil) ---------- */
+  $$('[data-cb]').forEach((cb) => {
+    const err = $('[data-err]', cb);
+    cb.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      $$('.is-invalid', cb).forEach((x) => x.classList.remove('is-invalid'));
+      const fail = (i, m) => { i.classList.add('is-invalid'); err.textContent = m; i.focus(); };
+      if (!cb.nom.value.trim()) return fail(cb.nom, 'Indiquez votre nom.');
+      if (cb.telephone.value.replace(/\D/g, '').length < 9) return fail(cb.telephone, 'Indiquez un numéro où vous rappeler.');
+      if (!cb.consent.checked) { err.textContent = 'Cochez la case pour que je puisse vous rappeler.'; cb.consent.focus(); return; }
+      err.textContent = ''; cb.classList.add('is-sending');
+      try {
+        const res = await fetch(cb.action, { method: 'POST', body: new FormData(cb), headers: { Accept: 'application/json' } });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error('send');
+        const m = $('input[name="rdv_moment"]:checked', cb);
+        $('[data-cb-when]', cb).textContent = m ? ` ${m.value.toLowerCase()}` : '';
+        cb.classList.add('is-done'); $('.cb__done', cb).focus({ preventScroll: true });
+      } catch (ex) {
+        cb.classList.add('is-failed'); $('.cb__fail', cb).focus({ preventScroll: true });
+      } finally { cb.classList.remove('is-sending'); }
+    });
+  });
 
   /* ---------- Demande de devis en trois étapes ---------- */
   const form = $('[data-form]');

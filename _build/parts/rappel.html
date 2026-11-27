@@ -1,0 +1,33 @@
+    <section class="close" aria-labelledby="close-t">
+      <div class="wrap close__in">
+        <div>
+          <h2 class="h2" id="close-t">Parlons de votre site.</h2>
+          <p>Un appel de quinze minutes suffit pour voir ce dont vous avez besoin. Vous recevez ensuite un devis écrit, gratuit, valable 30 jours.</p>
+          <a class="close__tel" href="tel:+33695506239">06 95 50 62 39</a>
+          <p>Si je ne décroche pas, laissez un message : je rappelle.</p>
+        </div>
+        <form class="cb" action="send.php" method="post" novalidate data-cb>
+          <div class="cb__main">
+            <p class="cb__t">Être rappelé</p>
+            <p class="cb__intro">Laissez votre nom et votre numéro. Je vous appelle au moment qui vous arrange.</p>
+            <input type="hidden" name="demande" value="Rappel">
+            <div class="fields">
+              <div class="field"><label for="cb-nom">Nom</label><input id="cb-nom" name="nom" autocomplete="name" required></div>
+              <div class="field"><label for="cb-tel">Téléphone</label><input id="cb-tel" name="telephone" type="tel" autocomplete="tel" inputmode="tel" required></div>
+            </div>
+            <span class="sub" id="cb-moment">Le meilleur moment</span>
+            <div class="chips" role="radiogroup" aria-labelledby="cb-moment">
+              <label class="chip"><input type="radio" name="rdv_moment" value="Le matin"><span>Le matin</span></label>
+              <label class="chip"><input type="radio" name="rdv_moment" value="Le midi"><span>Le midi</span></label>
+              <label class="chip"><input type="radio" name="rdv_moment" value="En fin de journée"><span>En fin de journée</span></label>
+            </div>
+            <div class="hp-field" aria-hidden="true"><label for="cb-web">Ne pas remplir</label><input id="cb-web" name="website" tabindex="-1" autocomplete="off"></div>
+            <label class="consent"><input type="checkbox" name="consent" value="1" required><span>J'accepte que mon numéro serve seulement à me rappeler. <a href="confidentialite.html">Confidentialité</a></span></label>
+            <p class="form__err" role="alert" data-err></p>
+            <button class="btn btn--mustard" type="submit">Me faire rappeler</button>
+          </div>
+          <div class="cb__done" tabindex="-1"><p class="cb__t">C'est noté.</p><p>Je vous rappelle<span data-cb-when></span>. Si c'est urgent : <a href="tel:+33695506239">06 95 50 62 39</a>.</p></div>
+          <div class="cb__fail" tabindex="-1"><p class="cb__t">L'envoi n'a pas marché.</p><p>Appelez-moi au <a href="tel:+33695506239">06 95 50 62 39</a>, ou écrivez à <a href="mailto:thibault.lbrt21@gmail.com">thibault.lbrt21@gmail.com</a>.</p></div>
+        </form>
+      </div>
+    </section>

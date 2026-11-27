@@ -1,6 +1,6 @@
 # WEBZLY — le site
 
-Sobre et professionnel : un fond blanc cassé, du texte noir, une seule police nette pour les titres,
+Sobre et professionnel : un fond blanc, du texte noir, une seule police nette pour les titres,
 de vraies réalisations à la place des illustrations. Le jaune moutarde reste la signature du logo.
 Sept pages courtes plutôt qu'une longue page. Pensé d'abord pour le téléphone, écrit à la première personne.
 
@@ -18,8 +18,8 @@ Les sources sont dans `_build/pages/`, les blocs communs dans `_build/parts/`.
 
 | Rôle | Valeur | Usage |
 |---|---|---|
-| Blanc cassé | `#F5F4F0` | fond des pages |
-| Blanc | `#FFFFFF` | sections alternées, cartes, formulaire |
+| Blanc | `#FFFFFF` | fond des pages |
+| Gris clair | `#F5F5F3` | sections alternées, cartes, formulaire |
 | Encre | `#12110F` | texte, boutons principaux, appel de fin de page, pied de page |
 | Gris chaud | `#5E594F` sur fond clair, `#ABA597` sur encre | textes d'appui |
 | Moutarde | `#E5B80B` | Z du logo ; boutons seulement sur fond sombre (appel de fin, barre du téléphone, menu) ; poignée de l'avant/après |
@@ -37,7 +37,8 @@ La moutarde ne sert jamais à surligner un mot dans un titre. Sur fond clair, le
 
 ## Mouvement
 
-- Aucune animation décorative. L'accueil montre une vraie réalisation (TDS Fermetures) dans un navigateur et un téléphone.
+- Aucune animation décorative. Le haut de l'accueil montre un MacBook et un iPhone dessinés en CSS, avec la maquette d'un site d'architecte (`assets/img/work/archi-*.jpg`, produite depuis une page HTML). Le site réel de TDS Fermetures sert de preuve juste en dessous.
+- Bas de l'accueil : demande de rappel (nom, téléphone, moment), envoyée par `send.php` avec `demande=Rappel`.
 - Page Réalisations : avant / après au doigt ou à la souris, maquettes qui défilent au survol.
 - Pas d'écran de chargement, pas de curseur personnalisé, pas d'apparitions au défilement.
 
