@@ -5,3 +5,17 @@ ErrorDocument 404 /404.html
 RedirectMatch 404 ^/\.git
 RedirectMatch 404 ^/_build(/|$)
 RedirectMatch 404 ^/DESIGN\.md$
+
+# Mise en cache : les images de l'animation et les polices restent dans le navigateur.
+# La feuille de style et les scripts portent un numéro de version (?v=...) : on peut les garder un an.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+</IfModule>

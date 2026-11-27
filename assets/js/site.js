@@ -14,15 +14,22 @@
   const top = $('.hero, .phead, .nf');
   const heroBtns = $('.hero__btns'); // sur l'accueil : la barre s'affiche dès que ces boutons ne sont pas à l'écran
   const ends = $$('.cta, .close, .ft, .contact');
+  const darks = $$('[data-dark], .cta, .close, .ft'); // sections noires : l'en-tête passe en blanc sur noir
   let lastY = scrollY;
   const onScroll = () => {
     const y = scrollY, menuOpen = body.classList.contains('menu-open');
     hd.classList.toggle('is-solid', y > 12);
-    if (!menuOpen) hd.classList.toggle('is-hidden', y > 320 && y > lastY + 2);
-    if (y < lastY - 2) hd.classList.remove('is-hidden');
+    const mid = hd.offsetHeight / 2;
+    hd.classList.toggle('on-dark', darks.some((el) => { const r = el.getBoundingClientRect(); return r.top <= mid && r.bottom > mid; }));
+    // l'en-tête se range quand on descend et revient dès qu'on remonte (les petits écarts ne changent rien)
+    if (!menuOpen && y > 320 && y > lastY + 2) hd.classList.add('is-hidden');
+    else if (y < lastY - 2 || y <= 320) hd.classList.remove('is-hidden');
     if (mbar) {
       let past;
-      if (heroBtns) { const r = heroBtns.getBoundingClientRect(); past = r.top > innerHeight - 70 || r.bottom < 0; }
+      if (heroBtns) { // sur l'accueil, le texte s'efface pendant l'animation : la barre prend le relais
+        const r = heroBtns.getBoundingClientRect(), fade = heroBtns.parentElement.style.opacity;
+        past = r.top > innerHeight - 70 || r.bottom < 0 || (fade !== '' && +fade < .5);
+      }
       else past = top ? top.getBoundingClientRect().bottom < 0 : y > 300;
       const atEnd = ends.some((el) => el.getBoundingClientRect().top < innerHeight - 40);
       mbar.classList.toggle('is-visible', past && !atEnd);
@@ -142,6 +149,14 @@
     let cur = 1;
     const params = new URLSearchParams(location.search);
     ['formule', 'abonnement'].forEach((n) => { const v = params.get(n); if (!v) return; const r = $$(`input[name="${n}"]`, form).find((i) => i.value === v); if (r) r.checked = true; });
+    // Venu du bandeau « Vous avez déjà un site ? » de l'accueil
+    const site = (params.get('site') || '').trim().slice(0, 200);
+    if (site && form.site_actuel) {
+      form.site_actuel.value = site;
+      const redo = $$('input[name="besoins[]"]', form).find((i) => i.value === 'Refaire mon site');
+      if (redo) redo.checked = true;
+      if (form.message && !form.message.value) form.message.value = 'Bonjour, pouvez-vous me dire ce que vous changeriez en premier sur mon site ?';
+    }
     const show = (n, focus = true) => {
       cur = n; steps.forEach((s) => (s.hidden = +s.dataset.step !== n));
       label.textContent = `Étape ${n} sur ${steps.length}`; bar.style.width = `${(n / steps.length) * 100}%`;
