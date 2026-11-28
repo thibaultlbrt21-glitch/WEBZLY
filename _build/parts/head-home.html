@@ -1,11 +1,3 @@
-  <script>
-    // La scène animée de l'accueil, sauf si l'appareil demande moins d'animations ou d'économiser les données
-    (function (d, n) {
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches || (n.connection && n.connection.saveData) || !window.fetch) return;
-      d.documentElement.classList.add('stage-live');
-      setTimeout(function () { if (!window.__stageOK) d.documentElement.classList.remove('stage-live'); }, 8000);
-    })(document, navigator);
-  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -21,15 +21,7 @@
   <link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/site.css?v=1fdb3329">
-  <script>
-    // La scène animée de l'accueil, sauf si l'appareil demande moins d'animations ou d'économiser les données
-    (function (d, n) {
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches || (n.connection && n.connection.saveData) || !window.fetch) return;
-      d.documentElement.classList.add('stage-live');
-      setTimeout(function () { if (!window.__stageOK) d.documentElement.classList.remove('stage-live'); }, 8000);
-    })(document, navigator);
-  </script>
+  <link rel="stylesheet" href="assets/css/site.css?v=f1e8e963">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -95,28 +87,28 @@
   </div>
 
   <main id="contenu">
-    <section class="stage" data-stage data-dark>
-      <div class="stage__pin">
-        <canvas class="stage__cv" aria-hidden="true"></canvas>
-        <p class="stage__beat" data-beat aria-hidden="true">Un site dessiné pour chaque métier.</p>
-        <p class="stage__end" data-end>Maquettes dessinées par WEBZLY, les entreprises sont inventées. <a href="realisations.html">Voir les réalisations</a></p>
-      </div>
-      <div class="stage__copy wrap">
-        <h1 class="stage__t">Des sites qui font sonner votre téléphone.</h1>
-        <p class="stage__lead">Je crée et j’entretiens le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d’Or.<span class="hide-sm"> Des prix affichés, un seul interlocuteur.</span></p>
-        <div class="hero__btns"><a class="btn btn--mustard" href="contact.html">Demander un devis</a><a class="btn btn--glass" href="offres.html">Voir les tarifs</a></div>
-        <p class="stage__note hide-sm">Devis gratuit et sans engagement. Ou appelez-moi au <a href="tel:+33695506239">06 95 50 62 39</a></p>
-        <figure class="stage__slot">
-          <picture class="stage__poster">
-            <source media="(max-width: 699px)" srcset="assets/video/m/s073.webp" width="810" height="1440">
-            <img src="assets/video/d/s098.webp" alt="Un MacBook ouvert sur la page d'accueil d'un cabinet d'architectes" width="1600" height="900" loading="lazy">
-          </picture>
-          <figcaption>Maquette dessinée par WEBZLY, le cabinet est inventé. <a href="realisations.html">Voir les réalisations</a></figcaption>
+    <section class="hero">
+      <div class="wrap hero__in">
+        <div>
+          <h1 class="hero__t">Des sites qui font sonner votre téléphone.</h1>
+          <p class="hero__lead">Je crée, héberge et entretiens le site internet des artisans, commerçants et indépendants de Dijon et de Côte-d’Or. Vous gardez un seul interlocuteur, des prix affichés, et un site qui reste à vous.</p>
+          <div class="hero__btns"><a class="btn btn--mustard" href="contact.html">Demander un devis</a><a class="btn btn--line" href="offres.html">Voir les tarifs</a></div>
+          <p class="hero__note">Devis gratuit et sans engagement. Vous préférez parler tout de suite ? <a href="tel:+33695506239">06 95 50 62 39</a></p>
+        </div>
+        <figure class="devices">
+          <div class="devices__stage">
+          <div class="mbp">
+            <div class="mbp__lid"><div class="mbp__screen"><img src="assets/img/work/archi-mac.jpg" alt="Maquette de la page d'accueil d'un cabinet d'architectes, sur ordinateur" width="1600" height="1039" fetchpriority="high"><i class="mbp__notch"></i></div></div>
+            <div class="mbp__base"><i></i></div>
+          </div>
+          <div class="iph"><div class="iph__screen"><img src="assets/img/work/archi-iphone.jpg" alt="La même page sur téléphone" width="600" height="1298"><i class="iph__notch"></i></div></div>
+          </div>
+          <figcaption>Maquette d’un site d’architecte, dessinée par WEBZLY. Le cabinet et le projet sont inventés.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="band" data-dark aria-label="L'essentiel">
+    <section class="sec sec--tight" style="padding-bottom:0">
       <div class="wrap keys">
         <div><b>Devis gratuit</b><span>Écrit, valable 30 jours, sans engagement.</span></div>
         <div><b>Prix affichés</b><span>Le site dès 890 €, l’entretien dès 39 € par mois.</span></div>
@@ -127,13 +119,10 @@
 
     <section class="sec">
       <div class="wrap proof">
-        <div class="proof__media">
-          <a class="browser" href="https://tds-fermetures.fr" target="_blank" rel="noopener" aria-label="Voir le site de TDS Fermetures (nouvel onglet)">
-            <span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>tds-fermetures.fr</span></span>
-            <img src="assets/img/work/tds-site-desktop.jpg" alt="Page d'accueil du site de TDS Fermetures, sur ordinateur" width="1600" height="1000" loading="lazy">
-          </a>
-          <div class="iph proof__phone" aria-hidden="true"><div class="iph__screen"><img src="assets/img/work/tds-site-mobile.jpg" alt="" width="540" height="1080" loading="lazy"><i class="iph__notch"></i></div></div>
-        </div>
+        <a class="browser" href="https://tds-fermetures.fr" target="_blank" rel="noopener" aria-label="Voir le site de TDS Fermetures (nouvel onglet)">
+          <span class="browser__bar" aria-hidden="true"><i></i><i></i><i></i><span>tds-fermetures.fr</span></span>
+          <img src="assets/img/work/tds-site-desktop.jpg" alt="Page d'accueil du site de TDS Fermetures" width="1600" height="1000" loading="lazy">
+        </a>
         <div>
           <h2 class="h2">Déjà en ligne, à Dijon</h2>
           <p>TDS Fermetures pose des fenêtres, des volets et des portails en Côte-d’Or. Leur site, leur fiche Google et leurs mises à jour passent par moi.</p>
@@ -170,8 +159,8 @@
         </div>
         <div class="offers">
           <a class="offer" href="offres.html#creation"><b>Essentiel</b><p>Un site d’une page, la fiche Google et un formulaire de contact.</p><strong>890 €</strong></a>
-          <a class="offer" href="offres.html#creation"><b>Pro</b><p>Jusqu’à 6 pages, les devis en ligne et une galerie de réalisations.</p><strong>1 490 €</strong></a>
-          <a class="offer" href="offres.html#creation"><b>Sur-mesure</b><p>Réservation, boutique en ligne, plusieurs langues.</p><strong><small>dès</small>1 990 €</strong></a>
+          <a class="offer" href="offres.html#creation"><b>Pro</b><p>Jusqu’à 6 pages, les devis en ligne et une galerie de réalisations.</p><strong>1 490 €</strong></a>
+          <a class="offer" href="offres.html#creation"><b>Sur-mesure</b><p>Réservation, boutique en ligne, plusieurs langues.</p><strong><small>dès</small>1 990 €</strong></a>
         </div>
         <p>Ensuite, un abonnement couvre l’hébergement, la sécurité et vos modifications, dès 39 € par mois. <a class="tlink" href="offres.html">Le détail des offres</a></p>
       </div>
@@ -188,32 +177,6 @@
           <li><h3>Je dessine, vous validez</h3><p>Une maquette avec vos prestations et vos photos. Deux séries de retours sont comprises.</p></li>
           <li><h3>Votre site est en ligne</h3><p>Sur votre nom de domaine, relié à votre fiche Google. Ensuite, je m’en occupe chaque mois.</p></li>
         </ol>
-        <form class="audit" action="contact.html" method="get">
-          <div class="audit__txt">
-            <h2 class="audit__t">Vous avez déjà un site ?</h2>
-            <p>Donnez-moi son adresse. Je vous dis, gratuitement, ce que je changerais en premier.</p>
-          </div>
-          <div class="audit__field">
-            <label class="sr" for="audit-site">Adresse de votre site</label>
-            <input id="audit-site" name="site" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="www.votre-site.fr" required>
-            <button class="btn btn--mustard" type="submit">Recevoir mon avis</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="sec paper">
-      <div class="wrap qa">
-        <div>
-          <h2 class="h2">On me demande souvent</h2>
-          <p>Les réponses courtes. <a class="tlink" href="faq.html">Toutes les questions</a></p>
-        </div>
-        <div class="faq">
-          <details><summary>Est-ce que le site m’appartient ?</summary><div class="faq__a"><p>Oui. Le nom de domaine, vos textes, vos photos et votre fiche Google restent à vous. Si vous arrêtez, je vous transfère le domaine et je vous remets une copie complète du site.</p></div></details>
-          <details><summary>Pourquoi un abonnement en plus du site ?</summary><div class="faq__a"><p>Le site, vous le payez une fois : il est à vous. L’abonnement paie ce qui le fait vivre : hébergement, nom de domaine, sécurité, mises à jour et modifications. Sans entretien, un site vieillit vite et finit par mal s’afficher ou disparaître de Google.</p></div></details>
-          <details><summary>Je n’ai pas le temps de m’en occuper.</summary><div class="faq__a"><p>C’est le principe. Vous me donnez quinze minutes au départ, puis vous m’envoyez une photo ou un message quand quelque chose change. Je fais le reste.</p></div></details>
-          <details><summary>Mon neveu peut me faire un site. Pourquoi vous ?</summary><div class="faq__a"><p>C’est un bon début. La différence se joue après : les pages qui sortent sur Google dans votre ville, la vitesse sur téléphone, les mentions légales à jour, et quelqu’un de joignable chaque mois quand il faut changer quelque chose.</p></div></details>
-        </div>
       </div>
     </section>
 
@@ -266,7 +229,7 @@
         <div class="ft__col"><p>Légal</p><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="cgv.html">Conditions de vente</a></div>
       </div>
       <div class="ft__bottom">
-        <p>© <span data-year>2026</span> WEBZLY, Thibault Lambert EI, SIREN 130 268 048. Prix nets, TVA non applicable (art. 293 B du CGI).</p>
+        <p>© <span data-year>2026</span> WEBZLY, Thibault Lambert EI, SIREN 130 268 048. Prix nets, TVA non applicable (art. 293 B du CGI).</p>
       </div>
     </div>
   </footer>
@@ -276,8 +239,7 @@
     <a class="btn btn--mustard" href="contact.html">Demander un devis</a>
   </div>
 
-  <script src="assets/js/site.js?v=1fdb3329" defer></script>
-  <script src="assets/js/stage.js?v=1fdb3329" defer></script>
+  <script src="assets/js/site.js?v=f1e8e963" defer></script>
 
 </body>
 </html>

@@ -45,7 +45,7 @@ def typo_text(t):
     t = t.replace("...", "…")
     t = re.sub(r"(\w)'(\w)", "\\1\u2019\\2", t)                       # apostrophe typographique
     t = re.sub(r"\b(0\d)((?: \d\d){4})\b", lambda m: m.group(1) + m.group(2).replace(" ", NBSP), t)  # 06 95 50 62 39
-    t = re.sub(r"(\d) (?=\d{3}\b)", "\\1" + NBSP, t)                   # 1 490, 130 268 048 (espace insécable : la fine disparaît en gros corps)
+    t = re.sub(r"(\d) (?=\d{3}\b)", "\\1" + NNBSP, t)                  # 1 490, 130 268 048
     t = re.sub(r"(\d) (€|h\b|s\b)", "\\1" + NBSP + "\\2", t)           # 890 €, 23 h, 2,5 s
     t = re.sub(r"(\d) %", "\\1" + NNBSP + "%", t)                      # 30 %
     t = re.sub(r" ([?!;])", NNBSP + "\\1", t)                          # avant ? ! ;
@@ -77,7 +77,7 @@ def legal(meta, body):
 
 def main():
     layout = expand(read(SRC / "layout.html"))
-    assets = [ROOT / "assets/css/site.css", ROOT / "assets/js/site.js", ROOT / "assets/js/stage.js"]
+    assets = [ROOT / "assets/css/site.css", ROOT / "assets/js/site.js"]
     v = hashlib.sha1(b"".join(p.read_bytes() for p in assets if p.exists())).hexdigest()[:8]
     for page in sorted((SRC / "pages").glob("*.html")):
         meta, body = front_matter(read(page))
